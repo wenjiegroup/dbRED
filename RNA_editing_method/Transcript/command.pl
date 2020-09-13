@@ -1,0 +1,5 @@
+$command = "java -Xmx3g -jar -Djava.io.tmpdir=/public3/lih/my_work/CSHL_Long_RNA-seq/K562tmp/ /public3/lih/software/GATK/picard-tools-1.70/picard-tools-1.70/MergeSamFiles.jar INPUT=wgEncodeCshlLongRnaSeqHuvecCellLongnonpolyaFastqRd1Rep1.sort.sam INPUT=wgEncodeCshlLongRnaSeqHuvecCellLongnonpolyaFastqRd1Rep2.sort.sam INPUT=wgEncodeCshlLongRnaSeqHuvecCellLongnonpolyaFastqRd2Rep1.sort.sam INPUT=wgEncodeCshlLongRnaSeqHuvecCellLongnonpolyaFastqRd2Rep2.sort.sam  OUTPUT=HuvecCellLongnonpolya.sam VALIDATION_STRINGENCY=LENIENT";
+system ("$command");
+
+$command = "java -Xmx3g -jar -Djava.io.tmpdir=/public3/lih/my_work/CSHL_Long_RNA-seq/K562tmp/ /public3/lih/software/GATK/picard-tools-1.70/picard-tools-1.70/MarkDuplicates.jar MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=2000 INPUT=HuvecCellLongnonpolya.sam OUTPUT=HuvecCellLongnonpolya.dedup.sam METRICS_FILE=HuvecCellLongnonpolya.dedup.metrics CREATE_INDEX=true VALIDATION_STRINGENCY=LENIENT REMOVE_DUPLICATES=true";
+system ("$command");
