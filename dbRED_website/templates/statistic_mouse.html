@@ -1,0 +1,259 @@
+{% extends 'base.html' %}
+{% block title %} Statistics {% endblock %}
+{% block home_active %}{%endblock%}
+{% block statistics_active %}class="active"{%endblock%}
+{% load staticfiles %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" id="barc" style="height:440px;"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"  id="bard" style="height:440px;"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6"  id="pie6" style="height:550px;"></div>
+        <div class="col-md-6"  id="piemouse2" style="height:550px;"></div>
+    </div>
+        <script type="text/javascript">
+        var myChartk = echarts.init(document.getElementById('barc'));
+        var optionk = {
+            title : {
+                text: 'Number of Samples',
+                x:'center',
+                top: 20,
+                textStyle:{
+                    fontSize:24,
+                    fontFamily : 'Arial'
+                }
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: "{b} : {c} "
+            },
+            xAxis:{
+                type:'category',
+                axisTick: {
+                    alignWithLabel: false
+                },
+                axisLabel:{
+                    interval :0,
+                    rotate :90,
+                    fontFamily : 'Arial'
+                },
+                data : ['10T12','416B','A20','Adrenal','BAT','BMDM','BcellCD19','BcellCD43','Bladder','BoneMarrow','C2C12','CH12','CNS','Cerebellum','Cerebrum','Colon','Cortex','Duodenum','ES-Bruce4','ES-E14','Erythrobl','FVLstem','FVprogenitor','FatPad','FrontalLobe','G1E','G1E-ER4','GenitalFatPad','HeadlessEmbryo','Heart','Kidney','LgIntestine','Limb','Liver','Lung','MEF','MEL','MEP','Megakaryo','OlfactBulb','Ovary','Patski','Placenta','SkMuscle','SmIntestine','Spleen','Stomach','T-Naive','Testis','Thymus','WholeBrain']
+            },
+            grid: {
+                x:60, x2:10, y2:100
+            },
+            yAxis: {
+                axisLine : {
+                    show : false
+                },
+                axisTick : {
+                    show : false
+                },
+                axisLabel : {
+                    fontFamily : 'Arial'
+                }
+            },
+            series : [
+                {
+                    barMaxWidth :30,
+                    type:"bar",
+                    data:[2,2,2,2,2,2,1,2,2,2,2,2,6,6,2,2,4,2,2,2,2,2,2,1,2,2,12,2,1,8,5,2,4,14,5,2,4,2,2,2,2,2,4,2,2,5,2,1,4,6,8],
+                    itemStyle: {
+                        normal:{
+                            color:new echarts.graphic.LinearGradient(
+                                0, 0, 0, 1,
+                                [
+                                    {offset: 0, color: '#83bff6'},
+                                    {offset: 0.5, color: '#188df0'},
+                                    {offset: 1, color: '#188df0'}
+                                ])
+                        },
+                        emphasis: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 0, 1,
+                                [
+                                    {offset: 0, color: '#2378f7'},
+                                    {offset: 0.7, color: '#2378f7'},
+                                    {offset: 1, color: '#83bff6'}
+                                ]),
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+        myChartk.setOption(optionk);
+        var myChartl = echarts.init(document.getElementById('bard'));
+        var optionl = {
+            title : {
+                text: 'Number of RNA editing sites',
+                x:'center',
+                top: 20,
+                textStyle:{
+                    fontSize:24,
+                    fontFamily : 'Arial'
+                }
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: "{b} : {c} "
+            },
+            xAxis:{
+                type:'category',
+                axisTick: {
+                    alignWithLabel: false
+                },
+                axisLabel:{
+                    interval :0,
+                    rotate :90,
+                    fontFamily : 'Arial'
+                },
+                data : ['10T12','Adrenal','BAT','BMDM','Bladder','BoneMarrow','C2C12','CH12','CNS','Cerebellum','Colon','Cortex','Duodenum','ES-Bruce4','ES-E14','Erythrobl','FVLstem','FVprogenitor','FrontalLobe','G1E','G1E-ER4','Heart','Kidney','Limb','Liver','Lung','MEF','MEL','MEP','Megakaryo','OlfactBulb','Ovary','Placenta','SmIntestine','Spleen','Stomach','Testis','Thymus','WholeBrain']
+            },
+            grid: {
+                x:60, x2:10, y2:100
+            },
+            yAxis: {
+                axisLine : {
+                    show : false
+                },
+                axisTick : {
+                    show : false
+                },
+                axisLabel : {
+                    fontFamily : 'Arial'
+                }
+            },
+            series : [
+                {
+                    barMaxWidth : 30,
+                    type:"bar",
+                    data:[1288,732,15,30,3796,9,818,1300,12091,34766,659,24963,415,20,2033,411,680,963,24697,1000,2103,1136,91,2022,3241,2400,32,5836,794,418,1,747,2033,5,633,410,701,1086,6812],
+                    itemStyle: {
+                        normal:{
+                            color:new echarts.graphic.LinearGradient(
+                                0, 0, 0, 1,
+                                [
+                                    {offset: 0, color: '#83bff6'},
+                                    {offset: 0.5, color: '#188df0'},
+                                    {offset: 1, color: '#188df0'}
+                                ])
+                        },
+                        emphasis: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 0, 1,
+                                [
+                                    {offset: 0, color: '#2378f7'},
+                                    {offset: 0.7, color: '#2378f7'},
+                                    {offset: 1, color: '#83bff6'}
+                                ]),
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+        myChartl.setOption(optionl);
+        var myChartm = echarts.init(document.getElementById('pie6'));
+        var optionm = {
+            title : {
+                text: 'Repetitive Location',
+                x:165,
+                bottom:20,
+                textStyle:{
+                  fontSize:24,
+                  fontFamily : 'Arial'
+                }
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: "{a}<br/>{b} : {c} ({d}%)"
+            },
+            series : [
+                {
+                    name:"Repetitive Location",
+                    type: 'pie',
+                    radius : '65%',
+                    center: ['50%', '50%'],
+                    data:[
+                        {value: 31216, name: 'Alu'},
+                        {value: 9174, name: 'NonRep'},
+                        {value: 21571, name: 'Rep'},
+                    ],
+                    itemStyle: {
+                        normal: {
+                            shadowBlur: 20,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    },
+                    color:['#1ab2e2','#1ab21c','#ffb41a']
+                }
+            ]
+        };
+        myChartm.setOption(optionm);
+        var myChartMousepie2 = echarts.init(document.getElementById('piemouse2'));
+        var optionMousepie2 = {
+            title : {
+                text: 'Genomic Location',
+                x:165,
+                bottom:20,
+                textStyle:{
+                  fontSize:24,
+                  fontFamily : 'Arial'
+                }
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: "{a}<br/>{b} : {c} ({d}%)"
+            },
+            series : [
+                {
+                    name:"Genomic Location",
+                    type: 'pie',
+                    radius : '65%',
+                    center: ['50%', '50%'],
+                    data:[
+                        {value: 2843, name: 'UTR3'},
+                        {value: 94, name: 'UTR5'},
+                        {value: 2, name: 'UTR5;UTR3'},
+                        {value: 110, name: 'downstream'},
+                        {value: 1754, name: 'intergenic'},
+                        {value: 50792, name: 'intronic'},
+                        {value: 1339, name: 'ncRNA_exonic'},
+                        {value: 4181, name: 'ncRNA_intronic'},
+                        {value: 2, name: 'ncRNA_splicing'},
+                        {value: 447, name: 'nonsynonymous SNV'},
+                        {value: 5, name: 'splicing'},
+                        {value: 2, name: 'stoploss'},
+                        {value: 298, name: 'synonymous SNV'},
+                        {value: 1, name: 'unknown'},
+                        {value: 77, name: 'upstream'},
+                        {value: 14, name: 'upstream;downstream'},
+                    ],
+                    itemStyle: {
+                        normal: {
+                            shadowBlur: 20,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    },
+                    color:['#f95a90','#b51ab5','#1ab2e2','#FF4500','#ffb41a','#497ce9','#D2691E','#cc99ff',"#A52A2A","#40E0D0","#228B22","#0000CD","#6A5ACD","#FFC0CB","#008B8B","#778899","#FFD700"]
+                }
+            ]
+        };
+        myChartMousepie2.setOption(optionMousepie2);
+        </script>
+</div>
+
+
+{% csrf_token %}
+{% for key,error in search_form.errors.items %}{{key}}:{{error}}{% endfor %}
+{% endblock %}

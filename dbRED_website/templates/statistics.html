@@ -1,0 +1,1920 @@
+{% extends 'base.html' %}
+{% block title %} Statistics {% endblock %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#Human" data-toggle="tab">Human</a></li>
+                <li><a href="#Mouse" data-toggle="tab">Mouse</a></li>
+                <li><a href="#Rat" data-toggle="tab">Rat</a></li>
+                <li><a href="#Chimpanzee" data-toggle="tab">Chimpanzee</a></li>
+                <li><a href="#Rhesus" data-toggle="tab">Rhesus</a></li>
+                <li><a href="#Drosophila" data-toggle="tab">Drosophila</a></li>
+                <li><a href="#Nematode" data-toggle="tab">Nematode</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="Human">
+                    <div class="jumbotron" style="background:#F5F5F5">
+                        <ul class="nav nav-pills">
+                            <li class="active"><a href="#allproject" data-toggle="tab">All Project</a></li>
+                            <li><a href="#encode" data-toggle="tab">ENCODE</a></li>
+                            <li><a href="#roadmap" data-toggle="tab">Roadmap</a></li>
+                            <li><a href="#ccle" data-toggle="tab">CCLE</a></li>
+                            <li><a href="#seqc" data-toggle="tab">SEQC</a></li>
+                            <li><a href="#abrf" data-toggle="tab">ABRF</a></li>
+                            <li><a href="#geuvadis" data-toggle="tab">GEUVADIS</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="allproject">
+                                <div class="row">
+                                    <div class="col-md-6" id="pie" style="height:550px;"></div>
+                                    <div class="col-md-6" id="bar" style="height:550px;"></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="encode">
+                                <div class="row">
+                                    <div class="col-md-12"  id="bar0" style="height:450px;"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12"  id="bar1" style="height:450px;"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6"  id="pie0" style="height:550px;"></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="roadmap">
+                                <div class="row">
+                                    <div class="col-md-12"  id="bar2" style="height:630px;"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12"  id="bar3" style="height:630px;"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6"  id="pie1" style="height:550px;"></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ccle">
+                                <div class="row">
+                                    <div class="col-md-12"  id="bar4" style="height:400px;"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12"  id="bar5" style="height:400px;"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6"  id="pie2" style="height:550px;"></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="seqc">
+                                <div class="row">
+                                    <div class="col-md-12"  id="bar6" style="height:400px;"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12"  id="bar7" style="height:400px;"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6"  id="pie3" style="height:550px;"></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="abrf">
+                                <div class="row">
+                                    <div class="col-md-12"  id="bar8" style="height:500px;"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12"  id="bar9" style="height:500px;"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6"  id="pie4" style="height:550px;"></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="geuvadis">
+                                <div class="row">
+                                    <div class="col-md-6"  id="bara" style="height:400px;"></div>
+                                    <div class="col-md-6"  id="barb" style="height:400px;"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6"  id="pie5" style="height:550px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="Mouse">
+                    <div class="row">
+                        <div class="col-md-12"  id="barc" style="height:400px;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12"  id="bard" style="height:400px;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"  id="pie6" style="height:550px;"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="Rat">
+                    <div class="row">
+                        <div class="col-md-12"  id="bare" style="height:400px;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12"  id="barf" style="height:400px;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"  id="pie7" style="height:550px;"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="Chimpanzee">
+                    <div class="jumbotron">4</div>
+                </div>
+                <div class="tab-pane fade" id="Rhesus">
+                    <div class="jumbotron">3</div>
+                </div>
+                <div class="tab-pane fade" id="Drosophila">
+                    <div class="row">
+                        <div class="col-md-6"  id="barg" style="height:410px;"></div>
+                        <div class="col-md-6"  id="barh" style="height:410px;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"  id="pie8" style="height:550px;"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="Nematode">
+                    <div class="row">
+                        <div class="col-md-6"  id="bari" style="height:400px;"></div>
+                        <div class="col-md-6"  id="barj" style="height:400px;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"  id="pie9" style="height:550px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+var charts = []
+    var myChart0 = echarts.init(document.getElementById('pie'));
+    var option0 = {
+        title : {
+            text: 'Sample',
+            x:'center',
+            top: 20,
+            textStyle:{
+              fontSize:24
+            }
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a}<br/>{b} : {c} ({d}%)"
+        },
+        series : [
+            {
+                name:"number of sample",
+                type: 'pie',
+                radius : '55%',
+                center: ['50%', '50%'],
+                data:[
+                    {value: 501 , name:' ENCODE '},
+                    {value: 1251 , name:' CCLE '},
+                    {value: 548 , name:' Roadmap '},
+                    {value: 2898 , name:' SEQC '},
+                    {value: 473 , name:' ABRF '},
+                    {value: 48 , name:' Human BodyMap '},
+                    {value: 462 , name:' GEUVADIS '}
+                ],
+                itemStyle: {
+                    normal: {
+                        shadowBlur: 20,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                },
+                color:['#f95a90','#b51ab5','#1ab2e2','#1ab21c','#ffb41a','#f8511a','#497ce9']
+            }
+        ]
+    };
+    myChart0.setOption(option0);
+    var myChart1 = echarts.init(document.getElementById('bar'));
+    var option1 = {
+        title : {
+            text: 'RNA editing',
+            x:'center',
+            top: 20,
+            textStyle:{
+                fontSize:24
+            }
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{b} : {c} "
+        },
+        xAxis:{
+            axisLabel:{
+                interval :0,
+                rotate :30
+            },
+            data : ['ENCODE', 'CCLE', 'Roadmap', 'SEQC', 'ABRF', 'Human BodyMap', 'GEUVADIS']
+        },
+        grid: {
+            x:60, x2:10, y2:60
+        },
+        yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+        series : [
+            {
+                barMaxWidth:30,
+                type:"bar",
+                data:[11874,4884,825,114895,328168,5613,54868],
+                itemStyle: {
+                    normal:{
+                        color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                    },
+                    emphasis: {
+                        color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChart1.setOption(option1);
+var myChart2 = echarts.init(document.getElementById('bar0'));
+var option2 = {
+    title : {
+        text: 'Number of Samples',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        axisLabel:{
+            interval :0,
+            rotate :90
+        },
+        data : ['A549', 'AG04450', 'BE2_C', 'BJ', 'CD20+', 'CD34+_Mobilized', 'ECC-1', 'GM12878', 'GM12891', 'GM12892', 'H1-hESC', 'HAoAF', 'HAoEC', 'HCH', 'HeLa-S3', 'HepG2', 'HFDPC', 'HMEC', 'HMEpC', 'hMNC-CB', 'hMNC-PB', 'hMSC-AT', 'hMSC-BM', 'hMSC-UC', 'HOB', 'HPC-PL', 'HPIEpC', 'HSaVEC', 'HSMM', 'HUVEC', 'HVMF', 'HWP', 'IMR90', 'Jurkat', 'K562', 'MCF-7', 'Monocytes-CD14+', 'NHDF', 'NHEK', 'NHEM.f_M2', 'NHEM_M2', 'NHLF', 'PANC-1', 'PFSK-1', 'SK-N-SH', 'SK-N-SH_RA', 'SkMC', 'T-47D', 'U87']
+    },
+    grid: {
+        x:60, x2:10, y2:140
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            type:"bar",
+            data:[30, 8, 2, 8, 8, 2, 8, 38, 5, 9, 29, 4, 4, 4, 28, 30, 4, 4, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 12, 28, 4, 4, 16, 2, 49, 22, 8, 4, 31, 4, 4, 12, 2, 2, 14, 8, 4, 8, 4],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChart2.setOption(option2);
+var myChart3 = echarts.init(document.getElementById('bar1'));
+var option3 = {
+    title : {
+        text: 'Number of RNA editing sites',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        axisLabel:{
+            interval :0,
+            rotate :90
+        },
+        data : ['A549', 'AG04450', 'BE2_C', 'BJ', 'CD20+', 'CD34+_Mobilized', 'ECC-1', 'GM12878', 'GM12891', 'GM12892', 'H1-hESC', 'HAoAF', 'HAoEC', 'HCH', 'HeLa-S3', 'HepG2', 'HFDPC', 'HMEC', 'HMEpC', 'hMNC-CB', 'hMNC-PB', 'hMSC-AT', 'hMSC-BM', 'hMSC-UC', 'HOB', 'HPC-PL', 'HPIEpC', 'HSaVEC', 'HSMM', 'HUVEC', 'HVMF', 'HWP', 'IMR90', 'Jurkat', 'K562', 'MCF-7', 'Monocytes-CD14+', 'NHDF', 'NHEK', 'NHEM.f_M2', 'NHEM_M2', 'NHLF', 'PANC-1', 'PFSK-1', 'SK-N-SH', 'SK-N-SH_RA', 'SkMC', 'T-47D', 'U87']
+    },
+    grid: {
+        x:60, x2:10, y2:140
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            type:"bar",
+            barMaxWidth : 30,
+            data:[156, 321, 158, 654, 15, 648, 135, 1486, 314, 489, 564, 16, 648, 16, 165, 489, 489, 654, 562, 74, 1236, 21, 665, 321, 74, 354, 321, 879, 54, 35, 445, 345, 687, 354, 32, 48, 314, 35, 54, 326, 23, 54, 3514, 351, 312, 35, 132, 21, 21],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChart3.setOption(option3);
+var myChart4 = echarts.init(document.getElementById('pie0'));
+var option4 = {
+    title : {
+        text: 'Location',
+        x:'center',
+        top: 20,
+        textStyle:{
+          fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a}<br/>{b} : {c} ({d}%)"
+    },
+    series : [
+        {
+            name:"Location",
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value: 654 , name: 'downstream'},
+                {value: 3241 , name:'upstream'},
+                {value: 486 , name:'upstream;downstream'},
+                {value: 231 , name:'intergenic'},
+                {value: 486 , name:'intronic'},
+                {value: 354 , name:'ncRNA_exonic'},
+                {value: 489 , name:'ncRNA_intronic'},
+                {value: 321 , name:'nonsynonymous SNV'},
+                {value: 486 , name:'synonymous SNV'},
+                {value: 68 , name:'UTR3'},
+                {value: 35 , name:'UTR5'}
+            ],
+            itemStyle: {
+                normal: {
+                    shadowBlur: 20,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+            color:['#f95a90','#b51ab5','#1ab2e2','#1ab21c','#ffb41a','#f8511a','#497ce9']
+        }
+    ]
+};
+myChart4.setOption(option4);
+var myChart5 = echarts.init(document.getElementById('bar2'));
+var option5 = {
+    title : {
+        text: 'Number of Samples',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        axisLabel:{
+            interval :0,
+            rotate :90
+        },
+        data : ['adipose', 'adrenal gland', 'bladder', 'CD14 primary cells', 'CD19 primary cells', 'CD3 primary cells', 'CD4 primary cells', 'CD56 primary cells', 'CD8 primary cells', 'esophagus', 'fibroblasts', 'gastric', 'H1', 'H1 BMP4 derived mesendoderm cultured cells', 'H1 derived mesenchymal stem cells', 'H1 derived neuronal progenitor cultured cells', 'heart', 'HUES64 cell line', 'kidney', 'large intestine', 'liver', 'lung', 'muscle, arm', 'muscle, back', 'muscle, leg', 'muscle, trunk', 'ovary', 'pancreas', 'psoas muscle', 'sigmoid colon', 'skeletal muscle, lower limb', 'small intestine', 'spleen', 'stomach', 'testes, pool', 'thymus']
+    },
+    grid: {
+        x:60, x2:10, y2:290
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            type:"bar",
+            data:[29, 25, 1, 1, 1, 2, 2, 1, 2, 19, 7, 28, 18, 2, 2, 4, 57, 6, 28, 8, 2, 28, 13, 10, 12, 3, 5, 22, 30, 24, 2, 38, 30, 10, 1, 12],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChart5.setOption(option5);
+var myChart6 = echarts.init(document.getElementById('bar3'));
+var option6 = {
+    title : {
+        text: 'Number of RNA editing sites',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        axisLabel:{
+            interval :0,
+            rotate :90
+        },
+        data : ['adipose', 'adrenal gland', 'bladder', 'CD14 primary cells', 'CD19 primary cells', 'CD3 primary cells', 'CD4 primary cells', 'CD56 primary cells', 'CD8 primary cells', 'esophagus', 'fibroblasts', 'gastric', 'H1', 'H1 BMP4 derived mesendoderm cultured cells', 'H1 derived mesenchymal stem cells', 'H1 derived neuronal progenitor cultured cells', 'heart', 'HUES64 cell line', 'kidney', 'large intestine', 'liver', 'lung', 'muscle, arm', 'muscle, back', 'muscle, leg', 'muscle, trunk', 'ovary', 'pancreas', 'psoas muscle', 'sigmoid colon', 'skeletal muscle, lower limb', 'small intestine', 'spleen', 'stomach', 'testes, pool', 'thymus']
+    },
+    grid: {
+        x:60, x2:10, y2:290
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            type:"bar",
+            data:[156, 321, 158, 654, 15, 648, 135, 314, 489, 564, 16, 648, 16, 165, 489, 489, 74, 21, 321, 74, 354, 321, 879, 54, 35, 445, 345, 354, 32, 48, 314, 35, 54, 326, 23, 54],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChart6.setOption(option6);
+var myChart7 = echarts.init(document.getElementById('pie1'));
+var option7 = {
+    title : {
+        text: 'Location',
+        x:'center',
+        top: 20,
+        textStyle:{
+          fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a}<br/>{b} : {c} ({d}%)"
+    },
+    series : [
+        {
+            name:"Location",
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value:654, name:'downstream'},
+                {value:3241, name:'upstream'},
+                {value:486, name:'upstream;downstream'},
+                {value:231, name:'intergenic'},
+                {value:486, name:'intronic'},
+                {value:354, name:'ncRNA_exonic'},
+                {value:489, name:'ncRNA_intronic'},
+                {value:321, name:'nonsynonymous SNV'},
+                {value:486, name:'synonymous SNV'},
+                {value:68, name:'UTR3'},
+                {value:35, name:'UTR5'}
+            ],
+            itemStyle: {
+                normal: {
+                    shadowBlur: 20,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+            color:['#f95a90','#b51ab5','#1ab2e2','#1ab21c','#ffb41a','#f8511a','#497ce9']
+        }
+    ]
+};
+myChart7.setOption(option7);
+var myChart8 = echarts.init(document.getElementById('bar4'));
+var option8 = {
+    title : {
+        text: 'Number of Samples',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        axisLabel:{
+            interval :0,
+            rotate :30
+        },
+        data : ['CCLE-BLCA', 'CCLE-BRCA', 'CCLE-CESC', 'CCLE-COAD', 'CCLE-DLBC', 'CCLE-ESCA', 'CCLE-HNSC', 'CCLE-KIRC', 'CCLE-LCLL', 'CCLE-LGG', 'CCLE-LIHC', 'CCLE-LUSC', 'CCLE-MESO', 'CCLE-MM', 'CCLE-OV', 'CCLE-PAAD', 'CCLE-PRAD', 'CCLE-SARC', 'CCLE-SKCM', 'CCLE-STAD', 'CCLE-THCA', 'CCLE-UCEC']
+    },
+    grid: {
+        x:60, x2:10, y2:60
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            barMaxWidth:30,
+            type:"bar",
+            data:[31, 81, 38, 72, 83, 29, 50, 33, 122, 83, 46, 219, 2, 42, 59, 57, 11, 51, 68, 54, 14, 6],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChart8.setOption(option8);
+var myChart9 = echarts.init(document.getElementById('bar5'));
+var option9 = {
+    title : {
+        text: 'Number of RNA editing sites',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        axisLabel:{
+            interval :0,
+            rotate :30
+        },
+        data : ['CCLE-BLCA', 'CCLE-BRCA', 'CCLE-CESC', 'CCLE-COAD', 'CCLE-DLBC', 'CCLE-ESCA', 'CCLE-HNSC', 'CCLE-KIRC', 'CCLE-LCLL', 'CCLE-LGG', 'CCLE-LIHC', 'CCLE-LUSC', 'CCLE-MESO', 'CCLE-MM', 'CCLE-OV', 'CCLE-PAAD', 'CCLE-PRAD', 'CCLE-SARC', 'CCLE-SKCM', 'CCLE-STAD', 'CCLE-THCA', 'CCLE-UCEC']
+    },
+    grid: {
+        x:60, x2:10, y2:60
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            barMaxWidth:30,
+            type:"bar",
+            data:[156, 321, 158, 654, 15, 648, 135, 1486, 314, 489, 564, 16, 648, 16, 165, 489, 489, 654, 562, 74, 354, 4654],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChart9.setOption(option9);
+var myCharta = echarts.init(document.getElementById('pie2'));
+var optiona = {
+    title : {
+        text: 'Location',
+        x:'center',
+        top: 20,
+        textStyle:{
+          fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a}<br/>{b} : {c} ({d}%)"
+    },
+    series : [
+        {
+            name:"Location",
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value:654, name:'downstream'},
+                {value:3241, name:'upstream'},
+                {value:486, name:'upstream;downstream'},
+                {value:231, name:'intergenic'},
+                {value:486, name:'intronic'},
+                {value:354, name:'ncRNA_exonic'},
+                {value:489, name:'ncRNA_intronic'},
+                {value:321, name:'nonsynonymous SNV'},
+                {value:486, name:'synonymous SNV'},
+                {value:68, name:'UTR3'},
+                {value:35, name:'UTR5'}
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myCharta.setOption(optiona);
+var myChartb = echarts.init(document.getElementById('bar6'));
+var optionb = {
+    title : {
+        text: 'Number of Samples',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        axisLabel:{
+            interval :0,
+            rotate :30
+        },
+        data : ['ABI_SOLID LIV', 'ABI_SOLID NWU', 'ABI_SOLID PSU', 'ABI_SOLID SQW', 'ILLUMINA AGR', 'ILLUMINA BGI', 'ILLUMINA CNL', 'ILLUMINA COH', 'ILLUMINA MAY', 'ILLUMINA NVS', 'ILLUMINA NYG', 'LS454 MGP', 'LS454 NYU', 'LS454 SQW']
+    },
+    grid: {
+        x:60, x2:10, y2:60
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            barMaxWidth : 30,
+            type:"bar",
+            data:[50, 288, 288, 292, 256, 384, 360, 128, 384, 320, 140, 4, 4, 4],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChartb.setOption(optionb);
+var myChartc = echarts.init(document.getElementById('bar7'));
+var optionc = {
+    title : {
+        text: 'Number of RNA editing sites',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        axisLabel:{
+            interval :0,
+            rotate :30
+        },
+        data : ['ABI_SOLID LIV', 'ABI_SOLID NWU', 'ABI_SOLID PSU', 'ABI_SOLID SQW', 'ILLUMINA AGR', 'ILLUMINA BGI', 'ILLUMINA CNL', 'ILLUMINA COH', 'ILLUMINA MAY', 'ILLUMINA NVS', 'ILLUMINA NYG', 'LS454 MGP', 'LS454 NYU', 'LS454 SQW']
+    },
+    grid: {
+        x:60, x2:10, y2:60
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            barMaxWidth: 30 ,
+            type:"bar",
+            data:[56, 156, 65, 2350, 456, 321, 156, 15, 632, 1489, 4865, 21, 893, 123],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChartc.setOption(optionc);
+var myChartd = echarts.init(document.getElementById('pie3'));
+var optiond = {
+    title : {
+        text: 'Location',
+        x:'center',
+        top: 20,
+        textStyle:{
+          fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a}<br/>{b} : {c} ({d}%)"
+    },
+    series : [
+        {
+            name:"Location",
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value: 654 , name: 'downstream'},
+                {value: 3241 , name:' upstream '},
+                {value: 486 , name:' upstream;downstream '},
+                {value: 231 , name:' intergenic '},
+                {value: 486 , name:' intronic '},
+                {value: 354 , name:' ncRNA_exonic '},
+                {value: 489 , name:' ncRNA_intronic '},
+                {value: 321 , name:' nonsynonymous SNV '},
+                {value: 486 , name:' synonymous SNV '},
+                {value: 68 , name:' UTR3 '},
+                {value: 35 , name:' UTR5 '}
+            ],
+            itemStyle: {
+                normal: {
+                    shadowBlur: 20,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+            color:['#f95a90','#b51ab5','#1ab2e2','#1ab21c','#ffb41a','#f8511a','#497ce9']
+        }
+    ]
+};
+myChartd.setOption(optiond);
+var myCharte = echarts.init(document.getElementById('bar8'));
+var optione = {
+    title : {
+        text: 'Number of Samples',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        axisLabel:{
+            interval :0,
+            rotate :30
+        },
+        data : ['LS454 CNL', 'LS454 PSU', 'LS454 UI', 'ION_TORRENT PGM MSK', 'ION_TORRENT PGM NIH', 'ION_TORRENT PGM PSU', 'ION_TORRENT Proton MSK', 'ION_TORRENT Proton NCI', 'Illumina HiSeq 2500 W-PolyA', 'Illumina HiSeq 2500 W-RIBO', 'Illumina HiSeq 2500 V', 'Illumina HiSeq 2500 L', 'Illumina HiSeq 2500 R', 'Illumina HiSeq 2500 M-Heat', 'Illumina HiSeq 2500 M-sonication', 'Illumina HiSeq 2500 N-heat', 'Illumina HiSeq 2500 N-Rnase']
+    },
+    grid: {
+        x:60, x2:10, y2:160
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            barMaxWidth:30,
+            type:"bar",
+            data:[4, 4, 8, 9, 10, 6, 6, 4, 128, 128, 36, 22, 36, 18, 18, 6, 30],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myCharte.setOption(optione);
+var myChartf = echarts.init(document.getElementById('bar9'));
+var optionf = {
+    title : {
+        text: 'Number of RNA editing sites',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        axisLabel:{
+            interval :0,
+            rotate :30
+        },
+        data : ['LS454 CNL', 'LS454 PSU', 'LS454 UI', 'ION_TORRENT PGM MSK', 'ION_TORRENT PGM NIH', 'ION_TORRENT PGM PSU', 'ION_TORRENT Proton MSK', 'ION_TORRENT Proton NCI', 'Illumina HiSeq 2500 W-PolyA', 'Illumina HiSeq 2500 W-RIBO', 'Illumina HiSeq 2500 V', 'Illumina HiSeq 2500 L', 'Illumina HiSeq 2500 R', 'Illumina HiSeq 2500 M-Heat', 'Illumina HiSeq 2500 M-sonication', 'Illumina HiSeq 2500 N-heat', 'Illumina HiSeq 2500 N-Rnase']
+    },
+    grid: {
+        x:60, x2:10, y2:160
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            barMaxWidth:30,
+            type:"bar",
+            data:[465, 321, 789, 3124, 16, 321, 23, 1456, 1564, 2313, 132, 654, 1322, 1326, 321, 321, 3295],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChartf.setOption(optionf);
+var myChartg = echarts.init(document.getElementById('pie4'));
+var optiong = {
+    title : {
+        text: 'Location',
+        x:'center',
+        top: 20,
+        textStyle:{
+          fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a}<br/>{b} : {c} ({d}%)"
+    },
+    series : [
+        {
+            name:"Location",
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value: 654 , name: 'downstream'},
+                {value: 3241 , name:' upstream '},
+                {value: 486 , name:' upstream;downstream '},
+                {value: 231 , name:' intergenic '},
+                {value: 486 , name:' intronic '},
+                {value: 354 , name:' ncRNA_exonic '},
+                {value: 489 , name:' ncRNA_intronic '},
+                {value: 321 , name:' nonsynonymous SNV '},
+                {value: 486 , name:' synonymous SNV '},
+                {value: 68 , name:' UTR3 '},
+                {value: 35 , name:' UTR5 '}
+            ],
+            itemStyle: {
+                normal: {
+                    shadowBlur: 20,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+            color:['#f95a90','#b51ab5','#1ab2e2','#1ab21c','#ffb41a','#f8511a','#497ce9']
+        }
+    ]
+};
+myChartg.setOption(optiong);
+var myCharth = echarts.init(document.getElementById('bara'));
+var optionh = {
+    title : {
+        text: 'Number of Samples',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        data : ['CEU', 'FIN', 'GBR', 'TSI', 'YRI']
+    },
+    grid: {
+        x:60, x2:10, y2:60
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            barMaxWidth:30,
+            type:"bar",
+            data:[91, 95, 94, 93, 89],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myCharth.setOption(optionh);
+var myCharti = echarts.init(document.getElementById('barb'));
+var optioni = {
+    title : {
+        text: 'Number of RNA editing sites',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        data : ['CEU', 'FIN', 'GBR', 'TSI', 'YRI']
+    },
+    grid: {
+        x:60, x2:10, y2:60
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            barMaxWidth:30,
+            type:"bar",
+            data:[171783, 201918, 210524, 187392, 195548],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myCharti.setOption(optioni);
+var myChartj = echarts.init(document.getElementById('pie5'));
+var optionj = {
+    title : {
+        text: 'Location',
+        x:'center',
+        top: 20,
+        textStyle:{
+          fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a}<br/>{b} : {c} ({d}%)"
+    },
+    series : [
+        {
+            name:"Location",
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value:91, name:'CEU'},
+                {value:95, name:'FIN'},
+                {value:94, name:'GBR'},
+                {value:93, name:'TSI'},
+                {value:89, name:'YRI'}
+            ],
+            itemStyle: {
+                normal: {
+                    shadowBlur: 20,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+            color:['#f95a90','#b51ab5','#1ab2e2','#1ab21c','#ffb41a','#f8511a','#497ce9']
+        }
+    ]
+};
+myChartj.setOption(optionj);
+var myChartk = echarts.init(document.getElementById('barc'));
+var optionk = {
+    title : {
+        text: 'Number of Samples',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        data : ['Adr', 'Brn', 'Hrt', 'Kdn', 'Lng', 'Lvr', 'Msc', 'Spl', 'Thm', 'Tst', 'Utr']
+    },
+    grid: {
+        x:60, x2:10, y2:60
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            barMaxWidth :30,
+            type:"bar",
+            data:[66, 66, 66, 66, 66, 66, 66, 66, 66, 32, 34],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChartk.setOption(optionk);
+var myChartl = echarts.init(document.getElementById('bard'));
+var optionl = {
+    title : {
+        text: 'Number of RNA editing sites',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        data : ['Adr', 'Brn', 'Hrt', 'Kdn', 'Lng', 'Lvr', 'Msc', 'Spl', 'Thm', 'Tst', 'Utr']
+    },
+    grid: {
+        x:60, x2:10, y2:60
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            barMaxWidth : 30,
+            type:"bar",
+            data:[453, 324, 354, 687, 2489, 2156, 2459, 2486, 2356, 488, 289],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChartl.setOption(optionl);
+var myChartm = echarts.init(document.getElementById('pie6'));
+var optionm = {
+    title : {
+        text: 'Location',
+        x:'center',
+        top: 20,
+        textStyle:{
+          fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a}<br/>{b} : {c} ({d}%)"
+    },
+    series : [
+        {
+            name:"Location",
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value: 654 , name: 'downstream'},
+                {value: 3241 , name:' upstream '},
+                {value: 486 , name:' upstream;downstream '},
+                {value: 231 , name:' intergenic '},
+                {value: 486 , name:' intronic '},
+                {value: 354 , name:' ncRNA_exonic '},
+                {value: 489 , name:' ncRNA_intronic '},
+                {value: 321 , name:' nonsynonymous SNV '},
+                {value: 486 , name:' synonymous SNV '},
+                {value: 68 , name:' UTR3 '},
+                {value: 35 , name:' UTR5 '}
+            ],
+            itemStyle: {
+                normal: {
+                    shadowBlur: 20,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+            color:['#f95a90','#b51ab5','#1ab2e2','#1ab21c','#ffb41a','#f8511a','#497ce9']
+        }
+    ]
+};
+myChartm.setOption(optionm);
+var myChartn = echarts.init(document.getElementById('bare'));
+var optionn = {
+    title : {
+        text: 'Number of Samples',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        data : ['Adr', 'Brn', 'Hrt', 'Kdn', 'Lng', 'Lvr', 'Msc', 'Spl', 'Thm', 'Tst', 'Utr']
+    },
+    grid: {
+        x:60, x2:10, y2:60
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            barMaxWidth : 30,
+            type:"bar",
+            data:[66, 66, 66, 66, 66, 66, 66, 66, 66, 32, 34],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChartn.setOption(optionn);
+var myCharto = echarts.init(document.getElementById('barf'));
+var optiono = {
+    title : {
+        text: 'Number of RNA editing sites',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        data : ['Adr', 'Brn', 'Hrt', 'Kdn', 'Lng', 'Lvr', 'Msc', 'Spl', 'Thm', 'Tst', 'Utr']
+    },
+    grid: {
+        x:60, x2:10, y2:60
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            barMaxWidth : 30,
+            type:"bar",
+            data:[453, 324, 354, 687, 2489, 2156, 2459, 2486, 2356, 488, 289],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myCharto.setOption(optiono);
+var myChartp = echarts.init(document.getElementById('pie7'));
+var optionp = {
+    title : {
+        text: 'Location',
+        x:'center',
+        top: 20,
+        textStyle:{
+          fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a}<br/>{b} : {c} ({d}%)"
+    },
+    series : [
+        {
+            name:"Location",
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value: 654 , name: 'downstream'},
+                {value: 3241 , name:' upstream '},
+                {value: 486 , name:' upstream;downstream '},
+                {value: 231 , name:' intergenic '},
+                {value: 486 , name:' intronic '},
+                {value: 354 , name:' ncRNA_exonic '},
+                {value: 489 , name:' ncRNA_intronic '},
+                {value: 321 , name:' nonsynonymous SNV '},
+                {value: 486 , name:' synonymous SNV '},
+                {value: 68 , name:' UTR3 '},
+                {value: 35 , name:' UTR5 '}
+            ],
+            itemStyle: {
+                normal: {
+                    shadowBlur: 20,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+            color:['#f95a90','#b51ab5','#1ab2e2','#1ab21c','#ffb41a','#f8511a','#497ce9']
+        }
+    ]
+};
+myChartp.setOption(optionp);
+var myChartq = echarts.init(document.getElementById('barg'));
+var optionq = {
+    title : {
+        text: 'Number of Samples',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        axisLabel:{
+            interval :0,
+            rotate :30
+        },
+        data : ['D.ananassae', 'D.melanogaster', 'D.mojavensis', 'D.pseudoobscura', 'D.simulans', 'D.virilis', 'D.yakuba']
+    },
+    grid: {
+        x:60, x2:10, y2:70
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            barMaxWidth : 30,
+            type:"bar",
+            data:[2, 911, 26, 32, 17, 2, 2],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChartq.setOption(optionq);
+var myChartr = echarts.init(document.getElementById('barh'));
+var optionr = {
+    title : {
+        text: 'Number of RNA editing sites',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        axisLabel:{
+            interval :0,
+            rotate :30
+        },
+        data : ['D.ananassae', 'D.melanogaster', 'D.mojavensis', 'D.pseudoobscura', 'D.simulans', 'D.virilis', 'D.yakuba']
+    },
+    grid: {
+        x:60, x2:10, y2:70
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            barMaxWidth : 30,
+            type:"bar",
+            data:[50, 2000, 15, 300, 254, 315, 1685],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChartr.setOption(optionr);
+var myCharts = echarts.init(document.getElementById('pie8'));
+var options = {
+    title : {
+        text: 'Location',
+        x:'center',
+        top: 20,
+        textStyle:{
+          fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a}<br/>{b} : {c} ({d}%)"
+    },
+    series : [
+        {
+            name:"Location",
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value: 654 , name: 'downstream'},
+                {value: 3241 , name:' upstream '},
+                {value: 486 , name:' upstream;downstream '},
+                {value: 231 , name:' intergenic '},
+                {value: 486 , name:' intronic '},
+                {value: 354 , name:' ncRNA_exonic '},
+                {value: 489 , name:' ncRNA_intronic '},
+                {value: 321 , name:' nonsynonymous SNV '},
+                {value: 486 , name:' synonymous SNV '},
+                {value: 68 , name:' UTR3 '},
+                {value: 35 , name:' UTR5 '}
+            ],
+            itemStyle: {
+                normal: {
+                    shadowBlur: 20,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+            color:['#f95a90','#b51ab5','#1ab2e2','#1ab21c','#ffb41a','#f8511a','#497ce9']
+        }
+    ]
+};
+myCharts.setOption(options);
+var myChartt = echarts.init(document.getElementById('bari'));
+var optiont = {
+    title : {
+        text: 'Number of Samples',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        data : ['C.brenneri', 'C.briggsae', 'C.elegans', 'C.japonica', 'C.remanei']
+    },
+    grid: {
+        x:60, x2:10, y2:60
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            barMaxWidth : 30,
+            type:"bar",
+            data:[20, 59, 519, 17, 28],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChartt.setOption(optiont);
+var myChartu = echarts.init(document.getElementById('barj'));
+var optionu = {
+    title : {
+        text: 'Number of RNA editing sites',
+        x:'center',
+        top: 20,
+        textStyle:{
+            fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b} : {c} "
+    },
+    xAxis:{
+        data : ['C.brenneri', 'C.briggsae', 'C.elegans', 'C.japonica', 'C.remanei']
+    },
+    grid: {
+        x:60, x2:10, y2:60
+    },
+    yAxis: {
+        splitLine:{
+            show : false
+        }
+    },
+    series : [
+        {
+            barMaxWidth:30,
+            type:"bar",
+            data:[156, 32, 165, 216, 65],
+            itemStyle: {
+                normal:{
+                    color:new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#83bff6'},
+                            {offset: 0.5, color: '#188df0'},
+                            {offset: 1, color: '#188df0'}
+                        ])
+                },
+                emphasis: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            {offset: 0, color: '#2378f7'},
+                            {offset: 0.7, color: '#2378f7'},
+                            {offset: 1, color: '#83bff6'}
+                        ]),
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChartu.setOption(optionu);
+var myChartv = echarts.init(document.getElementById('pie9'));
+var optionv = {
+    title : {
+        text: 'Location',
+        x:'center',
+        top: 20,
+        textStyle:{
+          fontSize:24
+        }
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a}<br/>{b} : {c} ({d}%)"
+    },
+    series : [
+        {
+            name:"Location",
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value: 654 , name: 'downstream'},
+                {value: 3241 , name:' upstream '},
+                {value: 486 , name:' upstream;downstream '},
+                {value: 231 , name:' intergenic '},
+                {value: 486 , name:' intronic '},
+                {value: 354 , name:' ncRNA_exonic '},
+                {value: 489 , name:' ncRNA_intronic '},
+                {value: 321 , name:' nonsynonymous SNV '},
+                {value: 486 , name:' synonymous SNV '},
+                {value: 68 , name:' UTR3 '},
+                {value: 35 , name:' UTR5 '}
+            ],
+            itemStyle: {
+                normal: {
+                    shadowBlur: 20,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+            color:['#f95a90','#b51ab5','#1ab2e2','#1ab21c','#ffb41a','#f8511a','#497ce9']
+        }
+    ]
+};
+myChartv.setOption(optionv);
+charts.push(myChart2);
+charts.push(myChart3);
+charts.push(myChart4);
+charts.push(myChart5);
+charts.push(myChart6);
+charts.push(myChart7);
+charts.push(myChart8);
+charts.push(myChart9);
+charts.push(myCharta);
+charts.push(myChartb);
+charts.push(myChartc);
+charts.push(myChartd);
+charts.push(myCharte);
+charts.push(myChartf);
+charts.push(myChartg);
+charts.push(myCharth);
+charts.push(myCharti);
+charts.push(myChartj);
+charts.push(myChartk);
+charts.push(myChartl);
+charts.push(myChartm);
+charts.push(myChartn);
+charts.push(myCharto);
+charts.push(myChartp);
+charts.push(myChartq);
+charts.push(myChartr);
+charts.push(myCharts);
+charts.push(myChartt);
+charts.push(myChartu);
+charts.push(myChartv);
+$(window).resize(function(){
+    for(var i=0;i<charts.length;i++){
+        charts[i].resize();
+    }
+});
+$("a[data-toggle='tab']").on('shown.bs.tab', function(e) {
+    for(var i = 0; i < charts.length; i++) {
+        charts[i].resize();
+    }
+});
+</script>
+{% csrf_token %}
+{% for key,error in search_form.errors.items %}{{key}}:{{error}}{% endfor %}
+{% endblock %}

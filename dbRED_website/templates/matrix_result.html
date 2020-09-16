@@ -1,0 +1,913 @@
+{% extends 'base.html' %}
+
+{% block title %} Result {% endblock %}
+
+{% load staticfiles %}
+
+
+
+{% block homeclass %}
+
+{% endblock %}
+
+{% block content %}
+<script>
+    var t1 = new Date().getTime();
+</script>
+<style>
+
+#gopage {
+
+  vertical-align:middle;
+
+  line-height:79px;
+
+}
+
+#page_input{
+
+  top:22px;
+
+}
+
+</style>
+<!--<div class="loader" style="position:fixed;top:50%;left:50%;">
+    <div class="loader-inner ball-spin-fade-loader">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+</div>-->
+<div class="section">
+
+    <div class="container">
+
+        <div class="row" style="width:1315px;margin-left:-70px">
+
+            <div class="col-md-12">
+
+                <table class="table table-hover">
+                    {% if Specie != 'Cbrenneri' and Specie != 'Cjaponica' and Specie != 'Cremanei' %}
+                    <tr>
+                        <td>AAChagne</td>
+
+                        <td>
+
+                            {% for AAChange,select in all_AAChanges.items %}
+                            <input type="checkbox" name="AAChange" id="{{AAChange}}" value="{{AAChange}}" {% if select == 1 %}checked=true {% endif %} onclick="jumpto()">{{AAChange}}
+                            {% for AAChange2,num in AAChangeNum.items %}
+                            {% ifequal AAChange AAChange2 %}
+                            {% if num == 0 %}
+                              <span class="badge">{{num}}</span>
+                            {% else %}
+                              <span class="badge" style="background-color:#337cbb;">{{num}}</span>
+                            {% endif %}
+                            {% endifequal %}
+                            {% endfor %}
+                            {% endfor %}
+
+                        </td>
+
+                    </tr>
+                    {% endif %}
+                    {% if Specie != 'Cbrenneri' and Specie != 'Cjaponica' and Specie != 'Cremanei' and Specie != 'Dmojavensis' and Specie != 'Dvirilis' %}
+                    <tr>
+
+                        <td>Location</td>
+
+                        <td>
+
+                            {% for location,select in all_locations.items %}
+
+                            <input type="checkbox" name="location" id="{{location}}" value="{{location}}" {% if select == 1 %}checked=true {% endif %} onclick="jumpto()">{{location}}
+                            {% for loc,num in RepeatNum.items %}
+                            {% ifequal location loc %}
+                            {% if num == 0 %}
+                              <span class="badge">{{num}}</span>
+                            {% else %}
+                              <span class="badge" style="background-color:#337cbb;">{{num}}</span>
+                            {% endif %}
+                            {% endifequal %}
+                            {% endfor %}
+                            {% endfor %}
+
+                        </td>
+
+                    </tr>
+                    {% endif %}
+                    {% if Specie != 'Cbrenneri' and Specie != 'Cjaponica' and Specie != 'Cremanei' %}
+                    <tr>
+
+                        <td>GeneRegion</td>
+
+                        <td>
+
+                            {% for gene,select in all_generegions.items %}
+
+                            <input type="checkbox" name="GeneRegion" id="{{gene}}" value="{{gene}}" {% if select == 1 %}checked=true {% endif %} onclick="jumpto()">{{gene}}
+                            {% for gene2,num in GeneRegionNum.items %}
+                            {% ifequal gene gene2 %}
+                            {% if num == 0 %}
+                              <span class="badge">{{num}}</span>
+                            {% else %}
+                              <span class="badge" style="background-color:#337cbb;">{{num}}</span>
+                            {% endif %}
+                            {% endifequal %}
+                            {% endfor %}
+                            {% endfor %}
+
+                    </td>
+
+                    </tr>
+                    {% endif %}
+                    <!--<tr>
+
+                        <td>Method</td>
+
+                        <td>
+
+                            {% for method,select in all_methods.items %}
+
+                            <input type="checkbox" name="method" id="{{method}}" value="{{method}}" {% if select == 1 %}checked=true {% endif %} onclick="jumpto()">{{method}}
+                            {% for method2,num in MethodNum.items %}
+                            {% ifequal method method2 %}
+                            {% if num == 0 %}
+                              <span class="badge">{{num}}</span>
+                            {% else %}
+                              <span class="badge" style="background-color:#337cbb;">{{num}}</span>
+                            {% endif %}
+                            {% endifequal %}
+                            {% endfor %}
+                            {% endfor %}
+
+                        </td>
+
+                    </tr>
+                    {% if Specie == 'Human' %}
+                    <tr>
+
+                        <td>Project</td>
+
+                        <td>
+
+                            {% for project,select in all_projects.items %}
+
+                            <input type="checkbox" name="project" id="{{project}}" value="{{project}}" {% if select == 1 %}checked=true {% endif %} onclick="jumpto()">{{project}}
+                            {% for project2,num in ProjectNum.items %}
+                            {% ifequal project project2 %}
+                            {% if num == 0 %}
+                              <span class="badge">{{num}}</span>
+                            {% else %}
+                              <span class="badge" style="background-color:#337cbb;">{{num}}</span>
+                            {% endif %}
+                            {% endifequal %}
+                            {% endfor %}
+                            {% endfor %}
+
+                        </td>
+
+                    </tr>
+                    {% endif %}
+
+                    {% if all_celllines %}
+
+                    <tr>
+
+                        <td>Cellline</td>
+
+                        <td>
+
+                            {% for cell,select in all_celllines.items %}
+
+                            <input type="checkbox" name="cellline" id="{{cell}}" value="{{cell}}" {% if select == 1 %}checked=true {% endif %} onclick="jumpto()">{{cell}}
+                            {% for cell2,num in CelllineNum.items %}
+                            {% ifequal cell cell2 %}
+                            {% if num == 0 %}
+                              <span class="badge">{{num}}</span>
+                            {% else %}
+                              <span class="badge" style="background-color:#337cbb;">{{num}}</span>
+                            {% endif %}
+                            {% endifequal %}
+                            {% endfor %}
+                            {% endfor %}
+
+                        </td>
+
+                    </tr>
+
+                    {% endif %}-->
+                    {% if Specie == 'Human' or Specie == 'Mouse' or Specie == 'Rat' or Specie == 'Rhesus' or Specie == 'Chimpanzee' %}
+                    <tr>
+
+                        <td>dbSNP</td>
+
+                        <td>
+
+                            {% for dbsnp,select in all_dbsnp.items %}
+
+                            <input type="checkbox" name="dbsnp" id="{{dbsnp}}" value="{{dbsnp}}" {% if select == 1 %}checked=true {% endif %} onclick="jumpto()">{{dbsnp}}
+                            {% for dbsnp2,num in dbSNPNum.items %}
+                            {% ifequal dbsnp dbsnp2 %}
+                            {% if num == 0 %}
+                              <span class="badge">{{num}}</span>
+                            {% else %}
+                              <span class="badge" style="background-color:#337cbb;">{{num}}</span>
+                            {% endif %}
+                            {% endifequal %}
+                            {% endfor %}
+                            {% endfor %}
+
+						</td>
+                    </tr>
+                    {% endif %}
+                </table>
+				<div class="alert alert-info" role="alert">
+					<div>You has {{ number }} result</div>
+					<form class="form-horizontal" name="form" method="post" style="float:right;margin-top:-27px">
+						<div class="form-group ">
+							<div class="col-md-2" style="width:200px">
+								<select class="bs-select form-control" data-live-search="true" data-size="6" name="Specie" id="site_id" style="width:160px">
+									<option value="Human">Human</option>
+									<option value="Mouse">Mouse</option>
+									<option value="Rat">Rat</option>
+									<option value="Chimpanzee">Chimpanzee</option>
+									<option value="Rhesus">Rhesus</option>
+									<option value="Cbrenneri">C.brenneri</option>
+									<option value="Cbriggsae">C.briggsae</option>
+									<option value="Celegans">C.elegans</option>
+									<option value="Cjaonica">C.japonica</option>
+									<option value="Cremanei">C.remanei</option>
+									<option value="Dananassae">D.ananassae</option>
+									<option value="Dmelanogaster">D.melanogaster</option>
+									<option value="Dmojavensis">D.mojavensis</option>
+									<option value="Dpseudoobscura">D.pseudoobscura</option>
+									<option value="Dsimulans">D.simulans</option>
+									<option value="Dvirilis">D.virilis</option>
+									<option value="Dyakuba">D.yakuba</option>
+								</select>
+							</div>
+							<div class="col-md-9 {% if Error_message %}has-error{%endif%}" style="width:300px; margin-left:-30px">
+								<input type="text" id = "chr" name="Chr" placeholder="Search Coordinates or Gene Symbol"  class="form-control" style="width:300px">
+							</div>
+							<div class="col-md-1" style="margin-left:10px">
+								<button class="btn btn-default" onclick="setaction()">Search</button>
+							</div>
+						</div>
+						{% csrf_token %}
+						<script type="text/javascript">
+							function setaction(){
+					
+							  var chr = form.Chr.value;
+							  document.form.action = '/search/';
+							  form.submit();
+							}
+						</script>
+					</form>
+					{% if Error_message  %}
+					<div class="alert alert-warning alert-dismissible" role="alert">
+					  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+					  <label class="control-label" for="inputError1">{{Error_message}}</label>
+					</div>
+					{% endif %}
+				</div>
+			
+			
+
+        </div>
+
+    </div>
+
+</div>
+<div></div>
+<script>
+    function jumpto(){
+
+      aachange_obj = document.getElementsByName("AAChange");
+
+      aachange_value = [];
+
+      for (k in aachange_obj){
+
+        if(aachange_obj[k].checked){
+
+          aachange_value.push(aachange_obj[k].value);
+
+        }
+
+      }
+
+      var link = '?par={{Numpar}}&flag=1&Chr={{Chr}}&Specie={{Specie}}&Genename={{Genename}}&AAChange='+aachange_value;
+
+      location_obj = document.getElementsByName("location");
+
+      location_value = [];
+
+      for (k in location_obj){
+
+        if(location_obj[k].checked){
+
+          location_value.push(location_obj[k].value);
+
+        }
+
+      }
+
+      link = link + '&Location=' + location_value;
+
+      GeneRegion_obj = document.getElementsByName("GeneRegion");
+
+      GeneRegion_value = [];
+
+      for (k in GeneRegion_obj){
+
+        if(GeneRegion_obj[k].checked){
+
+          GeneRegion_value.push(GeneRegion_obj[k].value);
+
+        }
+
+      }
+
+      link = link + '&GeneRegion=' + GeneRegion_value;
+
+      method_obj = document.getElementsByName("method");
+
+      method_value = [];
+
+      for (k in method_obj){
+
+        if(method_obj[k].checked){
+
+          method_value.push(method_obj[k].value);
+
+        }
+
+      }
+
+      link = link + '&Method=' + method_value;
+
+      project_obj = document.getElementsByName("project");
+
+      project_value = [];
+
+      for (k in project_obj){
+
+        if(project_obj[k].checked){
+
+          project_value.push(project_obj[k].value);
+
+        }
+
+      }
+
+      link = link + '&Project=' + project_value;
+
+      dbsnp_obj = document.getElementsByName("dbsnp");
+
+      dbsnp_value = [];
+
+      for (k in dbsnp_obj){
+
+        if(dbsnp_obj[k].checked){
+
+          dbsnp_value.push(dbsnp_obj[k].value);
+
+        }
+
+      }
+
+      link = link + '&dbSNP=' + dbsnp_value;
+
+      cellline_obj = document.getElementsByName("cellline");
+
+      cellline_value = [];
+
+      for (k in cellline_obj){
+
+        if(cellline_obj[k].checked){
+
+          str = cellline_obj[k].value
+          str = str.replace(/\+/g,"%2B")
+          cellline_value.push(str);
+
+        }
+
+      }
+
+      link = link + '&Cellline=' + cellline_value;
+
+      window.location.href=link;
+    }
+
+</script>
+
+<div id="img_wait"></div>
+
+<div class="section" style="margin-left:-113px">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-12" >
+
+                <table class="table table-bordered table-hover table-responsive" style="table-layout:fixed;word-break:break-all;word-wrap:break-word;">
+
+                    <thead>
+
+                        <tr>
+							{% if Specie == "Human" or Specie == "Mouse" %}
+	                        <th width="40px" style="border-bottom-style:none;"></th>
+							{% endif %}
+                            <th data-toggle="tooltip" data-container="body" data-original-title="Rnaedit's Name defined by dbRed" class="text-center" aria-label="Rnaedit Name" width="110px" style="border-bottom-style:none;">RnaeditName</th>
+                            {% if Specie == "Cbrenneri" or Specie == "Cjaponica" or Specie == "Cremanei" or Specie == "Dananassae" or Specie == "Dmojavensis" or Specie == "Dvirilis" %}
+                            <th data-toggle="tooltip" data-container="body" data-original-title="Chromosome Name" class="text-center" aria-label="Chr" width="150px" style="border-bottom-style:none;">Chr</th>
+                            {% else %}
+                            <th data-toggle="tooltip" data-container="body" data-original-title="Chromosome Name" class="text-center" aria-label="Chr" width="70px" style="border-bottom-style:none;">Chr</th>
+                            {% endif %}
+
+                            <th data-toggle="tooltip" data-container="body" data-original-title="Genome Coordinate" class="text-center" aria-label="Position" width="90px" style="border-bottom-style:none;">Pos</th>
+
+                            <th data-toggle="tooltip" data-container="body" data-original-title="Edited Nucleotide" class="text-center" aria-label="Strand" width="65px" style="border-bottom-style:none;">Strand</th>
+
+                            <th data-toggle="tooltip" data-container="body" data-original-title="Reference Nucleotide" class="text-center" aria-label="Ref" width="45px" style="border-bottom-style:none;">Ref</th>
+
+                            <th data-toggle="tooltip" data-container="body" data-original-title="Altered Nucleotide" class="text-center" aria-label="Alt" width="45px" style="border-bottom-style:none;">Alt</th>
+
+                            <th data-toggle="tooltip" data-container="body" data-original-title="Compute Method" class="text-center" aria-label="Method" width="70px" style="border-bottom-style:none;">Method</th>
+
+                            {% if Specie != "Cbrenneri" and Specie != "Cjaponica" and Specie != "Cremanei" %}
+                            <th data-toggle="tooltip" data-container="body" data-original-title="Amino acid change" class="text-center" aria-label="AAChange" width="100px" style="border-bottom-style:none;">AAChange</th>
+                            {% endif %}
+
+                            {% if Specie != "Cbrenneri" and Specie != "Cjaponica" and Specie != "Cremanei" %}
+                            <th data-toggle="tooltip" data-container="body" data-original-title="Gene Symbol According To Gencode"  class="text-center" aria-label="GeneName" width="110px" style="border-bottom-style:none;">GeneName</th>
+                            {% endif %}
+
+                            <th data-toggle="tooltip" data-container="body" data-original-title="Editing Site Annotated In Public Databases" class="text-center" aria-label="Database" width="80px" style="border-bottom-style:none;">Database</th>
+
+                            <th data-toggle="tooltip" data-container="body" data-original-title="dnSNP Annotation" class="text-center" aria-label="db SNP" width="65px" style="border-bottom-style:none;">dbSNP</th>
+                            {% if Specie != "Cbrenneri" and Specie != "Cjaponica" and Specie != "Cremanei" and Specie != "Dmojavensis" and Specie != "Dvirilis" %}
+                            <th data-toggle="tooltip" data-container="body" data-original-title="Editing Location: ALU, REP, NONREP" class="text-center" aria-label="Location" width="85px" style="border-bottom-style:none;">Location</th>
+                            {% endif %}
+
+                            {% if Specie != "Cbrenneri" and Specie != "Cjaponica" and Specie != "Cremanei" and Specie != "Dmojavensis" and Specie != "Dvirilis" %}
+                            <th data-toggle="tooltip" data-container="body" data-original-title="Repeat Type According To RepeatMask" class="text-center" aria-label="Repeats" width="100px" style="border-bottom-style:none;">Repeats</th>
+                            {% endif %}
+
+                            {% if Specie == "Human" or Specie == "Mouse" %}
+                            <th data-toggle="tooltip" data-container="body" data-original-title="Phastcons value" class="text-center" aria-label="Phastcons" width="90px" style="border-bottom-style:none;">Phastcons</th>
+                            {% endif %}
+
+                            {% if Specie != "Cbrenneri" and Specie != "Cjaponica" and Specie != "Cremanei" %}
+                            <th data-toggle="tooltip" data-container="body" data-original-title="Gene Region According To Gencode" class="text-center" aria-label="Region" width="120px" style="border-bottom-style:none;">Region</th>
+                            {% endif %}
+                          </tr>
+
+
+                    </thead>
+
+                    <tbody>
+
+                    {% for rnaedit in RNAedits.object_list %}
+
+                        <tr>
+                        
+                            
+                            {% if Specie == "Human" %}
+                            	<td class="text-center"><button class="btn btn-primary btn-xs" type="button" data-toggle="tooltip" title="" id="ucsc_0" onclick="window.open('http://genome.ucsc.edu/cgi-bin/hgTracks?db=hg19&amp;position={{ rnaedit.Chr }}:{{ rnaedit.position }}-{{ rnaedit.position }}');" data-original-title="View in UCSC Genome Browser">U</button></td>
+                        	{% elif Specie == "Mouse" %}
+                            	<td class="text-center"><button class="btn btn-primary btn-xs" type="button" data-toggle="tooltip" title="" id="ucsc_0" onclick="window.open('http://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&amp;position={{ rnaedit.Chr }}:{{ rnaedit.position }}-{{ rnaedit.position }}');" data-original-title="View in UCSC Genome Browser">U</button></td>
+                        	{% endif %}
+							
+                            <td class="text-center"><button class="btn btn-success btn-xs" data-toggle="tooltip" title="name" id="name" onclick="window.open('/detail/?Chr={{rnaedit.Chr}}:{{rnaedit.position}}&Specie={{Specie}}')" data-original-title="Detail information for RNA editing site">{{rnaedit.name}}</button></td>
+
+                            <td class="text-center">{{rnaedit.Chr}}</td>
+
+                            <td class="text-center">{{rnaedit.position}}</td>
+
+                            <td class="text-center">{{rnaedit.Strand}}</td>
+
+                            <td class="text-center">{{rnaedit.Ref}}</td>
+
+                            <td class="text-center">{{rnaedit.Alt}}</td>
+
+                            <td class="text-center" width="90px">
+
+                              {% if "G" in rnaedit.method %}
+
+                              <button class="btn btn-danger btn-xs" type="button" data-toggle="tooltip" title="" data-original-title="Giremi">G</button>
+
+                              {% endif %}
+
+                              {% if "D" in rnaedit.method %}
+
+                              <button class="btn btn-primary btn-xs" type="button" data-toggle="tooltip" title="" data-original-title="DeepRed">D</button>
+
+                              {% endif %}
+
+                              {% if "P" in rnaedit.method %}
+
+                              <button class="btn btn-info btn-xs" type="button" data-toggle="tooltip" title="" data-original-title="Jinbilly pool">P</button>
+
+                              {% endif %}
+
+                              {% if "S" in rnaedit.method %}
+
+                              <button class="btn btn-warning btn-xs" type="button" data-toggle="tooltip" title="" data-original-title="Jinbilly single">S</button>
+
+                              {% endif %}
+
+                            </td>
+                            {% if Specie != "Cbrenneri" and Specie != "Cjaponica" and Specie != "Cremanei" %}
+                            <td class="text-center">{{rnaedit.AAChange}}</td>
+                            {% endif %}
+							{% if Specie == "Human" or Specie == "Mouse" %}
+								{% if ","  in rnaedit.Genename or "(" in rnaedit.Genename or ":" in rnaedit.Genename %}
+                        		<td class="text-center">{{rnaedit.Genename}}</td>
+								{% else %}
+								<td class="text-center">
+									<button class="btn btn-warning btn-xs" type="button" data-toggle="tooltip" data-original-title="{{rnaedit.Genename}}" value="{{rnaedit.Genename}}" id="Genename" onclick="geneInfo()">{{rnaedit.Genename}}</button>
+								</td>
+								{% endif %}
+							{% else %}
+                                {% if Specie != "Cbrenneri" and Specie != "Cjaponica" and Specie != "Cremanei" %}
+								<td class="text-center">{{rnaedit.Genename}}</td>
+                                {% endif %}
+							{% endif %}
+                            <td class="text-center">
+
+                              {% if "P" in rnaedit.database %}
+
+                              <button class="btn btn-warning btn-xs" type="button" data-toggle="tooltip" title="" onclick="window.open('http://srv00.recas.ba.infn.it/cgi/atlas/getpage.py?query1={{ rnaedit.Chr }}%3A{{ rnaedit.position }}-{{ rnaedit.position }}&query2=&query3=&query4=&query5=')" data-original-title="RedIportal">P</button>
+
+                              {% endif %}
+
+                              {% if "D" in rnaedit.database %}
+
+							  <button class="btn btn-primary btn-xs" type="button" data-toggle="tooltip" title=""  data-original-title="DARNED">D</button>
+                              {% endif %}
+
+                              {% if "R" in rnaedit.database %}
+                              	  {% if Specie == "Human" %}
+                              	  <button class="btn btn-info btn-xs" type="button" data-toggle="tooltip" title="" onclick="window.open('http://rnaedit.com/search/?species=human&chr={{ rnaedit.Chr | cut:"chr" }}&start={{ rnaedit.position }}&end={{ rnaedit.position }}&gene=');" data-original-title="RADAR">R</button>
+								  {% elif Specie == "Mouse" %}
+	                              <button class="btn btn-info btn-xs" type="button" data-toggle="tooltip" title="" value="{{ rnaedit.Chr }}-{{ rnaedit.position }}" id="Radar" onclick="getMm9()" data-original-title="RADAR">R</button>
+								  {% endif %}
+                              {% endif %}
+
+                              <button class="btn btn-danger btn-xs" type="button" data-toggle="tooltip" title="" data-original-title="dbRed">E</button>
+
+                            </td>
+
+                            <td class="text-center">
+
+                              {% if '-' not in rnaedit.dbSNP %}
+
+                                {% if Specie == "Human" %}
+                                    <button data-toggle="tooltip" title="" class="btn btn-success btn-xs" type="button" onclick="window.open('http://www.ncbi.nlm.nih.gov/SNP/snp_ref.cgi?rs={{ rnaedit.dbSNP }}');" data-original-title="Known SNP {{ rnaedit.dbSNP }}">S</button>
+                                {% else %}
+                                    <button data-toggle="tooltip" title="" class="btn btn-success btn-xs" type="button" data-original-title="Known SNP {{ rnaedit.dbSNP }}">S</button>
+                                {% endif %}
+                              {% else %}
+
+                              <button class="btn btn-danger btn-xs" type="button" data-toggle="tooltip" title="" data-original-title="Not in dbSNP">S</button>
+
+                              {% endif %}
+
+                            </td>
+                            {% if Specie != "Cbrenneri" and Specie != "Cjaponica" and Specie != "Dmojavensis" and Specie != "Dvirilis" and Specie != "Cremanei" %}
+                            <td class="text-center">{{rnaedit.Repeat}}</td>
+                            {% endif %}
+
+                            {% if Specie != "Cbrenneri" and Specie != "Cjaponica" and Specie != "Dmojavensis" and Specie != "Dvirilis" and Specie != "Cremanei" %}
+                            <td class="text-center">{{rnaedit.Element}}</td>
+                            {% endif %}
+                            {% if Specie == "Human" or Specie == "Mouse" %}
+                            <td class="text-center">{{rnaedit.phastcons}}</td>
+                            {% endif %}
+
+                            {% if Specie != "Cbrenneri" and Specie != "Cjaponica" and Specie != "Cremanei" %}
+                            <td class="text-center">{{rnaedit.GeneRegion}}</td>
+                            {% endif %}
+
+                        </tr>
+                        <!--<script>
+			                $(document).ready(function (){
+			                	var specie = "{{Specie}}";
+			                	var gene = "{{rnaedit.Genename}}";
+			                	var punctuation = new Array(",","(",":");
+			                	var flag = 0;
+			                	for (element of punctuation){
+			                		if (gene.indexOf(element) != -1){
+			                			flag = flag + 1;
+			                		}
+			                	}
+			                	console.log(gene);
+			                	if (flag == 0){
+			                		if (specie == "Human"){
+			                			$.ajax({
+					                		url:"/static/Rnaedit_result/ensg2genename.json",
+					                		type:"GET",
+					                		dataType:"json",
+					                		success: function(data) {
+					                			console.log("success")
+					                			var ensgData = data;
+					                			var ensg = ensgData[gene];	
+					                			console.log(ensg);
+					                			var genecardsUrl = "window.open('https://www.genecards.org/cgi-bin/carddisp.pl?gene=" + ensg + "&keywords=" + ensg + "')";
+					                			document.getElementById("Genename").setAttribute("onclick",genecardsUrl);
+					                			document.getElementById("Genename").setAttribute("data-toggle","tooltip");
+					                			document.getElementById("Genename").setAttribute("data-original-title",gene);
+					                			document.getElementById("Genename").className = "btn btn-info btn-xs";
+					                		},
+					                		error: function(xhr){
+					                			console.log('error', xhr)
+					                		}
+					                	});
+			                		}
+			                	}               		                
+			                })                                             
+                        </script>-->
+
+                        {% endfor %}
+
+                    </tbody>
+
+                </table>
+
+                <script>
+
+	                $(function () {
+
+	                  $('[data-toggle="tooltip"]').tooltip()
+                  })
+					  /*var opts = {
+						lines: 9,
+						length: 0,
+						width: 15,
+						radius: 20,
+						corners: 1,
+						rotate: 0,
+						direction: 1,
+						color: '#0101DF',
+						speed: 1,
+						trail: 34,
+						shadow: false,
+						hwaccel: false,
+						className: 'spinner',
+						zIndex: 2e9,
+						top: '50%',
+						left: '50%'
+					  };
+				   	  var target = document.getElementById('img_wait');
+					  var spinner = new Spinner(opts).spin(target);
+	                })*/
+
+	                /*function urlDetect(){
+	                    urlDarned = document.getElementById("url-darned").value;
+	                    $.ajax({
+	                        url:urlDarned,
+	                        type:'GET',
+	                        beforeSend: function (xhr) {
+	        					xhr.setRequestHeader("X-Custom-Header1", "Bar");
+	   						},
+	                        complete:function(response){
+	                            if(response.status==200){
+	                                window.open(urlDarned);
+	                            }else{
+	                                console.log(response.status);
+	                            }
+	                        }
+	                    });
+	                }*/
+	                
+	                function geneInfo(){
+	                	var gene = document.getElementById("Genename").value;
+	                	console.log(gene);
+	                	var specie = "{{Specie}}"
+	                	if (specie == "Human"){
+		                	if ((gene.substr(0,2) == "RP") && (gene.indexOf("-") != -1)){
+		                		$.ajax({
+			                		url:"/static/Rnaedit_result/ensg2genename.json",
+			                		type:"GET",
+			                		dataType:"json",
+			                		success: function(data) {
+			                			var ensgData = data;
+						                var ensg = ensgData[gene];					               
+						                console.log(ensg);
+						                var genecardsUrl = "https://www.genecards.org/cgi-bin/carddisp.pl?gene=" + ensg + "&keywords=" + ensg;
+						                window.open(genecardsUrl);
+			                		}	
+			                	})           
+		                	} else {
+		                		var genecardsUrl = "https://www.genecards.org/cgi-bin/carddisp.pl?gene=" + gene + "&keywords=" + gene;
+		                		window.open(genecardsUrl);
+		                	} 
+		                } else if (specie == "Mouse"){
+		                	var genecardsUrl = "http://www.informatics.jax.org/searchtool/Search.do?query=" + gene + "&submit=Quick+Search";
+		                	window.open(genecardsUrl);
+		                }
+	                }
+					function getMm9(){
+	                	var mm10Site = document.getElementById("Radar").value;
+	                	$.ajax({
+	                		url:"/static/Rnaedit_result/mm9-mm10.json",
+	                		type:"GET",
+	                		dataType:"json",
+	                		success: function(data) {
+	                			var siteData = data;
+	                			var mm9Site = siteData[mm10Site];
+	                			var tmp = mm9Site.split("-");
+	                			var mm9Chrom = tmp[0];
+	                			var mm9Position = tmp[1];
+	                			var chrNum = mm9Chrom.split("chr")[1];
+	                			console.log(chrNum);
+	                			console.log(mm9Position);
+	                			var radarUrl = "http://rnaedit.com/search/?species=mouse&chr=" + chrNum + "&start=" + mm9Position + "&end=" + mm9Position + "&gene=";
+	                			window.open(radarUrl);
+	                			
+	                		},
+	                		error: function(xhr){
+	                			console("error")
+	                		}
+	                	});
+	                }
+				</script>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="section" style="margin-left:-112px">
+
+    <div class="container">
+
+        <div class="row" style="width:1315px">
+
+            <div class="col-md-8">
+
+              <div id="pagination">
+
+                <nav aria-label="Page navigation">
+
+                <ul class="pagination">
+
+                {% if RNAedits.has_previous %}
+
+                <li>
+
+                  {% if "Chr" in RNAedits.previous_page_number.querystring %}
+
+                    <a href="?par={{Numpar}}&flag=1&{{ RNAedits.previous_page_number.querystring }}" aria-label="Previous">
+
+                  {% else %}
+
+                    <a href="?par={{Numpar}}&flag=1&{{ RNAedits.previous_page_number.querystring }}&Chr={{ Chr }}&Specie={{ Specie }}&Genename={{ Genename }}&AAChange={{AAChange_str}}&Location={{Repeat_str}}&GeneRegion={{GeneRegion_str}}&Method={{Method_str}}&Project={{Project_str}}&dbSNP={{dbSNP_str}}&Cellline={{Cellline_str}}" aria-label="Previous">
+
+                  {% endif %}
+
+                    <span aria-hidden="true">&laquo;</span>
+
+                  </a>
+
+                </li>
+
+                {% endif %}
+
+                {% for page in RNAedits.pages %}
+
+                  {% if page %}
+
+                    {% ifequal page RNAedits.number %}
+
+                      <li class="active"><span>{{ page }}<span class="sr-only">(current)</span></span></li>
+
+                    {% else %}
+
+                      <li><a href="?par={{Numpar}}&flag=1&page={{ page }}&Chr={{ Chr }}&Specie={{ Specie }}&Genename={{ Genename }}&AAChange={{AAChange_str}}&Location={{Repeat_str}}&GeneRegion={{GeneRegion_str}}&Method={{Method_str}}&Project={{Project_str}}&dbSNP={{dbSNP_str}}&Cellline={{Cellline_str}}">{{ page }}</a></li>
+
+                    {% endifequal %}
+
+                  {% else %}
+
+                      <li class="disabled"><span aria-hidden="true">...</span></li>
+
+                  {% endif %}
+
+                {% endfor %}
+
+                {% if RNAedits.has_next %}
+
+                <li>
+
+                  {% if "Chr" in RNAedits.previous_page_number.querystring %}
+
+                    <a href="?par={{Numpar}}&flag=1&{{ RNAedits.next_page_number.querystring }}" aria-label="Next">
+                  {% else %}
+
+                    <a href="?par={{Numpar}}&flag=1&{{ RNAedits.next_page_number.querystring }}&Chr={{ Chr }}&Specie={{ Specie }}&Genename={{ Genename }}&AAChange={{AAChange_str}}&Location={{Repeat_str}}&GeneRegion={{GeneRegion_str}}&Method={{Method_str}}&Project={{Project_str}}&dbSNP={{dbSNP_str}}&Cellline={{Cellline_str}}" aria-label="Next">
+
+                  {% endif %}
+
+                    <span aria-hidden="true">&raquo;</span>
+
+                  </a>
+
+                </li>
+
+                {% endif %}
+
+              </ul>
+
+                </nav>
+
+              </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+
+
+              <div class="input-group" id="gopage">
+
+                <span><input type="text" class="form-control" placeholder="Go to page number..." id="page_input" onkeydown="KeyGo()"></span>
+
+                <span class="input-group-btn"><button class="btn btn-default" type="button" onclick="Go()">Go!</button></span>
+
+              </div>
+
+              <script>
+
+                function checkNum(input){
+
+                  var re=/^[0-9]+$/;
+
+                  if(!re.test(input)){
+
+                    alert('Please input a number');
+
+                    return false;
+
+                  }
+
+                  else{
+
+                    return true;
+
+                  }
+
+                }
+
+                function Go(){
+
+                  var page = document.getElementById('page_input').value;
+
+                  if(checkNum(page)){
+
+                    window.location.href='?par={{Numpar}}&flag=1&page='+page+'&Chr={{ Chr }}&Specie={{ Specie }}&Genename={{ Genename }}&Genename={{ Genename }}&AAChange={{AAChange_str}}&Location={{Repeat_str}}&GeneRegion={{GeneRegion_str}}&Method={{Method_str}}&Project={{Project_str}}&dbSNP={{dbSNP_str}}&Cellline={{Cellline_str}}';
+
+                  }
+
+                }
+
+                function KeyGo(){
+
+                  if(event.keyCode==13){
+
+                  var page = document.getElementById('page_input').value;
+
+                  if(checkNum(page)){
+
+                    window.location.href='?par={{Numpar}}&flag=1&page='+page+'&Chr={{ Chr }}&Specie={{ Specie }}&Genename={{ Genename }}&Genename={{ Genename }}&AAChange={{AAChange_str}}&Location={{Repeat_str}}&GeneRegion={{GeneRegion_str}}&Method={{Method_str}}&Project={{Project_str}}&dbSNP={{dbSNP_str}}&Cellline={{Cellline_str}}';
+
+                  }}
+
+                }
+
+              </script>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    <script>
+        window.onload = function()
+        {
+            var t2 = new Date().getTime() - t1;
+            console.log(t2);
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block title %} Detail {% endblock %}
+{% load staticfiles %}
+
+{% block home_active %}
+{% endblock %}
+{% block content %}
+<style>
+.td{width:100px;}
+.testimonial-details .name{
+	margin-left:50px;
+	float:left;
+}
+</style>
+<div class="hero-background">
+  <section id="information" class="bg-white">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row-title">RNA editing site Detail Information</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div style="margin-left:auto; margin-right:auto">
+           <iframe style="border: 1px solid black" src="https://jbrowse.bioinfotech.org/?data={{ Specie }}&tracks=DNA,{{ Specie }}&loc={{ Rnaedit_info.Chr }}:{{ Rnaedit_info.position }}..{{ Rnaedit_info.position }}&tracklist=0&nav=0&overview=0" width="1000" height="200">
+           </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="information" class="bg-blue">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="testimonial-box" style="padding-bottom:30px;display: inline-block;">
+          <div class="testimonial-image">
+            <img src="/static/assets/info.svg" alt="info" style="height:75px;"/>
+          </div>
+          <div class="testimonial-title">Information</div>
+          <div class="testimonial-details">
+            <div class="col-md-4"><table><tr><td width="30%"><span class="name">Name:</span></td><td width="40%">{{ Rnaedit_info.name }}</td></tr>
+            <tr><td width="30%"><span class="name">Chr-position:</span></td><td width="40%">{{ Rnaedit_info.Chr }}-{{Rnaedit_info.position}}</td></tr>
+            <tr><td width="30%"><span class="name">Strand:</span></td><td width="40%">{{ Rnaedit_info.Strand }}</td></tr></table></div>
+            <div class="col-md-4"><table><tr><td width="60%"><span class="name">Ref->Alt:</span></td><td width="40%">{{ Rnaedit_info.Ref }}->{{ Rnaedit_info.Alt }}</td></tr>
+            <tr><td width="60%"><span class="name">dbSNP:</span></td><td width="40%">{{ Rnaedit_info.dbSNP }}</td></tr>
+            <tr><td width="60%"><span class="name">Method:</span></td><td width="40%">{{ Rnaedit_info.method }}</td></tr></table></div>
+            <div class="col-md-4"><table><tr><td width="60%"><span class="name">database:</span></td><td width="40%">{{ Rnaedit_info.database }}</td></tr>
+            <tr><td width="60%"><span class="name">Editlevel:</span></td><td width="40%">{{ Rnaedit_info.Editlevel }}</td></tr>
+            <tr><td width="60%"><span class="name">phastcons:</span></td><td width="40%">{{ Rnaedit_info.phastcons }}</td></tr></table></div>
+            <div class="col-md-12 col-sm-12"><table style="table-layout:fixed;word-wrap:break-word;"><tr><td width="60%"><span class="name">Projecondensedct:</span></td><td width="40%"><span style="text-align:left">{{ Rnaedit_info.Project }}</span></td></tr></table></div>
+            <div class="col-md-12 col-sm-12"><table><tr><td style="vertical-align:text-top"><span class="name">Cellline:</span></td><td><span style="float:left; margin-left:10px;width:450px;text-align:left">{{ Rnaedit_info.Cellline }}</span></td></tr></table></div>
+	  </div>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12">
+      <div class="testimonial-box">
+        <div class="testimonial-image">
+          <img src="/static/assets/dna.svg" alt="Gene" style="height:75px;" />
+        </div>
+        <div class="testimonial-title">Gene</div>
+        <div class="testimonial-details">
+          <div><table><tr><td><span class="name" style="float:left; margin-left:250px">Gene Name:</span></td><td><span style="float:left; margin-left:10px">{{Rnaedit_info.Genename}}</span></td></tr></table></div><br>
+          <div><table><tr><td><span class="name" style="float:left; margin-left:250px">Gene Region:</span></td><td><span style="float:left; margin-left:10px">{{Rnaedit_info.GeneRegion}}</span></td></tr></table></div><br>
+          <div><table><tr><td style="vertical-align:text-top"><span class="name" style="float:left; margin-left:250px">Gene Detail:</span></td><td><span style="float:left; margin-left:10px;width:800px;text-align:left">{{ Rnaedit_info.Genedetail }}</span></td></tr></table></div><br>
+          <div><table><tr><td><span class="name" style="float:left; margin-left:250px">Location:</span></td><td><span style="float:left; margin-left:10px">{{ Rnaedit_info.Repeat }}</span></td></tr></table></div><br>
+          <div><table><tr><td><span class="name" style="float:left; margin-left:250px">Repeat:</span></td><td><span style="float:left; margin-left:10px">{{ Rnaedit_info.Element }}</span></td></tr></table></div><br>
+          <div><table><tr><td><span class="name" style="float:left; margin-left:250px">AAChange:</span></td><td><span style="float:left; margin-left:10px;">{{ Rnaedit_info.AAChange }}</span></td></tr></table></div><br>
+        </div>
+      </div>
+      </div>
+      <div class="col-md-12 col-sm-12">
+      <div class="testimonial-box">
+        <div class="testimonial-image">
+          <img src="/static/assets/bio.svg" alt="ncRNA" style="height:75px;" />
+        </div>
+        <div class="testimonial-title">ncRNA</div>
+        <div class="testimonial-details">
+	 <table style="margin-left:200px"><tr><td><span class="name">lncRNA:</span></td><td><span style="margin-left:8px">{{Rnaedit_info.lncRNA}}</span></td></tr></table>
+         <table style="margin-left:200px"><tr><td><span class="name">miRNA:</span></td><td><span style="margin-left:8px">{{ Rnaedit_info.miRNA }}</span></td></tr></table>
+         <table style="margin-left:200px"><tr><td><span class="name">circRNA:</span></td><td><span style="margin-left:8px">{{ Rnaedit_info.circRNA }}</span></td></tr></table>
+         <table style="margin-left:200px"><tr><td><span class="name">piRNA:</span></td><td><span style="margin-left:8px">{{ Rnaedit_info.piRNA }}</span></td></tr></table>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="graph" class="bg-white">
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+      <div class="testimonial-box">
+        <div class="testimonial-image">
+          <img src="/static/assets/font.svg" alt="Seq" style="height:75px;" />
+        </div>
+        <div class="testimonial-title">Sequence</div>
+        <div class="testimonial-details">
+          {{ Rnaedit_info.Sequence }}
+        </div>
+      </div>
+      </div> 
+      <div class="col-md-4"><img src="/static/image/{{Rnaedit_ref_image}}" width="300" height="300" /></div>
+      <div class="col-md-4"><img src="/static/image/{{Rnaedit_alt_image}}" width="300" height="300" /></div>
+    </div>
+  </section>
+</div>
+{% endblock %}

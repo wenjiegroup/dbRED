@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% block title %} Detail {% endblock %}
+{% load staticfiles %}
+
+{% block home_active %}
+{% endblock %}
+{% block content %}
+<style>
+  .text-ellipsis{
+    float:left;
+    margin-left:39px;
+    width:460px;
+    text-align:left;
+    word-break:break-all;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space: nowrap;
+  }
+  .text-expand {
+    float:left;
+    margin-left:39px;
+    width:460px;
+    text-align:left;
+    word-break:break-all;
+    white-space:normal;
+    text-overflow:inherit;
+    overflow;visible;
+  }
+</style>
+<div class="hero-background">
+  <section id="information" class="bg-white">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row-title" style="padding-left:15px;">RNA editing site Detail Information</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div style="margin-left:auto; margin-right:auto">
+          {% if Specie == "Human" %}
+          <iframe style="border: 1px solid black;width:59%;" src="https://jbrowse.bioinfotech.org/?data=Human_project&tracks=DNA,GeneAnnot,RepeatMasker,SimpleRepeat,{{ Specie }}&loc={{ Rnaedit_info.Chr }}:{{ Rnaedit_info.position }}..{{ Rnaedit_info.position }}&tracklist=0&nav=0&overview=0" width="1000" height="290">
+          {% else %}
+          <iframe style="border: 1px solid black;width:59%;" src="https://jbrowse.bioinfotech.org/?data={{ Specie }}&tracks=DNA,GeneAnnot,RepeatMasker,SimpleRepeat,{{ Specie }}&loc={{ Rnaedit_info.Chr }}:{{ Rnaedit_info.position }}..{{ Rnaedit_info.position }}&tracklist=0&nav=0&overview=0" width="1000" height="290">
+          {% endif %}
+           </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="information" class="bg-blue">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="testimonial-box" style="padding-bottom:30px;display: inline-block;">
+          <div class="testimonial-image">
+            <img src="/static/assets/info.svg" alt="info" style="height:75px;"/>
+          </div>
+          <div class="testimonial-title">Information</div>
+          <div class="testimonial-details">
+           <div class="col-md-4"><table><tr><td><span class="name">Name:</span></td><td><span>{{ Rnaedit_info.name }}</span></td></tr>
+            <tr><td><span class="name">Chr-position:</span></td><td><span style="flaot:left;margin-left:18px">{{ Rnaedit_info.Chr }}-{{Rnaedit_info.position}}</span></td></tr>
+             <tr><td><span class="name">Strand:</span></td><td><span style="margin-left:-70px">{{ Rnaedit_info.Strand }}</span></td></tr></table></div>
+            <div class="col-md-4"><table><tr><td width="60%"><span class="name">Ref->Alt:</span></td><td width="40%">{{ Rnaedit_info.Ref }}->{{ Rnaedit_info.Alt }}</td></tr>
+            <tr><td width="60%"><span class="name">dbSNP:</span></td><td width="40%">{{ Rnaedit_info.dbSNP }}</td></tr>
+            <tr><td width="60%"><span class="name">Method:</span></td><td width="40%">{{ Rnaedit_info.method }}</td></tr></table></div>
+            <div class="col-md-4"><table><tr><td width="60%"><span class="name">database:</span></td><td width="40%">{{ Rnaedit_info.database }}</td></tr>
+            <tr><td width="60%"><span class="name">Editlevel:</span></td><td width="40%">{{ Rnaedit_info.Editlevel }}</td></tr>
+            <tr><td width="60%"><span class="name">phastcons:</span></td><td width="40%">{{ Rnaedit_info.phastcons }}</td></tr></table></div>
+            <div class="col-md-12 col-sm-12"><table style="table-layout:fixed;word-wrap:break-word;"><tr><td><span class="name" style="margin-left:20px">Project:</span></td><td style="text-align:left;padding-left:39px"><span>{{ Rnaedit_info.Project }}</span></td></tr></table></div>
+            <div class="col-md-12 col-sm-12"><table><tr><td style="vertical-align:text-top;"><span class="name" style="margin-left:20px;">Cellline:</span></td><td><span class="text-ellipsis" onclick="expandEllipsis(event)" onmouseover="judgeWidth(event)">{{ Rnaedit_info.Cellline }}</span></td></tr></table></div>
+	  </div>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12">
+      <div class="testimonial-box">
+        <div class="testimonial-image">
+          <img src="/static/assets/dna.svg" alt="Gene" style="height:75px;" />
+        </div>
+        <div class="testimonial-title">Gene</div>
+        <div class="testimonial-details">
+          <div style="margin-left:42%;"><table><tr><td style="vertical-align:text-top;"><span class="name" >Gene Name:</span></td><td><span style="float:left; margin-left:10px;width:500px;text-align:left">{{Rnaedit_info.Genename}}</span></td></tr></table></div>
+          <div style="margin-left:42%;"><table><tr><td style="vertical-align:text-top;"><span class="name" >Gene Region:</span></td><td><span style="float:left; margin-left:10px;width:500px;text-align:left">{{Rnaedit_info.GeneRegion}}</span></td></tr></table></div>
+          <div style="margin-left:42%;"><table><tr><td style="vertical-align:text-top"><span class="name" >Gene Detail:</span></td><td><span style="float:left; margin-left:10px;width:500px;text-align:left">{{ Rnaedit_info.Genedetail }}</span></td></tr></table></div>
+          <div style="margin-left:42%;"><table><tr><td style="vertical-align:text-top;"><span class="name" >Location:</span></td><td><span style="float:left; margin-left:10px;width:500px;text-align:left">{{ Rnaedit_info.Repeat }}</span></td></tr></table></div>
+          <div style="margin-left:42%;"><table><tr><td style="vertical-align:text-top;"><span class="name">Repeat:</span></td><td><span style="float:left; margin-left:10px;width:500px;text-align:left">{{ Rnaedit_info.Element }}</span></td></tr></table></div>
+          <div style="margin-left:42%;"><table><tr><td style="vertical-align:text-top;"><span class="name">AAChange:</span></td><td><span style="float:left; margin-left:10px;width:500px;text-align:left">{{ Rnaedit_info.AAChange }}</span></td></tr></table></div>
+        </div>
+      </div>
+      </div>
+      {% if Specie == 'Human' or Specie == 'Mouse' or Specie == 'Chimpanzee' or Specie == 'Rat' or Specie == 'Rhesus' %}
+      <div class="col-md-12 col-sm-12">
+      <div class="testimonial-box">
+        <div class="testimonial-image">
+          <img src="/static/assets/bio.svg" alt="ncRNA" style="height:75px;" />
+        </div>
+        <div class="testimonial-title">ncRNA</div>
+        <div class="testimonial-details">
+         <table style="margin-left:42%;""><tr><td style="vertical-align:text-top;"><span class="name">lncRNA:</span></td><td><span class="text-ellipsis" style="margin-left:8px;text-align:left;float:left;width:500px;" onclick="expandEllipsis(event)" onmouseover="judgeWidth(event)">{{Rnaedit_info.lncRNA}}</span></td></tr></table>
+         <table style="margin-left:42%;"><tr><td style="vertical-align:text-top;"><span class="name">miRNA:</span></td><td><span class="text-ellipsis" style="margin-left:8px;text-align:leftfloat:left;width:500px;" onclick="expandEllipsis(event)" onmouseover="judgeWidth(event)">{{ Rnaedit_info.miRNA }}</span></td></tr></table>
+         <table style="margin-left:42%;"><tr><td style="vertical-align:text-top;"><span class="name">circRNA:</span></td><td><span class="text-ellipsis" style="margin-left:8px;text-align:left;float:left;width:500px;" onclick="expandEllipsis(event)" onmouseover="judgeWidth(event)">{{ Rnaedit_info.circRNA }}</span></td></tr></table>
+         <table style="margin-left:42%;"><tr><td style="vertical-align:text-top;"><span class="name">piRNA:</span></td><td><span class="text-ellipsis" style="margin-left:8px;text-align:leftfloat:left;width:500px;" onclick="expandEllipsis(event)" onmouseover="judgeWidth(event)">{{ Rnaedit_info.piRNA }}</span></td></tr></table>
+        </div>
+      </div>
+      </div>
+    </div>
+    {% endif %}
+  </section>
+
+  <section id="graph" class="bg-white">
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+      <div class="testimonial-box">
+        <div class="testimonial-image">
+          <img src="/static/assets/font.svg" alt="Seq" style="height:75px;" />
+        </div>
+        <div class="testimonial-title">Sequence</div>
+        <div class="testimonial-details">
+          {{ Rnaedit_info.Sequence }}
+        </div>
+      </div>
+      </div>
+      <div class="col-md-4"><img onclick="largeImg('/static/image/{{Rnaedit_ref_image}}')" style="cursor:pointer;" src="/static/image/{{Rnaedit_ref_image}}" width="300" height="300" /></div>
+      <div class="col-md-4"><img onclick="largeImg('/static/image/{{Rnaedit_alt_image}}')" style="cursor:pointer;" src="/static/image/{{Rnaedit_alt_image}}" width="300" height="300" /></div>
+    </div>
+  </section>
+</div>
+<script>
+    function judgeWidth(event){
+      var present_obj = event.target;
+      var client_width = present_obj.clientWidth;
+      var text_width = present_obj.scrollWidth;
+      if (text_width > client_width){
+        present_obj.style.cursor="pointer";
+      }
+    }
+    function expandEllipsis(event){
+      var present_obj = event.target;
+      var obj_client = present_obj.clientWidth;
+      var obj_width = present_obj.scrollWidth;
+      var class_name = present_obj.className;
+      if (class_name == "text-ellipsis"){
+        present_obj.className = "text-expand";
+      }
+      else if (class_name == "text-expand"){
+        present_obj.className = "text-ellipsis";
+      }
+    }
+	function largeImg(url_img){
+		var url = url_img;
+		var img = new Image();
+		img.src = url_img;
+		var real_height = img.height;
+		var real_width = img.width;
+		console.log('real_height:' + real_height + '\treal_width:' + real_width)
+		var img_infor = "<img src='" + url + "'/>";
+		var area_height, area_width;
+		if (real_width>=1200){
+			area_width = 1200;
+		}
+		else{
+			area_width = real_width
+		};
+		if (real_height>=850){
+			area_height = 850;
+		}
+		else{
+			area_height = real_height;
+		}
+		
+		layer.open({  
+		     type: 1, 
+		     closeBtn: 1,
+		     shade: false,  
+		     title: false,
+		     skin: 'layui-layer-nobg',
+		     shadeClose: false,
+		     area:[area_width+'px', area_height+'px'],  
+		     content: img_infor,
+		     cancel: function () {   
+     		 }  
+		 });  	
+	}
+</script>
+{% endblock %}

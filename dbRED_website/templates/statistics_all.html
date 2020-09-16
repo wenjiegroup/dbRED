@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block title %} Statistics {% endblock %}
+{% block home_active %}{%endblock%}
+{% block statistics_active %}class="active"{%endblock%}
+{% load staticfiles %}
+{% block content %}
+<div id="features" class="container-fluid">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="row-title">
+                The statistics of seven spieces
+            </div>
+        </div>
+        <div class="col-md-3">
+          <div class="feature-box">
+            <div class="feature-icon">
+              <a href="/statistic/human/"><img src="/static/assets/human.png" alt="human" style="height:3em;width:3em;"></a>
+            </div>
+            <div class="feature-title">Human</div>
+            <div class="feature-details" style="text-align:justify">
+              Modern humans are the only extant members of the subtribe Hominina, a branch of the tribe Hominini belonging to the family of great apes. They are characterized by erect posture and bipedal locomotion; high manual dexterity and heavy tool use compared to other animals.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="feature-box">
+            <div class="feature-icon">
+              <a href="/statistic/mouse/"><img src="/static/assets/mouse.png" alt="mouse" style="height:3em;width:3em;"></a>
+            </div>
+            <div class="feature-title">Mouse</div>
+            <div class="feature-details" style="text-align:justify">
+              A mouse is a small rodent characteristically having a pointed snout, small rounded ears, a body-length scaly tail and a high breeding rate. The best known mouse species is the common house mouse. In some places, certain kinds of field mice are locally common. 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="feature-box">
+            <div class="feature-icon">
+              <a href="/statistic/rat/"><img src="/static/assets/rat.png" alt="rat" style="height:3em;width:3em;"></a>
+            </div>
+            <div class="feature-title">Rat</div>
+            <div class="feature-details" style="text-align:justify">
+              Rats are various medium-sized, long-tailed rodents of the superfamily Muroidea. True rats are members of the genus Rattus, the most important of which to humans are the black rat, Rattus rattus, and the brown rat, Rattus norvegicus. 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="feature-box">
+            <div class="feature-icon">
+              <a href="/statistic/chimpanzee/"><img src="/static/assets/chimpanzee.png" alt="chimpanzee" style="height:3em;width:3em;"></a>
+            </div>
+            <div class="feature-title">Chimpanzee</div>
+            <div class="feature-details" style="text-align:justify">
+              Chimpanzee is a species of great ape. This term can be used to refer to both species the common chimpanzee and the closely related bonobo. Evidence from fossils and DNA sequencing shows both species of chimpanzees are the sister taxon to the modern human lineage.
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div id="features2" class="container-fluid">
+  <div class="container">
+    <div class="col-md-4">
+      <div class="feature-box">
+        <div class="feature-icon">
+          <a href="/statistic/rhesus/"><img src="/static/assets/rhesus.png" alt="rhesus" style="height:3em;width:3em;"></a>
+        </div>
+        <div class="feature-title2">Rhesus</div>
+        <div class="feature-details2" style="text-align:justify">
+          The rhesus macaque is one of the best-known species of Old World monkeys. Native to South, Central, and Southeast Asia, rhesus macaque troops inhabit a great variety of habitats, from grasslands to arid and forested areas, but also close to human settlements.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feature-box">
+        <div class="feature-icon">
+          <a href="/statistic/nematode/"><img src="/static/assets/nematode.png" alt="nematode" style="height:3em;width:3em;"></a>
+        </div>
+        <div class="feature-title2">Nematode</div>
+        <div class="feature-details2" style="text-align:justify">
+          The nematodes or roundworms constitute the phylum Nematoda. They are a diverse animal phylum inhabiting a broad range of environments. Nematodes are classified along with insects and other moulting animals in the clade Ecdysozoa and have tubular digestive systems with openings at both ends.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="feature-box">
+        <div class="feature-icon">
+          <a href="/statistic/drosophila/"><img src="/static/assets/drosophila.png" alt="drosophila" style="height:3em;width:3em;"></a>
+        </div>
+        <div class="feature-title2">Drosophila</div>
+        <div class="feature-details2" style="text-align:justify">
+          Drosophila is a genus of flies, belonging to the family Drosophilidae, whose members are often called "small fruit flies" or pomace flies, vinegar flies, or wine flies, a reference to the characteristic of many species to linger around overripe or rotting fruit.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

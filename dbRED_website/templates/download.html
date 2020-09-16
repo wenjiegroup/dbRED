@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %} Download {% endblock %}
+{% block home_active %}{%endblock%}
+{% block download_active %}class="active"{%endblock%}
+{% load staticfiles %}
+{% block content %}
+<div class="download_banner_area">
+<section id="download" class="bg-white-download">
+<div>
+	<h1 class="download-h1">Download Rna editing data</h1><br>
+	<div class="download-human-div">
+		<h2 class="download-h2">Human</h2>
+		<p class="download-p"><a href="/static/Rnaedit_result/Human_final_result" download="Human_result.txt">Human_site</a></p>
+	</div>
+	<hr>
+	<div class="download-mouse-div">
+		<h2 class="download-h2">Mouse</h2>
+		<p class="download-p"><a href="/static/Rnaedit_result/Mouse_result" download="Mouse_result.txt">Mouse_site</a></p>
+	</div>
+	<hr>
+	<div class="download-rat-div">
+		<h2 class="download-h2">Rat</h2>
+		<p class="download-p"><a href="/static/Rnaedit_result/Rat_result" download="Rat_result.txt">Rat_site</a></p>
+	</div>
+	<hr>
+	<div class="download-chimpanzee-div">
+		<h2 class="download-h2">Chimpanzee</h2>
+		<p class="download-p"><a href="/static/Rnaedit_result/Chimpanzee_result" download="Chimpanzee_result.txt">Chimpanzee_site</a></p>	
+	</div>
+	<hr>
+	<div class="download-rhesus-div">
+		<h2 class="download-h2">Rhesus</h2>
+		<p class="download-p"><a href="/static/Rnaedit_result/Rhesus_result" download="Rhesus_result.txt">Rhesus_site</a></p>
+	</div>
+	<hr>
+		<div class="download-nematode-div">
+		<h2 class="download-h2">Nematode</h2>
+		<p class="download-p"><a href="/static/Rnaedit_result/C.brenneri_result" download="C.brenneri_result.txt">C.brenneri_site</a></p>	
+		<p class="download-p"><a href="/static/Rnaedit_result/C.briggsae_result" download="C.briggsae_result.txt">C.briggsae_site</a></p>	
+		<p class="download-p"><a href="/static/Rnaedit_result/C.elegans_result" download="C.elegans_result.txt">C.elegans_site</a></p>
+		<p class="download-p"><a href="/static/Rnaedit_result/C.japonica_result" download="C.japonica_result.txt">C.japonica_site</a></p>
+		<p class="download-p"><a href="/static/Rnaedit_result/C.remanei_result" download="C.remanei_result.txt">C.remanei_site</a></p>
+	</div>
+	<hr>
+	<div class="download-drosophila-div">
+		<h2 class="download-h2">Drosophila</h2>
+		<p class="download-p"><a href="/static/Rnaedit_result/D.ananassae_result" download="D.ananassae_result.txt">D.ananassae_site</a></p>
+		<p class="download-p"><a href="/static/Rnaedit_result/D.melanogaster_result" download="D.melanogaster_result.txt">D.melanogaster_site</a></p>
+		<p class="download-p"><a href="/static/Rnaedit_result/D.mojavensis_result" download="D.mojavensis_result.txt">D.mojavensis_site</a></p>
+		<p class="download-p"><a href="/static/Rnaedit_result/D.pseudoobscura_result" download="D.pseudoobscura_result.txt">D.pseudoobscura_site</a></p>
+		<p class="download-p"><a href="/static/Rnaedit_result/D.simulans_result" download="D.simulans_result.txt">D.simulans_site</a></p>
+		<p class="download-p"><a href="/static/Rnaedit_result/D.virilis_result" download="D.virilis_result.txt">D.virilis_site</a></p>
+		<p class="download-p"><a href="/static/Rnaedit_result/D.yakuba_result" download="D.yakuba_result.txt">D.yakuba_site</a></p>
+	</div>
+</div>
+</section>
+</div>
+{% endblock %}

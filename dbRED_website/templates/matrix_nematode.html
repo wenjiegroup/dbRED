@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>all project</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.table_title{
+				font-size: 28px;
+				text-align: center;
+				font-weight: 600;
+			}
+			#number{
+				width: 180px;
+				font-weight: 600;
+				margin: 10px 110px -10px auto;
+			}
+			.celegans_title{
+				font-weight: bold;
+				color: rgb(57,98,205);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.cremanei_title{
+				font-weight: bold;
+				color: rgb(33,152,25);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.cjaponica_title{
+				font-weight: bold;
+				color: rgb(200,100,21);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.cbrenneri_title{
+				font-weight: bold;
+				color: rgb(151,80,153);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.cbriggsae_title{
+				font-weight: bold;
+				color: rgb(149,74,75);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.table_pro1{
+				width: 700px;
+				border: 1px solid white;
+				background-color: rgb(240,240,240); 
+				border-radius: 8px;
+				margin: 0 auto;
+				margin-right:0px
+			}
+			.table_pro{
+				width: 700px;
+				border: 1px solid white;
+				background-color: rgb(240,240,240);
+				border-radius: 8px;
+				margin: 0 auto;
+			}
+			td{	
+				height: 20px;
+				font-size: 13px;
+			    text-align: center;
+				background-color: white;
+			}
+			.th1{
+				width: 330px;
+				border-top-left-radius: 8px;
+			}
+			.th2{
+				border-top-right-radius: 8px;
+			}
+			.t_head{
+				width: 140px;
+				margin: 0 auto;
+			}
+			.celegans_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(57,98,205);
+			}
+			.cjaponica_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(200,100,21);
+			}
+			.cremanei_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(33,152,25);
+			}
+			.cbriggsae_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(149,74,75);
+			}
+			.cbrenneri_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(151,80,153);
+			}
+			tbody td:hover{
+				background-color: #f1f1f1;
+			}
+			#flag{
+				font-size: 30px;
+				font-weight:900;
+				line-height: 12px;
+				height: 15px;
+				width: 30px;
+				border-bottom-right-radius: 5px;
+				float:right;
+				margin-top: 304px;
+				margin-right:90px;
+				background-color: rgb(57,98,205);
+				color: white;
+				text-align: center;
+				cursor:pointer;
+			}
+			.tr_none{
+				display:none;
+			}
+			.lineTh {
+				height:40px;
+		 		background: rgb(255,255,255,0) url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAlIiBoZWlnaHQ9IjEyMCUiPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjEwMCUiIHkyPSIxMDAlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=) no-repeat 100% center;
+			}
+		</style>
+	</head>
+	<div id="number"></div>
+<!---------------------- >C.elegans表格 -------------------------->
+	<div id="body_celegans">
+		<div class="celegans_title">C.elegans</div>
+		<div id="flag" onclick="flexTable(event)">&or;</div>
+		<table cellspacing="1" class="table_pro1" id="table_pro1">
+			<div id="thead0">
+				<thead class="celegans_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+										<tr>
+											<th class="lineTh">
+												<span style="float:right;">Method</span>
+												<span style="float:left;margin-top:18px;">Cell line</span>
+											</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+						<!--<th class="th2">Total</th>-->
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>4 cell Embryos</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,4 cell Embryos')">3</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,4 cell Embryos')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,4 cell Embryos')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,4 cell Embryos')">6</td>
+				</tr>
+				<tr>
+					<td>Adult Drechmeria coniospora 1 5 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Adult Drechmeria coniospora 1 5 hr')">42</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Adult Drechmeria coniospora 1 5 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Adult Drechmeria coniospora 1 5 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Adult Drechmeria coniospora 1 5 hr')">17</td>
+				</tr>
+				<tr>
+					<td>Adult Drechmeria coniospora 2 12 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Adult Drechmeria coniospora 2 12 hr')">75</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Adult Drechmeria coniospora 2 12 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Adult Drechmeria coniospora 2 12 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Adult Drechmeria coniospora 2 12 hr')">28</td>
+				</tr>
+				<tr>
+					<td>Adult Drechmeria coniospora control EcoliOP50 exposed 2 12 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Adult Drechmeria coniospora control EcoliOP50 exposed 2 12 hr')">55</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Adult Drechmeria coniospora control EcoliOP50 exposed 2 12 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Adult Drechmeria coniospora control EcoliOP50 exposed 2 12 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Adult Drechmeria coniospora control EcoliOP50 exposed 2 12 hr')">16</td>
+				</tr>
+				<tr>
+					<td>Adult Enterococcus faecalis 1 24 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Adult Enterococcus faecalis 1 24 hr')">56</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Adult Enterococcus faecalis 1 24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Adult Enterococcus faecalis 1 24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Adult Enterococcus faecalis 1 24 hr')">24</td>
+				</tr>
+				<tr>
+					<td>Adult Harposporium control EcoliOP50 exposed 2 24 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Adult Harposporium control EcoliOP50 exposed 2 24 hr')">8</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Adult Harposporium control EcoliOP50 exposed 2 24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Adult Harposporium control EcoliOP50 exposed 2 24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Adult Harposporium control EcoliOP50 exposed 2 24 hr')">10</td>
+				</tr>
+				<tr>
+					<td>Adult Harposporium exposed 2 24 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Adult Harposporium exposed 2 24 hr')">6</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Adult Harposporium exposed 2 24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Adult Harposporium exposed 2 24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Adult Harposporium exposed 2 24 hr')">5</td>
+				</tr>
+				<tr>
+					<td>Adult Photorhabdus luminescens 2 24 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Adult Photorhabdus luminescens 2 24 hr')">37</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Adult Photorhabdus luminescens 2 24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Adult Photorhabdus luminescens 2 24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Adult Photorhabdus luminescens 2 24 hr')">25</td>
+				</tr>
+				<tr>
+					<td>Adult S macescens Db10 control EcoliOP50 exposed 1 24 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Adult S macescens Db10 control EcoliOP50 exposed 1 24 hr')">8</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Adult S macescens Db10 control EcoliOP50 exposed 1 24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Adult S macescens Db10 control EcoliOP50 exposed 1 24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Adult S macescens Db10 control EcoliOP50 exposed 1 24 hr')">12</td>
+				</tr>
+				<tr>
+					<td>Adult S macescens Db10 exposed 1 24 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Adult S macescens Db10 exposed 1 24 hr')">7</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Adult S macescens Db10 exposed 1 24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Adult S macescens Db10 exposed 1 24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Adult S macescens Db10 exposed 1 24 hr')">7</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Adult spe-9(hc88) 8 days post-L4 molt stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Adult spe-9(hc88) 8 days post-L4 molt stage larvae')">12</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Adult spe-9(hc88) 8 days post-L4 molt stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Adult spe-9(hc88) 8 days post-L4 molt stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Adult spe-9(hc88) 8 days post-L4 molt stage larvae')">14</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Dauer daf-2(e1370) 91 hr post-L1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Dauer daf-2(e1370) 91 hr post-L1 stage larvae')">142</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Dauer daf-2(e1370) 91 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Dauer daf-2(e1370) 91 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Dauer daf-2(e1370) 91 hr post-L1 stage larvae')">72</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Dauer entry daf-2(e1370) 48 hr post-L1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Dauer entry daf-2(e1370) 48 hr post-L1 stage larvae')">112</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Dauer entry daf-2(e1370) 48 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Dauer entry daf-2(e1370) 48 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Dauer entry daf-2(e1370) 48 hr post-L1 stage larvae')">53</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Dauer exit daf-2(e1370) 91 hr 15dC 12 hrs post-L1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Dauer exit daf-2(e1370) 91 hr 15dC 12 hrs post-L1 stage larvae')">70</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Dauer exit daf-2(e1370) 91 hr 15dC 12 hrs post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Dauer exit daf-2(e1370) 91 hr 15dC 12 hrs post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Dauer exit daf-2(e1370) 91 hr 15dC 12 hrs post-L1 stage larvae')">64</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos')">340</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos')">265</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-0')">59</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-0')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-0')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-0')">21</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-120</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-120')">37</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-120')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-120')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-120')">15</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-150</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-150')">44</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-150')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-150')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-150')">9</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-180</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-180')">41</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-180')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-180')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-180')">13</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-210</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-210')">13</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-210')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-210')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-210')">56</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-240</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-240')">25</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-240')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-240')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-240')">9</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-270</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-270')">37</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-270')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-270')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-270')">11</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-30</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-30')">46</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-30')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-30')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-30')">21</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-300</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-300')">18</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-300')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-300')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-300')">12</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-330</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-330')">22</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-330')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-330')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-330')">7</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-360</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-360')">26</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-360')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-360')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-360')">8</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-390</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-390')">25</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-390')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-390')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-390')">48</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-420</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-420')">25</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-420')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-420')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-420')">7</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-450</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-450')">46</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-450')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-450')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-450')">14</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-480</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-480')">39</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-480')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-480')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-480')">37</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-510</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-510')">22</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-510')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-510')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-510')">45</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-540</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-540')">35</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-540')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-540')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-540')">33</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-570</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-570')">31</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-570')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-570')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-570')">15</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-60</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-60')">33</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-60')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-60')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-60')">12</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-600</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-600')">22</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-600')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-600')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-600')">26</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-630</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-630')">30</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-630')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-630')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-630')">13</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-660</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-660')">34</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-660')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-660')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-660')">13</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-690</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-690')">31</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-690')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-690')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-690')">10</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-720</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-720')">50</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-720')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-720')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-720')">11</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos 50-90</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos 50-90')">74</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos 50-90')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos 50-90')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos 50-90')">26</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos capture EE-2cap5</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos capture EE-2cap5')">36</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos capture EE-2cap5')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos capture EE-2cap5')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos capture EE-2cap5')">36</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Early Embryos EE-2</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Early Embryos EE-2')">120</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Early Embryos EE-2')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Early Embryos EE-2')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Early Embryos EE-2')">68</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Embryos')">79</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Embryos')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Embryos')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Embryos')">37</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos him-8(e1480)</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Embryos him-8(e1480)')">377</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Embryos him-8(e1480)')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Embryos him-8(e1480)')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Embryos him-8(e1480)')">303</td>
+				</tr>
+				<tr class="tr_none">
+					<td>L1 4 hr post-L1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,L1 4 hr post-L1 stage larvae')">70</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,L1 4 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,L1 4 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,L1 4 hr post-L1 stage larvae')">51</td>
+				</tr>
+				<tr class="tr_none">
+					<td>L1 4.0 hr post-L1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,L1 4.0 hr post-L1 stage larvae')">74</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,L1 4.0 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,L1 4.0 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,L1 4.0 hr post-L1 stage larvae')">61</td>
+				</tr>
+				<tr class="tr_none">
+					<td>L1LIN35-1cap1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,L1LIN35-1cap1 stage larvae')">75</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,L1LIN35-1cap1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,L1LIN35-1cap1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,L1LIN35-1cap1 stage larvae')">59</td>
+				</tr>
+				<tr class="tr_none">
+					<td>L2 17.75 hr post-L1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,L2 17.75 hr post-L1 stage larvae')">16</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,L2 17.75 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,L2 17.75 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,L2 17.75 hr post-L1 stage larvae')">14</td>
+				</tr>
+				<tr class="tr_none">
+					<td>L2-4 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,L2-4 stage larvae')">16</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,L2-4 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,L2-4 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,L2-4 stage larvae')">14</td>
+				</tr>
+				<tr class="tr_none">
+					<td>L3 26.75 hr post-L1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,L3 26.75 hr post-L1 stage larvae')">2</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,L3 26.75 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,L3 26.75 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,L3 26.75 hr post-L1 stage larvae')">12</td>
+				</tr>
+				<tr class="tr_none">
+					<td>L3-1 26.75 hr post-L1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,L3-1 26.75 hr post-L1 stage larvae')">25</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,L3-1 26.75 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,L3-1 26.75 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,L3-1 26.75 hr post-L1 stage larvae')">12</td>
+				</tr>
+				<tr class="tr_none">
+					<td>L3-1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,L3-1 stage larvae')">25</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,L3-1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,L3-1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,L3-1 stage larvae')">21</td>
+				</tr>
+				<tr class="tr_none">
+					<td>L4 34.25 hr post-L1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,L4 34.25 hr post-L1 stage larvae')">179</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,L4 34.25 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,L4 34.25 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,L4 34.25 hr post-L1 stage larvae')">103</td>
+				</tr>
+				<tr class="tr_none">
+					<td>L4 soma JK1107 no DNaseI stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,L4 soma JK1107 no DNaseI stage larvae')">43</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,L4 soma JK1107 no DNaseI stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,L4 soma JK1107 no DNaseI stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,L4 soma JK1107 no DNaseI stage larvae')">21</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Larvae L4cap4 stage</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Larvae L4cap4 stage')">17</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Larvae L4cap4 stage')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Larvae L4cap4 stage')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Larvae L4cap4 stage')">24</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Larvae L4MALE6cap2 stage</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Larvae L4MALE6cap2 stage')">73</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Larvae L4MALE6cap2 stage')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Larvae L4MALE6cap2 stage')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Larvae L4MALE6cap2 stage')">36</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Larvae L4RRcap3 stage</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Larvae L4RRcap3 stage')">2</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Larvae L4RRcap3 stage')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Larvae L4RRcap3 stage')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Larvae L4RRcap3 stage')">7</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Late Embryos 4.5 hr post-early Embryo</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Late Embryos 4.5 hr post-early Embryo')">87</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Late Embryos 4.5 hr post-early Embryo')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Late Embryos 4.5 hr post-early Embryo')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Late Embryos 4.5 hr post-early Embryo')">62</td>
+				</tr>
+				<tr class="tr_none">
+					<td>LE-2cap6</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,LE-2cap6')">6</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,LE-2cap6')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,LE-2cap6')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,LE-2cap6')">13</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Lin-35(n745)  L1 4.0 hr post-L1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Lin-35(n745)  L1 4.0 hr post-L1 stage larvae')">86</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Lin-35(n745)  L1 4.0 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Lin-35(n745)  L1 4.0 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Lin-35(n745)  L1 4.0 hr post-L1 stage larvae')">79</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Male  L4 30 hr post-L1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Male  L4 30 hr post-L1 stage larvae')">51</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Male  L4 30 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Male  L4 30 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Male  L4 30 hr post-L1 stage larvae')">30</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Male  L4 L4MALE5 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Male  L4 L4MALE5 stage larvae')">51</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Male  L4 L4MALE5 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Male  L4 L4MALE5 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Male  L4 L4MALE5 stage larvae')">30</td>
+				</tr>
+				<tr class="tr_none">
+					<td>PharyngealMuscle</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,PharyngealMuscle')">25</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,PharyngealMuscle')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,PharyngealMuscle')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,PharyngealMuscle')">19</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Young adult</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Young adult')">177</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Young adult')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Young adult')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Young adult')">70</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Young adult (pre-gravid) 46 hr post-L1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,S,Young adult (pre-gravid) 46 hr post-L1 stage larvae')">62</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,P,Young adult (pre-gravid) 46 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,G,Young adult (pre-gravid) 46 hr post-L1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Celegans,,D,Young adult (pre-gravid) 46 hr post-L1 stage larvae')">67</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+<!---------------------- C.japonica表格 -------------------------->
+	<div id="body_cjaponica">
+		<div class="cjaponica_title">C.japonica</div>
+		<table cellspacing="1" class="table_pro">
+			<div id="thead1">
+				<thead class="cjaponica_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+										<tr>
+											<th class="lineTh">
+												<span style="float:right;">Method</span>
+												<span style="float:left;margin-top:18px;">Cell line</span>
+											</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>DF5081 AD-F</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,S,DF5081 AD-F')">728</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,P,DF5081 AD-F')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,G,DF5081 AD-F')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,D,DF5081 AD-F')">168</td>
+				</tr>
+				<tr>
+					<td>DF5081 AD-F-1</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,S,DF5081 AD-F-1')">263</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,P,DF5081 AD-F-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,G,DF5081 AD-F-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,D,DF5081 AD-F-1')">109</td>
+				</tr>
+				<tr>
+					<td>DF5081 AD-M</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,S,DF5081 AD-M')">686</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,P,DF5081 AD-M')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,G,DF5081 AD-M')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,D,DF5081 AD-M')">189</td>
+				</tr>
+				<tr>
+					<td>DF5081 AD-M-1</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,S,DF5081 AD-M-1')">180</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,P,DF5081 AD-M-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,G,DF5081 AD-M-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,D,DF5081 AD-M-1')">84</td>
+				</tr>
+				<tr>
+					<td>DF5081 EE</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,S,DF5081 EE')">779</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,P,DF5081 EE')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,G,DF5081 EE')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,D,DF5081 EE')">205</td>
+				</tr>
+				<tr>
+					<td>DF5081 EE-1</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,S,DF5081 EE-1')">741</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,P,DF5081 EE-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,G,DF5081 EE-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,D,DF5081 EE-1')">186</td>
+				</tr>
+				<tr>
+					<td>DF5081 L2 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,S,DF5081 L2 stage larvae')">766</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,P,DF5081 L2 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,G,DF5081 L2 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,D,DF5081 L2 stage larvae')">217</td>
+				</tr>
+				<tr>
+					<td>DF5081 L2-1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,S,DF5081 L2-1 stage larvae')">766</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,P,DF5081 L2-1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,G,DF5081 L2-1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,D,DF5081 L2-1 stage larvae')">217</td>
+				</tr>
+				<tr>
+					<td>DF5081 L4 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,S,DF5081 L4 stage larvae')">649</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,P,DF5081 L4 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,G,DF5081 L4 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,D,DF5081 L4 stage larvae')">213</td>
+				</tr>
+				<tr>
+					<td>DF5081 L4-1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,S,DF5081 L4-1 stage larvae')">271</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,P,DF5081 L4-1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,G,DF5081 L4-1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cjaponica,,D,DF5081 L4-1 stage larvae')">119</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+<!---------------------- C.remanei表格 -------------------------->
+	<div id="body_cremanei">
+		<div class="cremanei_title">C.remanei</div>
+		<table cellspacing="1" class="table_pro">
+			<div id="thead2">
+				<thead class="cremanei_thead">
+						<tr>
+							<th class="th1">
+								<div>
+									<table class="t_head">
+										<thead>
+											<tr>
+												<th class="lineTh">
+													<span style="float:right;">Method</span>
+													<span style="float:left;margin-top:18px;">Cell line</span>
+												</th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+							</th>
+							<th>Seperate</th>
+							<th>Pool</th>
+							<th>Giremi</th>
+							<th class="th2">Deepred</th>
+						</tr>
+					</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>SB146 EE-2</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,S,SB146 EE-2')">1140</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,P,SB146 EE-2')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,G,SB146 EE-2')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,D,SB146 EE-2')">1063</td>
+				</tr>
+				<tr>
+					<td>SB146 L2-1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,S,SB146 L2-1 stage larvae')">5976</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,P,SB146 L2-1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,G,SB146 L2-1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,D,SB146 L2-1 stage larvae')">3036</td>
+				</tr>
+				<tr>
+					<td>SB146 L4 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,S,SB146 L4 stage larvae')">9225</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,P,SB146 L4 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,G,SB146 L4 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,D,SB146 L4 stage larvae')">3873</td>
+				</tr>
+				<tr>
+					<td>SB146 L4-1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,S,SB146 L4-1 stage larvae')">9225</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,P,SB146 L4-1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,G,SB146 L4-1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,D,SB146 L4-1 stage larvae')">3873</td>
+				</tr>
+				<tr>
+					<td>SB146 YAF</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,S,SB146 YAF')">5557</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,P,SB146 YAF')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,G,SB146 YAF')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,D,SB146 YAF')">2718</td>
+				</tr>
+				<tr>
+					<td>SB146 YAF-1</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,S,SB146 YAF-1')">2282</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,P,SB146 YAF-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,G,SB146 YAF-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,D,SB146 YAF-1')">1746</td>
+				</tr>
+				<tr>
+					<td>SB146 YAM</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,S,SB146 YAM')">5313</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,P,SB146 YAM')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,G,SB146 YAM')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,D,SB146 YAM')">3038</td>
+				</tr>
+				<tr>
+					<td>SB146 YAM-1</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,S,SB146 YAM-1')">175</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,P,SB146 YAM-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,G,SB146 YAM-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cremanei,,D,SB146 YAM-1')">108</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+<!---------------------- C.briggsae表格 -------------------------->
+	<div id="body_cbriggsae">
+		<div class="cbriggsae_title">C.briggsae</div>
+		<table cellspacing="1" class="table_pro">
+			<div id="thead3">
+				<thead class="cbriggsae_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+										<tr>
+											<th class="lineTh">
+												<span style="float:right;">Method</span>
+												<span style="float:left;margin-top:18px;">Cell line</span>
+											</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>AF16 EE</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,S,AF16 EE')">48</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,P,AF16 EE')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,G,AF16 EE')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,D,AF16 EE')">49</td>
+				</tr>
+				<tr>
+					<td>AF16 EE-2</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,S,AF16 EE-2')">36</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,P,AF16 EE-2')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,G,AF16 EE-2')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,D,AF16 EE-2')">30</td>
+				</tr>
+				<tr>
+					<td>AF16 EE-3</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,S,AF16 EE-3')">17</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,P,AF16 EE-3')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,G,AF16 EE-3')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,D,AF16 EE-3')">26</td>
+				</tr>
+				<tr>
+					<td>AF16 L2 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,S,AF16 L2 stage larvae')">88</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,P,AF16 L2 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,G,AF16 L2 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,D,AF16 L2 stage larvae')">107</td>
+				</tr>
+				<tr>
+					<td>AF16 L2-1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,S,AF16 L2-1 stage larvae')">54</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,P,AF16 L2-1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,G,AF16 L2-1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,D,AF16 L2-1 stage larvae')">48</td>
+				</tr>
+				<tr>
+					<td>AF16 L2-2 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,S,AF16 L2-2 stage larvae')">19</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,P,AF16 L2-2 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,G,AF16 L2-2 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,D,AF16 L2-2 stage larvae')">50</td>
+				</tr>
+				<tr>
+					<td>AF16 L4 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,S,AF16 L4 stage larvae')">114</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,P,AF16 L4 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,G,AF16 L4 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,D,AF16 L4 stage larvae')">48</td>
+				</tr>
+				<tr>
+					<td>AF16 L4-1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,S,AF16 L4-1 stage larvae')">71</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,P,AF16 L4-1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,G,AF16 L4-1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,D,AF16 L4-1 stage larvae')">35</td>
+				</tr>
+				<tr>
+					<td>AF16 L4-2 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,S,AF16 L4-2 stage larvae')">48</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,P,AF16 L4-2 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,G,AF16 L4-2 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,D,AF16 L4-2 stage larvae')">21</td>
+				</tr>
+				<tr>
+					<td>AF16 Mx</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,S,AF16 Mx')">11</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,P,AF16 Mx')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,G,AF16 Mx')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,D,AF16 Mx')">28</td>
+				</tr>
+				<tr>
+					<td>AF16 Mx-1</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,S,AF16 Mx-1')">8</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,P,AF16 Mx-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,G,AF16 Mx-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,D,AF16 Mx-1')">15</td>
+				</tr>
+				<tr>
+					<td>AF16 YA</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,S,AF16 YA')">72</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,P,AF16 YA')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,G,AF16 YA')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,D,AF16 YA')">24</td>
+				</tr>
+				<tr>
+					<td>AF16 YA-1</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,S,AF16 YA-1')">47</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,P,AF16 YA-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,G,AF16 YA-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,D,AF16 YA-1')">16</td>
+				</tr>
+				<tr>
+					<td>AF16 YA-2</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,S,AF16 YA-2')">41</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,P,AF16 YA-2')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,G,AF16 YA-2')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbriggsae,,D,AF16 YA-2')">15</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+<!---------------------- C.brenneri表格 -------------------------->
+	<div id="body_cbrenneri">
+		<div class="cbrenneri_title">C.brenneri</div>
+		<table cellspacing="1" class="table_pro">
+			<div id="thead4">
+				<thead class="cbrenneri_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+										<tr>
+											<th class="lineTh">
+												<span style="float:right;">Method</span>
+												<span style="float:left;margin-top:18px;">Cell line</span>
+											</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>PB2801 EE-1</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbrenneri,,S,PB2801 EE-1')">88</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbrenneri,,P,PB2801 EE-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbrenneri,,G,PB2801 EE-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbrenneri,,D,PB2801 EE-1')">55</td>
+				</tr>
+				<tr>
+					<td>PB2801 L4-1 stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbrenneri,,S,PB2801 L4-1 stage larvae')">95</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbrenneri,,P,PB2801 L4-1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbrenneri,,G,PB2801 L4-1 stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbrenneri,,D,PB2801 L4-1 stage larvae')">37</td>
+				</tr>
+				<tr>
+					<td>PB2801 YAF-1</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbrenneri,,S,PB2801 YAF-1')">53</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbrenneri,,P,PB2801 YAF-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbrenneri,,G,PB2801 YAF-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbrenneri,,D,PB2801 YAF-1')">22</td>
+				</tr>
+				<tr>
+					<td>PB2801 YAM-1</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbrenneri,,S,PB2801 YAM-1')">80</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbrenneri,,P,PB2801 YAM-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbrenneri,,G,PB2801 YAM-1')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Cbrenneri,,D,PB2801 YAM-1')">43</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<script type="text/javascript">
+		window.onload=function(){
+			myPadding();
+		}
+		
+		function myPadding(){
+			var table, tr, list, i;
+			list = ["celegans", "cjaponica", "cremanei", "cbriggsae","cbrenneri"];
+			for(i=0; i <= 4; i++){
+				table = document.getElementById("body_" + list[i]);
+				tr = table.getElementsByTagName("tr");
+				for (i = 0; i < tr.length; i++){
+					td = tr[i].getElementsByTagName("td")[0];
+					if(td){
+						td.style.width = "330px";
+						// td.style.textAlign = "right";
+						// td.style.paddingRight = "10px";
+						
+					}
+				}
+			}	
+		}
+		
+		function myFunction(){
+			var input, filter,  div, tr, td, i, j, n, list, sum;
+			list = ["celegans", "cjaponica", "cremanei", "cbriggsae","cbrenneri"];
+			input = window.parent.document.getElementById("myInput1");
+			filter = input.value.toUpperCase();
+			sum = 0;
+			for(j=0; j<=4; j++){
+				n = 0;
+				div = document.getElementById("body_"+list[j]);
+				div.style.display="";
+				tr = div.getElementsByTagName("tr");
+				for (i = 0; i < tr.length; i++){
+					td = tr[i].getElementsByTagName("td")[0];
+					if(td){
+						if (td.innerHTML.toUpperCase().indexOf(filter) > -1){
+							tr[i].style.display="table-row";
+							n += 1;
+						}else{
+							tr[i].style.display="none";
+						}
+					}
+				}
+				if(n == 0){
+					div.style.display="none";
+				}
+				sum += n;
+			}
+			document.getElementById("number").innerHTML="You have "+sum+" results"
+			div_celegans = document.getElementById("body_celegans");
+			tr_celegans = div_celegans.getElementsByTagName("tr");
+			if (input.value != ""){
+				document.getElementById("flag").setAttribute("style","display:none;");
+				document.getElementById("table_pro1").setAttribute("style","margin-right: auto");
+			} else{
+				document.getElementById("flag").style.display="";
+				document.getElementById("table_pro1").setAttribute("style","margin-right: 0px");
+				for (i = 13; i < tr_celegans.length; i++){
+					tr_celegans[i].style.display="none";
+				}
+			}
+			// console.log(sum);
+		}
+
+		function flexTable(event){
+				var table = document.getElementById("body_celegans");
+				var tr = table.getElementsByTagName("tr");
+				var state = event.target;
+				if (state.innerHTML=="∨"){
+					for (var i = 13; i < tr.length; i++){
+						tr[i].style.display="table-row";
+					}
+					state.innerHTML = "&and;";
+					state.setAttribute("style","margin-top:1452px;");
+				}else{
+					for (var i = 13; i < tr.length; i++){
+						tr[i].style.display="none";
+					}
+					state.innerHTML = "&or;";
+					state.setAttribute("style","margin-top:304px;");
+				}
+		}
+	</script>
+</html>

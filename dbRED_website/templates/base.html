@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<head>
+  {% load  static %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="{%static "js/jquery.min.js"%}"></script>
+  <!--<script src="http://code.jquery.com/jquery.js"></script>-->
+  <script type="text/javascript" src="{% static "js/layer.js" %}"></script>
+  <link href="{%static "css/bootstrap.min.css"%}" rel="stylesheet" media="screen">
+  <link href="{%static "css/bootstrap-select.min.css"%}" rel="stylesheet" media="screen">
+  <link href="{%static "css/style.css"%}" rel="stylesheet" media="screen">
+  <script src="{%static "js/bootstrap.min.js"%}"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="{%static "js/bootstrap-select.min.js"%}"></script>
+  <script src="{%static "js/echarts1.js"%}"></script>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <title>{% block title %}默认标题{% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{%static "css/loaders.css"%}">
+</head>
+<style>
+#modencode-menu:hover #third-menu{
+    display:block;
+    position:absolute;
+    left:157px;
+    top:50px;
+
+}
+
+#third-menu{
+    display:none;
+}
+
+#third-menu li:hover{
+    background-color:#ffffff;
+}
+
+</style>
+<body class="gradient">
+        <div id="mainNav" role="navigation" style="background-color:#ffffff;-webkit-box-shadow:inset 0px 0px 12px rgba(0, 0, 0, .11);">
+            <div class="container container-nav">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="/home/" style="color:#2896F0;font-size:250%;font-weight:700;">
+                        dbRED
+                    </a>
+                </div>
+                <div style="height: 1px;" role="main" aria-expanded="false" class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li {%block home_active%}class="active1"{%endblock%} style="font-weight:700;font-size:110%;"><a href="/home/" style="color:#696969;">Home</a></li>
+                        <li {%block statistics_active%}{%endblock%} style="font-weight:700;font-size:110%;"><a href="/statistics/" style="color:#696969;">Statistics</a></li>
+                        <li class="dropdown" {%block project_active%}{%endblock%} style="font-weight:700;font-size:110%;"><a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#696969;">Project ∨</a>
+                        <ul class="dropdown-menu" style="left:1px">
+                           <li><a href="/project/Human_project/" style="font-weight:700;color:#696969;">Human</a></li>
+                           <!--<li><a href="/project/RoadMap/" style="font-weight:700;color:#696969;">RoadMap</a></li>-->
+                           <li><a href="/project/MouseEncode/" style="font-weight:700;color:#696969;">MouseEncode</a></li>
+                           <li id="modencode-menu"><a style="font-weight:700;color:#696969;">ModEncode</a>
+                            <ul class="dropdown-menu" id="third-menu">
+                                <li style="font-weight:700;"><a href="/project/C_elegans/">C.elegans</a></li>
+                                <li style="font-weight:700;"><a href="/project/D_melanogaster/">D.melanogaster</a></li>
+                            </ul>
+			                </li>
+                        </ul>
+                        </li>
+                        <li {%block download_active%}{%endblock%} style="font-weight:700;font-size:110%;"><a href="/download/" style="color:#696969;">Download</a></li>
+                        <li {%block help_active%}{%endblock%} style="font-weight:700;font-size:110%;"><a href="/help/" style="color:#696969;">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+{% block content %}
+<div>这里是默认内容，所有继承自这个模板的，如果不覆盖就显示这里的默认内容。</div>
+{% endblock %}
+
+<footer class="main-footer" style="border-style:none;">
+    <div class="widgets-area ">
+        <div class="container">
+        <div class="row ">
+            <div class="col-md-6">
+                <h4 class="widget-title">About</h4>
+                <p>dbRED collected more than 2.3 million A-to-I editing sites identified in seven species from nine projects using multiple methods. It integrates genomic and epigenomic annotations and enables the analysis of RNA editing sites across tissues/cell lines/species.</p>
+            </div>
+            <div class="col-md-6">
+                <h4 class="widget-title">Contact</h4>
+                <p>Qiuzhen Chen: <a href="mailto:cqz199509@163.com">cqz199509@163.com</a></p>
+            </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-band" style="border-style:none;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+           <div class="text-center"><p><font size=2> copyright </font><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span><font size=2> 2017 Beijing Institute of Radiation Medicine.</font></p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

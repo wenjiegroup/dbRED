@@ -1,0 +1,2248 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>all project</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.table_title{
+				font-size: 28px;
+				text-align: center;
+				font-weight: 600;
+			}
+			#number{
+				width: 180px;
+				font-weight: 600;
+				margin: 10px 110px -10px auto;
+			}
+			.encode_title{
+				font-weight: bold;
+				color: rgb(57,98,205);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.seqc_title{
+				font-weight: bold;
+				color: rgb(33,152,25);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.roadmap_title{
+				font-weight: bold;
+				color: rgb(200,100,21);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.abrf_title{
+				font-weight: bold;
+				color: rgb(151,80,153);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.ccle_title{
+				font-weight: bold;
+				color: rgb(149,74,75);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.geuv_title{
+				font-weight: bold;
+				color: rgb(72,209,204);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.bodymap_title{
+				font-weight: bold;
+				color: rgb(219,112,147);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.braindataset_title{
+				font-weight: bold;
+				color: rgb(60,179,113);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.table_pro{
+				width: 700px;
+				border: 1px solid white;
+				background-color: rgb(240,240,240); 
+				border-radius: 8px;
+				margin: 0 auto;
+			}
+			td{	
+				height: 20px;
+				font-size: 13px;
+			    text-align: center;
+				background-color: white;
+			}
+			.th1{
+				width: 330px;
+				border-top-left-radius: 8px;
+			}
+			.th2{
+				border-top-right-radius: 8px;
+			}
+			.t_head{
+				width: 140px;
+				margin: 0 auto;
+			}
+			.encode_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(57,98,205);
+			}
+			.roadmap_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(200,100,21);
+			}
+			.seqc_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(33,152,25);
+			}
+			.ccle_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(149,74,75);
+			}
+			.abrf_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(151,80,153);
+			}
+			.geuv_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(72,209,204);
+			}
+			.bodymap_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(219,112,147);
+			}
+			.braindataset_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(60,179,113);
+			}
+			tbody td:hover{
+				background-color: #f1f1f1;
+			}
+			.table_pro1{
+				width: 700px;
+				border: 1px solid white;
+				background-color: rgb(240,240,240);
+				border-radius: 8px;
+				margin: 0 auto;
+				margin-right:0px
+			}
+			.tr_none{
+				display:none;
+			}
+			#flag_encode{
+				font-size: 30px;
+				font-weight:900;
+				line-height: 12px;
+				height: 15px;
+				width: 30px;
+				border-bottom-right-radius: 5px;
+				float:right;
+				margin-top: 262px;
+				margin-right:90px;
+				background-color: rgb(57,98,205);
+				color: white;
+				text-align: center;
+				cursor:pointer;
+			}
+			#flag_roadmap{
+				font-size: 30px;
+				font-weight:900;
+				line-height: 12px;
+				height: 15px;
+				width: 30px;
+				border-bottom-right-radius: 5px;
+				float:right;
+				margin-top: 262px;
+				margin-right:90px;
+				background-color: rgb(200,100,21);
+				color: white;
+				text-align: center;
+				cursor:pointer;
+			}
+			#flag_seqc{
+				font-size: 30px;
+				font-weight:900;
+				line-height: 12px;
+				height: 15px;
+				width: 30px;
+				border-bottom-right-radius: 5px;
+				float:right;
+				margin-top: 262px;
+				margin-right:90px;
+				background-color: rgb(33,152,25);
+				color: white;
+				text-align: center;
+				cursor:pointer;
+			}
+			#flag_ccle{
+				font-size: 30px;
+				font-weight:900;
+				line-height: 12px;
+				height: 15px;
+				width: 30px;
+				border-bottom-right-radius: 5px;
+				float:right;
+				margin-top: 262px;
+				margin-right:90px;
+				background-color: rgb(149,74,75);
+				color: white;
+				text-align: center;
+				cursor:pointer;
+			}
+			#flag_abrf{
+				font-size: 30px;
+				font-weight:900;
+				line-height: 12px;
+				height: 15px;
+				width: 30px;
+				border-bottom-right-radius: 5px;
+				float:right;
+				margin-top: 262px;
+				margin-right:90px;
+				background-color: rgb(151,80,153);
+				color: white;
+				text-align: center;
+				cursor:pointer;
+			}
+			.lineTh {
+				height:40px;
+		 		background: rgb(255,255,255,0) url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAlIiBoZWlnaHQ9IjEyMCUiPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjEwMCUiIHkyPSIxMDAlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=) no-repeat 100% center;
+			}
+		</style>
+	</head>
+	<!--<div class="loader" style="position:fixed;top:50%;left:50%;">
+		<div class="loader-inner ball-spin-fade-loader">
+		  <div></div>
+		  <div></div>
+		  <div></div>
+		  <div></div>
+		  <div></div>
+		  <div></div>
+		  <div></div>
+		  <div></div>
+		</div>
+	</div>-->
+	<div id="number"></div>
+<!---------------------- Encoe表格 -------------------------->
+	<div id="body_encode">
+		<div class="encode_title">Encode</div>
+		<div id="flag_encode" onclick="flexTable(event)" value="body_encode">&or;</div>
+		<table cellspacing="1" class="table_pro1" id="table_encode">
+			<div id="thead0">
+				<thead class="encode_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+                                        <tr>
+                                            <th class="lineTh">
+                                                <span style="float:right;">Method</span>
+                                                <span style="float:left;margin-top:18px;">Cell line</span>
+                                            </th>
+                                        </tr>
+
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+						<!--<th class="th2">Total</th>-->
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>AG04450</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,AG04450')">52331</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,AG04450')">54884</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,AG04450')">49763</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,AG04450')">7753</td>
+				</tr>
+				<tr>
+					<td>A549</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,A549')">143225</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,A549')">159570</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,A549')">136323</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,A549')">25587</td>
+				</tr>
+				<tr>
+					<td>BE2_C</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,BE2_C')">233</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,BE2_C')">232</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,BE2_C')">204</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,BE2_C')">20</td>
+				</tr>
+				<tr>
+					<td>BJ</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,BJ')">61606</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,BJ')">64384</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,BJ')">58405</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,BJ')">9725</td>
+				</tr>
+				<tr>
+					<td>CD20+</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,CD20%2B')">126163</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,CD20%2B')">134401</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,CD20%2B')">121868</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,CD20+')">16862</td>
+				</tr>
+				<tr>
+					<td>CD34+_Mobilized</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,CD34%2B_Mobilized')">115452</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,CD34%2B_Mobilized')">109366</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,CD34%2B_Mobilized')">113229</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,CD34%2B_Mobilized')">16462</td>
+				</tr>
+				<tr>
+					<td>ECC-1</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,ECC-1')">1511</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,ECC-1')">1557</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,ECC-1')">1307</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,ECC-1')">106</td>
+				</tr>
+				<tr>
+					<td>GM12878</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,GM12878')">268899</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,GM12878')">304207</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,GM12878')">263214</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,GM12878')">47981</td>
+				</tr>
+				<tr>
+					<td>GM12891</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,GM12891')">12235</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,GM12891')">12445</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,GM12891')">11497</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,GM12891')">1597</td>
+				</tr>
+				<tr>
+					<td>GM12892</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,GM12892')">45314</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,GM12892')">46987</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,GM12892')">42880</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,GM12892')">5661</td>
+				</tr>
+				<tr class="tr_none">
+					<td>H1-hESC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,H1-hESC')">161373</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,H1-hESC')">184034</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,H1-hESC')">154726</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,H1-hESC')">29743</td>
+				</tr>
+				<tr class="tr_none">
+					<td>HAoAF</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,HAoAF')">47411</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,HAoAF')">50981</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,HAoAF')">44788</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,HAoAF')">7587</td>
+				</tr>
+				<tr class="tr_none">
+					<td>HAoEC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,HAoEC')">84221</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,HAoEC')">92164</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,HAoEC')">80896</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,HAoEC')">13925</td>
+				</tr>
+				<tr class="tr_none">
+					<td>HCH</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,HCH')">96332</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,HCH')">105822</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,HCH')">92397</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,HCH')">15315</td>
+				</tr>
+				<tr class="tr_none">
+					<td>HeLa-S3</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,HeLa-S3')">143009</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,HeLa-S3')">158968</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,HeLa-S3')">135219</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,HeLa-S3')">26676</td>
+				</tr>
+				<tr class="tr_none">
+					<td>HepG2</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,HepG2')">127168</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,HepG2')">140602</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,HepG2')">115404</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,HepG2')">23996</td>
+				</tr>
+				<tr class="tr_none">
+					<td>HFDPC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,HFDPC')">59293</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,HFDPC')">63382</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,HFDPC')">56892</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,HFDPC')">9470</td>
+				</tr>
+				<tr class="tr_none">
+					<td>HMEC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,HMEC')">8760</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,HMEC')">8928</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,HMEC')">8270</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,HMEC')">1264</td>
+				</tr>
+				<tr class="tr_none">
+					<td>HMEpC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,HMEpC')">17221</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,HMEpC')">17580</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,HMEpC')">16469</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,HMEpC')">2289</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Hmnccb</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,Hmnccb')">14639</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,Hmnccb')">14405</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,Hmnccb')">13947</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,Hmnccb')">1627</td>
+				</tr>
+				<tr class="tr_none">
+					<td>hMNC-PB</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,hMNC-PB')">71578</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,hMNC-PB')">66780</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,hMNC-PB')">70135</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,hMNC-PB')">9218</td>
+				</tr>
+				<tr class="tr_none">
+					<td>hMSC-AT</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,hMSC-AT')">68173</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,hMSC-AT')">73559</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,hMSC-AT')">65375</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,hMSC-AT')">11142</td>
+				</tr>
+				<tr class="tr_none">
+					<td>hMSC-BM</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,hMSC-BM')">86055</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,hMSC-BM')">93662</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,hMSC-BM')">82535</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,hMSC-BM')">14659</td>
+				</tr>
+				<tr class="tr_none">
+					<td>hMSC-UC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,hMSC-UC')">65160</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,hMSC-UC')">69906</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,hMSC-UC')">62386</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,hMSC-UC')">9229</td>
+				</tr>
+				<tr class="tr_none">
+					<td>HOB</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,HOB')">76399</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,HOB')">82852</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,HOB')">73127</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,HOB')">12015</td>
+				</tr>
+				<tr class="tr_none">
+					<td>HPC-PL</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,HPC-PL')">47911</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,HPC-PL')">51014</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,HPC-PL')">45359</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,HPC-PL')">7418</td>
+				</tr>
+				<tr class="tr_none">
+					<td>HPIEpC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,HPIEpC')">37162</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,HPIEpC')">39614</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,HPIEpC')">35522</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,HPIEpC')">5900</td>
+				</tr>
+				<tr class="tr_none">
+					<td>HSaVEC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,HSaVEC')">45204</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,HSaVEC')">48097</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,HSaVEC')">43260</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,HSaVEC')">7189</td>
+				</tr>
+				<tr class="tr_none">
+					<td>HSMM</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,HSMM')">24321</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,HSMM')">25118</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,HSMM')">22789</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,HSMM')">3382</td>
+				</tr>
+				<tr class="tr_none">
+					<td>HUVEC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,HUVEC')">141726</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,HUVEC')">156441</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,HUVEC')">135656</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,HUVEC')">25318</td>
+				</tr>
+				<tr class="tr_none">
+					<td>HVMF</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,HVMF')">63146</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,HVMF')">67780</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,HVMF')">59895</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,HVMF')">10543</td>
+				</tr>
+				<tr class="tr_none">
+					<td>HWP</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,HWP')">53307</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,HWP')">57297</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,HWP')">50967</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,HWP')">8815</td>
+				</tr>
+				<tr class="tr_none">
+					<td>IMR90</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,IMR90')">155199</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,IMR90')">170902</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,IMR90')">149105</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,IMR90')">25595</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Jurkat</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,Jurkat')">8</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,Jurkat')">8</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,Jurkat')">8</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,Jurkat')">0</td>
+				</tr>
+				<tr class="tr_none">
+					<td>K562</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,K562')">194614</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,K562')">214206</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,K562')">178198</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,K562')">36454</td>
+				</tr>
+				<tr class="tr_none">
+					<td>MCF-7</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,MCF-7')">132515</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,MCF-7')">149563</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,MCF-7')">126121</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,MCF-7')">24256</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Monocytes-CD14+</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,Monocytes-CD14%2B')">77937</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,Monocytes-CD14%2B')">81457</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,Monocytes-CD14%2B')">74207</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,Monocytes-CD14%2B')">9944</td>
+				</tr>
+				<tr class="tr_none">
+					<td>NHDF</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,NHDF')">80435</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,NHDF')">87879</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,NHDF')">77272</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,NHDF')">13177</td>
+				</tr>
+				<tr class="tr_none">
+					<td>NHEK</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,NHEK')">155475</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,NHEK')">174389</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,NHEK')">149558</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,NHEK')">25320</td>
+				</tr>
+				<tr class="tr_none">
+					<td>NHEM.f_M2</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,NHEM.f_M2')">44431</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,NHEM.f_M2')">46983</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,NHEM.f_M2')">42231</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,NHEM.f_M2')">6502</td>
+				</tr>
+				<tr class="tr_none">
+					<td>NHEM_M2</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,NHEM_M2')">25142</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,NHEM_M2')">25683</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,NHEM_M2')">24010</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,NHEM_M2')">3883</td>
+				</tr>
+				<tr class="tr_none">
+					<td>NHLF</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,NHLF')">23095</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,NHLF')">23596</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,NHLF')">21497</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,NHLF')">3356</td>
+				</tr>
+				<tr class="tr_none">
+					<td>PANC-1</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,PANC-1')">240</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,PANC-1')">236</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,PANC-1')">223</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,PANC-1')">14</td>
+				</tr>
+				<tr class="tr_none">
+					<td>PFSK-1</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,PFSK-1')">153</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,PFSK-1')">156</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,PFSK-1')">125</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,PFSK-1')">10</td>
+				</tr>
+				<tr class="tr_none">
+					<td>SkMC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,SkMC')">25474</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,SkMC')">26973</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,SkMC')">24063</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,SkMC')">3822</td>
+				</tr>
+				<tr class="tr_none">
+					<td>SK-N-SH</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,SK-N-SH')">140746</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,SK-N-SH')">156217</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,SK-N-SH')">131974</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,SK-N-SH')">23739</td>
+				</tr>
+				<tr class="tr_none">
+					<td>SK-N-SH_RA</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,SK-N-SH_RA')">65462</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,SK-N-SH_RA')">74980</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,SK-N-SH_RA')">61698</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,SK-N-SH_RA')">11035</td>
+				</tr>
+				<tr class="tr_none">
+					<td>T-47D</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,T-47D')">4641</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,T-47D')">4844</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,T-47D')">4365</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,T-47D')">266</td>
+				</tr>
+				<tr class="tr_none">
+					<td>U87</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,S,U87')">161</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,P,U87')">163</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,G,U87')">148</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Encode,D,U87')">13</td>
+				</tr>
+
+
+
+
+			</tbody>
+		</table>
+	</div>
+<!---------------------- roadmap表格 -------------------------->
+	<div id="body_roadmap">
+		<div class="roadmap_title">Roadmap</div>
+		<div id="flag_roadmap" onclick="flexTable(event)" value="body_roadmap">&or;</div>
+		<table cellspacing="1" class="table_pro1" id="table_roadmap">
+			<div id="thead1">
+				<thead class="roadmap_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+                                        <tr>
+                                            <th class="lineTh">
+                                                <span style="float:right;">Method</span>
+                                                <span style="float:left;margin-top:18px;">Cell line</span>
+                                            </th>
+                                        </tr>
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+					<tr>
+						<td>adipose</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,adipose')">51660</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,adipose')">53758</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,adipose')">48520</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,adipose')">6177</td>
+					</tr>
+					<tr>
+						<td>adrenal_gland</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,adrenal_gland')">155626</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,adrenal_gland')">158161</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,adrenal_gland')">154279</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,adrenal_gland')">24891</td>
+					</tr>
+					<tr>
+						<td>bladder</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,bladder')">23250</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,bladder')">23363</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,bladder')">21622</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,bladder')">2620</td>
+					</tr>
+					<tr>
+						<td>CD14_primary_cells</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,CD14_primary_cells')">94190</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,CD14_primary_cells')">87458</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,CD14_primary_cells')">92449</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,CD14_primary_cells')">12087</td>
+					</tr>
+					<tr>
+						<td>CD19_primary_cells</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,CD19_primary_cells')">131610</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,CD19_primary_cells')">121199</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,CD19_primary_cells')">132245</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,CD19_primary_cells')">15326</td>
+					</tr>
+					<tr>
+						<td>CD3_primary_cells</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,CD3_primary_cells')">145964</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,CD3_primary_cells')">157838</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,CD3_primary_cells')">146454</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,CD3_primary_cells')">20520</td>
+					</tr>
+					<tr>
+						<td>CD4_primary_cells</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,CD4_primary_cells')">119013</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,CD4_primary_cells')">115359</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,CD4_primary_cells')">116080</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,CD4_primary_cells')">15572</td>
+					</tr>
+					<tr>
+						<td>CD56_primary_cells</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,CD56_primary_cells')">165189</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,CD56_primary_cells')">150694</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,CD56_primary_cells')">169799</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,CD56_primary_cells')">21053</td>
+					</tr>
+					<tr>
+						<td>CD8_primary_cells</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,CD8_primary_cells')">119136</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,CD8_primary_cells')">115649</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,CD8_primary_cells')">116208</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,CD8_primary_cells')">15669</td>
+					</tr>
+					<tr>
+						<td>esophagus</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,esophagus')">73458</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,esophagus')">79805</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,esophagus')">71111</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,esophagus')">10205</td>
+					</tr>
+					<tr class="tr_none">
+						<td>fibroblasts_skin_abdomen</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,fibroblasts_skin_abdomen')">461</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,fibroblasts_skin_abdomen')">461</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,fibroblasts_skin_abdomen')">415</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,fibroblasts_skin_abdomen')">32</td>
+					</tr>
+					<tr class="tr_none">
+						<td>fibroblasts_skin_back</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,fibroblasts_skin_back')">311</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,fibroblasts_skin_back')">306</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,fibroblasts_skin_back')">289</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,fibroblasts_skin_back')">22</td>
+					</tr>
+					<tr class="tr_none">
+						<td>fibroblasts_skin_scalp</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,fibroblasts_skin_scalp')">280</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,fibroblasts_skin_scalp')">275</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,fibroblasts_skin_scalp')">238</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,fibroblasts_skin_scalp')">14</td>
+					</tr>
+					<tr class="tr_none">
+						<td>gastric</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,gastric')">15592</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,gastric')">17636</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,gastric')">14831</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,gastric')">2518</td>
+					</tr>
+					<tr class="tr_none">
+						<td>H1_BMP4_derived_mesendoderm_cultured_cells</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,H1_BMP4_derived_mesendoderm_cultured_cells')">44732</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,H1_BMP4_derived_mesendoderm_cultured_cells')">44272</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,H1_BMP4_derived_mesendoderm_cultured_cells')">42620</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,H1_BMP4_derived_mesendoderm_cultured_cells')">6296</td>
+					</tr>
+					<tr class="tr_none">
+						<td>H1_cell_line</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,H1_cell_line')">66196</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,H1_cell_line')">65829</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,H1_cell_line')">63348</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,H1_cell_line')">9969</td>
+					</tr>
+					<tr class="tr_none">
+						<td>H1_derived_mesenchymal_stem_cells</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,H1_derived_mesenchymal_stem_cells')">43462</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,H1_derived_mesenchymal_stem_cells')">43312</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,H1_derived_mesenchymal_stem_cells')">40825</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,H1_derived_mesenchymal_stem_cells')">5561</td>
+					</tr>
+					<tr class="tr_none">
+						<td>H1_derived_neuronal_progenitor_cultured_cells</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,H1_derived_neuronal_progenitor_cultured_cells')">71129</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,H1_derived_neuronal_progenitor_cultured_cells')">70766</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,H1_derived_neuronal_progenitor_cultured_cells')">67804</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,H1_derived_neuronal_progenitor_cultured_cells')">10542</td>
+					</tr>
+					<tr class="tr_none">
+						<td>heart</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,heart')">3470</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,heart')">3527</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,heart')">3120</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,heart')">391</td>
+					</tr>
+					<tr class="tr_none">
+						<td>heart_aorta</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,heart_aorta')">78196</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,heart_aorta')">135241</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,heart_aorta')">76169</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,heart_aorta')">12981</td>
+					</tr>
+					<tr class="tr_none">
+						<td>heart_left_ventricle</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,heart_left_ventricle')">35090</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,heart_left_ventricle')">37969</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,heart_left_ventricle')">33475</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,heart_left_ventricle')">4917</td>
+					</tr>
+					<tr class="tr_none">
+						<td>heart_right_atrium</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,heart_right_atrium')">43844</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,heart_right_atrium')">47150</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,heart_right_atrium')">42008</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,heart_right_atrium')">5882</td>
+					</tr>
+					<tr class="tr_none">
+						<td>heart_right_ventricle</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,heart_right_ventricle')">38804</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,heart_right_ventricle')">42121</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,heart_right_ventricle')">36913</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,heart_right_ventricle')">5467</td>
+					</tr>
+					<tr class="tr_none">
+						<td>hESC-derived_CD184+_endoderm_cultured_cells</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,hESC-derived_CD184+_endoderm_cultured_cells')">1290</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,hESC-derived_CD184+_endoderm_cultured_cells')">1319</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,hESC-derived_CD184+_endoderm_cultured_cells')">1308</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,hESC-derived_CD184+_endoderm_cultured_cells')">204</td>
+					</tr>
+					<tr class="tr_none">
+						<td>hESC-derived_CD56+_ectoderm_cultured_cells</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,hESC-derived_CD56+_ectoderm_cultured_cells')">3238</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,hESC-derived_CD56+_ectoderm_cultured_cells')">3277</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,hESC-derived_CD56+_ectoderm_cultured_cells')">3175</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,hESC-derived_CD56+_ectoderm_cultured_cells')">492</td>
+					</tr>
+					<tr class="tr_none">
+						<td>hESC-derived_CD56+_mesoderm_cultured_cells</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,hESC-derived_CD56+_mesoderm_cultured_cells')">860</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,hESC-derived_CD56+_mesoderm_cultured_cells')">876</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,hESC-derived_CD56+_mesoderm_cultured_cells')">842</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,hESC-derived_CD56+_mesoderm_cultured_cells')">138</td>
+					</tr>
+					<tr class="tr_none">
+						<td>HUES64_cell_line</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,HUES64_cell_line')">802</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,HUES64_cell_line')">817</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,HUES64_cell_line')">773</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,HUES64_cell_line')">114</td>
+					</tr>
+					<tr class="tr_none">
+						<td>kidney</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,kidney')">7603</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,kidney')">7622</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,kidney')">6874</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,kidney')">908</td>
+					</tr>
+					<tr class="tr_none">
+						<td>kidney_left</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,kidney_left')">799</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,kidney_left')">792</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,kidney_left')">725</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,kidney_left')">36</td>
+					</tr>
+					<tr class="tr_none">
+						<td>kidney_renal_cortex</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,kidney_renal_cortex')">1039</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,kidney_renal_cortex')">1025</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,kidney_renal_cortex')">957</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,kidney_renal_cortex')">37</td>
+					</tr>
+					<tr class="tr_none">
+						<td>kidney_renal_cortex_left</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,kidney_renal_cortex_left')">1532</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,kidney_renal_cortex_left')">1509</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,kidney_renal_cortex_left')">1378</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,kidney_renal_cortex_left')">86</td>
+					</tr>
+					<tr class="tr_none">
+						<td>kidney_renal_cortex_right</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,kidney_renal_cortex_right')">882</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,kidney_renal_cortex_right')">851</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,kidney_renal_cortex_right')">753</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,kidney_renal_cortex_right')">42</td>
+					</tr>
+					<tr class="tr_none">
+						<td>kidney_renal_pelvis</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,kidney_renal_pelvis')">1389</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,kidney_renal_pelvis')">1388</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,kidney_renal_pelvis')">1278</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,kidney_renal_pelvis')">66</td>
+					</tr>
+					<tr class="tr_none">
+						<td>kidney_renal_pelvis_left</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,kidney_renal_pelvis_left')">1863</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,kidney_renal_pelvis_left')">1852</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,kidney_renal_pelvis_left')">1668</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,kidney_renal_pelvis_left')">107</td>
+					</tr>
+					<tr class="tr_none">
+						<td>kidney_renal_pelvis_right</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,kidney_renal_pelvis_right')">1908</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,kidney_renal_pelvis_right')">1886</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,kidney_renal_pelvis_right')">1737</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,kidney_renal_pelvis_right')">91</td>
+					</tr>
+					<tr class="tr_none">
+						<td>large_intestine</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,large_intestine')">3093</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,large_intestine')">3036</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,large_intestine')">2835</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,large_intestine')">136</td>
+					</tr>
+					<tr class="tr_none">
+						<td>liver</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,liver')">21441</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,liver')">21687</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,liver')">19758</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,liver')">2707</td>
+					</tr>
+					<tr class="tr_none">
+						<td>lung</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,lung')">87549</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,lung')">93614</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,lung')">83636</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,lung')">11666</td>
+					</tr>
+					<tr class="tr_none">
+						<td>lung_left</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,lung_left')">3500</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,lung_left')">3495</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,lung_left')">3200</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,lung_left')">138</td>
+					</tr>
+					<tr class="tr_none">
+						<td>lung_right</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,lung_right')">2756</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,lung_right')">2749</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,lung_right')">2530</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,lung_right')">113</td>
+					</tr>
+					<tr class="tr_none">
+						<td>muscle_arm</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,muscle_arm')">1005</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,muscle_arm')">967</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,muscle_arm')">926</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,muscle_arm')">48</td>
+					</tr>
+					<tr class="tr_none">
+						<td>muscle_back</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,muscle_back')">753</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,muscle_back')">730</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,muscle_back')">704</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,muscle_back')">26</td>
+					</tr>
+					<tr class="tr_none">
+						<td>muscle_leg</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,muscle_leg')">73010</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,muscle_leg')">79441</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,muscle_leg')">71366</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,muscle_leg')">12126</td>
+					</tr>
+					<tr class="tr_none">
+						<td>muscle_trunk</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,muscle_trunk')">1545</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,muscle_trunk')">1702</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,muscle_trunk')">1608</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,muscle_trunk')">214</td>
+					</tr>
+					<tr class="tr_none">
+						<td>ovary</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,ovary')">57824</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,ovary')">60397</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,ovary')">54488</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,ovary')">7083</td>
+					</tr>
+					<tr class="tr_none">
+						<td>ovary_fetal</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,ovary_fetal')">706</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,ovary_fetal')">701</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,ovary_fetal')">624</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,ovary_fetal')">25</td>
+					</tr>
+					<tr class="tr_none">
+						<td>pancreas</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,pancreas')">120770</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,pancreas')">147491</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,pancreas')">116796</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,pancreas')">19254</td>
+					</tr>
+					<tr class="tr_none">
+						<td>placenta_day113_F</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,placenta_day113_F')">56537</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,placenta_day113_F')">60003</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,placenta_day113_F')">54724</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,placenta_day113_F')">11435</td>
+					</tr>
+					<tr class="tr_none">
+						<td>psoas_muscle</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,psoas_muscle')">26217</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,psoas_muscle')">30293</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,psoas_muscle')">24738</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,psoas_muscle')">3704</td>
+					</tr>
+					<tr class="tr_none">
+						<td>sigmoid_colon</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,sigmoid_colon')">77316</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,sigmoid_colon')">83854</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,sigmoid_colon')">74377</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,sigmoid_colon')">10904</td>
+					</tr>
+					<tr class="tr_none">
+						<td>skeletal_muscle_lower_limb</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,skeletal_muscle_lower_limb')">172</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,skeletal_muscle_lower_limb')">170</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,skeletal_muscle_lower_limb')">169</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,skeletal_muscle_lower_limb')">12</td>
+					</tr>
+					<tr class="tr_none">
+						<td>small_intestine</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,small_intestine')">95458</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,small_intestine')">96643</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,small_intestine')">91644</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,small_intestine')">14166</td>
+					</tr>
+					<tr class="tr_none">
+						<td>spleen</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,spleen')">135090</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,spleen')">169739</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,spleen')">130510</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,spleen')">22428</td>
+					</tr>
+					<tr class="tr_none">
+						<td>stomach</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,stomach')">2779</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,stomach')">2743</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,stomach')">2543</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,stomach')">99</td>
+					</tr>
+					<tr class="tr_none">
+						<td>testes_pool_fetal_M</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,testes_pool_fetal_M')">296</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,testes_pool_fetal_M')">293</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,testes_pool_fetal_M')">283</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,testes_pool_fetal_M')">11</td>
+					</tr>
+					<tr class="tr_none">
+						<td>thymus</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,S,thymus')">90720</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,P,thymus')">93268</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,G,thymus')">87149</td>
+						<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,Roadmap,D,thymus')">15551</td>
+					</tr>
+
+			</tbody>
+		</table>
+	</div>
+<!---------------------- SEQC表格 -------------------------->
+	<div id="body_seqc">
+		<div class="seqc_title">SEQC</div>
+		<div id="flag_seqc" onclick="flexTable(event)" value="body_seqc">&or;</div>
+		<table cellspacing="1" class="table_pro1" id="table_seqc">
+			<div id="thead2">
+				<thead class="seqc_thead">
+						<tr>
+							<th class="th1">
+								<div>
+									<table class="t_head">
+										<thead>
+											<tr>
+												<th class="lineTh">
+													<span style="float:right;">Method</span>
+													<span style="float:left;margin-top:18px;">Cell line</span>
+												</th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+							</th>
+							<th>Seperate</th>
+							<th>Pool</th>
+							<th>Giremi</th>
+							<th class="th2">Deepred</th>
+						</tr>
+					</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>ABI_LIV_A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_LIV_A')">1285</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_LIV_A')">1263</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_LIV_A')">1081</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_LIV_A')">107</td>
+				</tr>
+				<tr>
+					<td>ABI_LIV_B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_LIV_B')">1703</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_LIV_B')">1720</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_LIV_B')">1487</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_LIV_B')">157</td>
+				</tr>
+				<tr>
+					<td>ABI_LIV_C</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_LIV_C')">960</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_LIV_C')">935</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_LIV_C')">804</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_LIV_C')">76</td>
+				</tr>
+				<tr>
+					<td>ABI_LIV_D</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_LIV_D')">1847</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_LIV_D')">1871</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_LIV_D')">1611</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_LIV_D')">141</td>
+				</tr>
+				<tr>
+					<td>ABI_NWU_A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_NWU_A')">867</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_NWU_A')">853</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_NWU_A')">742</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_NWU_A')">74</td>
+				</tr>
+				<tr>
+					<td>ABI_NWU_B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_NWU_B')">1646</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_NWU_B')">1757</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_NWU_B')">1418</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_NWU_B')">183</td>
+				</tr>
+				<tr>
+					<td>ABI_NWU_C</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_NWU_C')">1205</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_NWU_C')">1210</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_NWU_C')">1044</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_NWU_C')">109</td>
+				</tr>
+				<tr>
+					<td>ABI_NWU_D</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_NWU_D')">1360</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_NWU_D')">1430</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_NWU_D')">1175</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_NWU_D')">146</td>
+				</tr>
+				<tr>
+					<td>ABI_NWU_F</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_NWU_F')">2</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_NWU_F')">2</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_NWU_F')">2</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_NWU_F')">0</td>
+				</tr>
+				<tr>
+					<td>ABI_PSU_A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_PSU_A')">567</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_PSU_A')">562</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_PSU_A')">481</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_PSU_A')">42</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABI_PSU_B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_PSU_B')">920</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_PSU_B')">952</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_PSU_B')">771</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_PSU_B')">75</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABI_PSU_C</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_PSU_C')">820</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_PSU_C')">808</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_PSU_C')">694</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_PSU_C')">65</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABI_PSU_D</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_PSU_D')">709</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_PSU_D')">725</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_PSU_D')">609</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_PSU_D')">64</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABI_PSU_F</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_PSU_F')">1</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_PSU_F')">1</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_PSU_F')">1</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_PSU_F')">0</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABI_SQW_A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_SQW_A')">750</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_SQW_A')">729</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_SQW_A')">655</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_SQW_A')">54</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABI_SQW_B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_SQW_B')">1275</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_SQW_B')">1363</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_SQW_B')">1083</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_SQW_B')">110</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABI_SQW_C</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_SQW_C')">791</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_SQW_C')">819</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_SQW_C')">670</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_SQW_C')">62</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABI_SQW_D</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ABI_SQW_D')">1241</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ABI_SQW_D')">1287</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ABI_SQW_D')">1071</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ABI_SQW_D')">95</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_AGR_A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_AGR_A')">161191</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_AGR_A')">201411</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_AGR_A')">144747</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_AGR_A')">42323</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_AGR_B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_AGR_B')">201459</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_AGR_B')">314951</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_AGR_B')">177431</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_AGR_B')">70625</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_AGR_C</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_AGR_C')">183963</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_AGR_C')">247281</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_AGR_C')">164894</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_AGR_C')">52111</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_AGR_D</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_AGR_D')">199273</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_AGR_D')">295840</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_AGR_D')">176812</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_AGR_D')">62944</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_BGI_A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_BGI_A')">142418</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_BGI_A')">169211</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_BGI_A')">127791</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_BGI_A')">34151</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_BGI_B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_BGI_B')">183296</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_BGI_B')">276998</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_BGI_B')">161571</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_BGI_B')">56181</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_BGI_C</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_BGI_C')">166634</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_BGI_C')">214821</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_BGI_C')">149486</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_BGI_C')">42068</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_BGI_D</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_BGI_D')">158564</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_BGI_D')">207433</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_BGI_D')">140290</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_BGI_D')">40405</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_BGI_E</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_BGI_E')">147</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_BGI_E')">153</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_BGI_E')">127</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_BGI_E')">26</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_BGI_F</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_BGI_F')">159</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_BGI_F')">159</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_BGI_F')">133</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_BGI_F')">21</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_CNL_A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_CNL_A')">136400</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_CNL_A')">154973</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_CNL_A')">122031</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_CNL_A')">39116</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_CNL_B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_CNL_B')">172284</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_CNL_B')">233718</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_CNL_B')">151174</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_CNL_B')">61977</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_CNL_C</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_CNL_C')">168584</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_CNL_C')">205973</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_CNL_C')">150391</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_CNL_C')">53716</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_CNL_D</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_CNL_D')">171868</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_CNL_D')">224273</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_CNL_D')">151951</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_CNL_D')">56307</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_CNL_E</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_CNL_E')">86</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_CNL_E')">87</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_CNL_E')">76</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_CNL_E')">6</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_CNL_F</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_CNL_F')">59</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_CNL_F')">63</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_CNL_F')">50</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_CNL_F')">7</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_COH_A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_COH_A')">91914</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_COH_A')">102181</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_COH_A')">83270</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_COH_A')">18632</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_COH_B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_COH_B')">118548</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_COH_B')">155095</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_COH_B')">106682</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_COH_B')">26793</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_COH_C</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_COH_C')">103414</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_COH_C')">120483</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_COH_C')">93866</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_COH_C')">20800</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_COH_D</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_COH_D')">119102</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_COH_D')">150584</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_COH_D')">107704</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_COH_D')">25890</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_MAY_A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_MAY_A')">116717</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_MAY_A')">130070</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_MAY_A')">104334</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_MAY_A')">26235</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_MAY_B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_MAY_B')">147943</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_MAY_B')">195436</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_MAY_B')">129941</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_MAY_B')">39523</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_MAY_C</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_MAY_C')">123094</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_MAY_C')">141955</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_MAY_C')">109763</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_MAY_C')">26717</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_MAY_D</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_MAY_D')">137073</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_MAY_D')">171135</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_MAY_D')">121174</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_MAY_D')">32271</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_MAY_E</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_MAY_E')">56</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_MAY_E')">50</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_MAY_E')">48</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_MAY_E')">8</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_MAY_F</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_MAY_F')">102</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_MAY_F')">97</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_MAY_F')">86</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_MAY_F')">12</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_NVS_A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_NVS_A')">132814</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_NVS_A')">152593</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_NVS_A')">119269</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_NVS_A')">31569</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_NVS_B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_NVS_B')">167570</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_NVS_B')">230393</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_NVS_B')">147766</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_NVS_B')">49904</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_NVS_C</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_NVS_C')">148210</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_NVS_C')">180636</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_NVS_C')">132889</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_NVS_C')">35922</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_NVS_D</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_NVS_D')">168259</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_NVS_D')">223856</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_NVS_D')">149173</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_NVS_D')">46208</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_NVS_E</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_NVS_E')">181</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_NVS_E')">176</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_NVS_E')">145</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_NVS_E')">22</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_NVS_F</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_NVS_F')">177</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_NVS_F')">191</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_NVS_F')">159</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_NVS_F')">16</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_NYG_A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_NYG_A')">76856</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_NYG_A')">84384</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_NYG_A')">69574</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_NYG_A')">14642</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_NYG_B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_NYG_B')">99936</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_NYG_B')">126612</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_NYG_B')">89105</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_NYG_B')">20781</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_NYG_C</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_NYG_C')">90737</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_NYG_C')">103953</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_NYG_C')">82002</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_NYG_C')">17487</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_NYG_D</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_NYG_D')">103599</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_NYG_D')">128020</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_NYG_D')">93328</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_NYG_D')">21186</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_NYG_E</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_NYG_E')">8</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_NYG_E')">8</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_NYG_E')">5</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_NYG_E')">1</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ILM_NYG_F</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,S,ILM_NYG_F')">105</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,P,ILM_NYG_F')">105</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,G,ILM_NYG_F')">92</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,SEQC,D,ILM_NYG_F')">22</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+<!---------------------- CCLE表格 -------------------------->
+	<div id="body_ccle">
+		<div class="ccle_title">CCLE</div>
+		<div id="flag_ccle" onclick="flexTable(event)" value="body_ccle">&or;</div>
+		<table cellspacing="1" class="table_pro1" id="table_ccle">
+			<div id="thead3">
+				<thead class="ccle_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+										<tr>
+                                            <th class="lineTh">
+                                                <span style="float:right;">Method</span>
+                                                <span style="float:left;margin-top:18px;">Cell line</span>
+                                            </th>
+                                        </tr>
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>CCLE-BLCA</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-BLCA')">55203</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-BLCA')">51780</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-BLCA')">51596</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-BLCA')">19252</td>
+				</tr>
+				<tr>
+					<td>CCLE-BRCA</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-BRCA')">108470</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-BRCA')">98796</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-BRCA')">100963</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-BRCA')">38705</td>
+				</tr>
+				<tr>
+					<td>CCLE-CESC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-CESC')">101247</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-CESC')">76036</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-CESC')">82308</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-CESC')">28990</td>
+				</tr>
+				<tr>
+					<td>CCLE-COAD</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-COAD')">104365</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-COAD')">85611</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-COAD')">88905</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-COAD')">33986</td>
+				</tr>
+				<tr>
+					<td>CCLE-DLBC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-DLBC')">98784</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-DLBC')">89341</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-DLBC')">90814</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-DLBC')">34314</td>
+				</tr>
+				<tr>
+					<td>CCLE-ESCA</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-ESCA')">68392</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-ESCA')">63003</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-ESCA')">64226</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-ESCA')">22852</td>
+				</tr>
+				<tr>
+					<td>CCLE-HNSC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-HNSC')">59341</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-HNSC')">55356</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-HNSC')">55420</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-HNSC')">20448</td>
+				</tr>
+				<tr>
+					<td>CCLE-KIRC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-KIRC')">47457</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-KIRC')">43844</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-KIRC')">44012</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-KIRC')">16127</td>
+				</tr>
+				<tr>
+					<td>CCLE-LCLL</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-LCLL')">147595</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-LCLL')">131661</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-LCLL')">136750</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-LCLL')">50409</td>
+				</tr>
+				<tr>
+					<td>CCLE-LGG</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-LGG')">129754</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-LGG')">115006</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-LGG')">127387</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-LGG')">43698</td>
+				</tr>
+				<tr class="tr_none">
+					<td>CCLE-LIHC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-LIHC')">63189</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-LIHC')">58958</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-LIHC')">58347</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-LIHC')">23229</td>
+				</tr>
+				<tr class="tr_none">
+					<td>CCLE-LUSC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-LUSC')">210122</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-LUSC')">178184</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-LUSC')">188616</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-LUSC')">80253</td>
+				</tr>
+				<tr class="tr_none">
+					<td>CCLE-MM</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-MM')">71776</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-MM')">65796</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-MM')">67778</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-MM')">23503</td>
+				</tr>
+				<tr class="tr_none">
+					<td>CCLE-OV</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-OV')">85042</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-OV')">77520</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-OV')">79053</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-OV')">29688</td>
+				</tr>
+				<tr class="tr_none">
+					<td>CCLE-PAAD</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-PAAD')">83467</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-PAAD')">77349</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-PAAD')">77546</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-PAAD')">31043</td>
+				</tr>
+				<tr class="tr_none">
+					<td>CCLE-PRAD</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-PRAD')">30709</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-PRAD')">28032</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-PRAD')">28044</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-PRAD')">8498</td>
+				</tr>
+				<tr class="tr_none">
+					<td>CCLE-SARC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-SARC')">65269</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-SARC')">61153</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-SARC')">60565</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-SARC')">24289</td>
+				</tr>
+				<tr class="tr_none">
+					<td>CCLE-SKCM</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-SKCM')">64602</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-SKCM')">60298</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-SKCM')">59713</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-SKCM')">25014</td>
+				</tr>
+				<tr class="tr_none">
+					<td>CCLE-STAD</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-STAD')">78262</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-STAD')">71824</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-STAD')">72580</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-STAD')">26127</td>
+				</tr>
+				<tr class="tr_none">
+					<td>CCLE-THCA</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-THCA')">36589</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-THCA')">34785</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-THCA')">34358</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-THCA')">11323</td>
+				</tr>
+				<tr class="tr_none">
+					<td>CCLE-UCEC</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,S,CCLE-UCEC')">19933</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,P,CCLE-UCEC')">19037</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,G,CCLE-UCEC')">18975</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,CCLE,D,CCLE-UCEC')">5725</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+<!---------------------- ABRF表格 -------------------------->
+	<div id="body_abrf">
+		<div class="abrf_title">ABRF</div>
+		<div id="flag_abrf" onclick="flexTable(event)" value="body_abrf">&or;</div>
+		<table cellspacing="1" class="table_pro1" id="table_abrf">
+			<div id="thead4">
+				<thead class="abrf_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+										<tr>
+                                            <th class="lineTh">
+                                                <span style="float:right;">Method</span>
+                                                <span style="float:left;margin-top:18px;">Cell line</span>
+                                            </th>
+                                        </tr>
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>ABRF-ILMN-L-A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-L-A')">83427</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-L-A')">102624</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-L-A')">80998</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-L-A')">9391</td>
+				</tr>
+				<tr>
+					<td>ABRF-ILMN-L-B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-L-B')">83786</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-L-B')">124765</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-L-B')">80607</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-L-B')">8925</td>
+				</tr>
+				<tr>
+					<td>ABRF-ILMN-M-AH</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-M-AH')">60279</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-M-AH')">68657</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-M-AH')">58332</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-M-AH')">6843</td>
+				</tr>
+				<tr>
+					<td>ABRF-ILMN-M-AS</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-M-AS')">53703</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-M-AS')">61773</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-M-AS')">51931</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-M-AS')">6320</td>
+				</tr>
+				<tr>
+					<td>ABRF-ILMN-N-AH</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-N-AH')">22762</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-N-AH')">24466</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-N-AH')">21835</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-N-AH')">2556</td>
+				</tr>
+				<tr>
+					<td>ABRF-ILMN-N-AR</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-N-AR')">58853</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-N-AR')">67132</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-N-AR')">56946</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-N-AR')">6577</td>
+				</tr>
+				<tr>
+					<td>ABRF-ILMN-N-BR</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-N-BR')">94435</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-N-BR')">148595</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-N-BR')">90933</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-N-BR')">10928</td>
+				</tr>
+				<tr>
+					<td>ABRF-ILMN-R-A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-R-A')">66182</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-R-A')">85223</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-R-A')">63929</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-R-A')">7199</td>
+				</tr>
+				<tr>
+					<td>ABRF-ILMN-R-B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-R-B')">82797</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-R-B')">130381</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-R-B')">79468</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-R-B')">8730</td>
+				</tr>
+				<tr>
+					<td>ABRF-ILMN-RIBO-A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-RIBO-A')">10851</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-RIBO-A')">13673</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-RIBO-A')">10278</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-RIBO-A')">423</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-ILMN-RIBO-B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-RIBO-B')">6533</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-RIBO-B')">8793</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-RIBO-B')">6050</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-RIBO-B')">281</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-ILMN-RIBO-C</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-RIBO-C')">22410</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-RIBO-C')">27748</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-RIBO-C')">21411</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-RIBO-C')">1271</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-ILMN-RIBO-D</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-RIBO-D')">28768</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-RIBO-D')">39874</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-RIBO-D')">27666</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-RIBO-D')">1813</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-ILMN-RNA-A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-RNA-A')">10479</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-RNA-A')">11797</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-RNA-A')">9595</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-RNA-A')">751</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-ILMN-RNA-B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-RNA-B')">14955</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-RNA-B')">17076</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-RNA-B')">13832</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-RNA-B')">1047</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-ILMN-RNA-C</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-RNA-C')">12574</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-RNA-C')">13195</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-RNA-C')">11507</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-RNA-C')">945</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-ILMN-RNA-D</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-RNA-D')">15701</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-RNA-D')">17281</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-RNA-D')">14380</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-RNA-D')">1218</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-ILMN-V-A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-V-A')">56667</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-V-A')">69074</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-V-A')">54454</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-V-A')">5792</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-ILMN-V-B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-ILMN-V-B')">89530</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-ILMN-V-B')">137689</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-ILMN-V-B')">86263</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-ILMN-V-B')">9302</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-PGM-NIH-A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-PGM-NIH-A')">261</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-PGM-NIH-A')">282</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-PGM-NIH-A')">216</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-PGM-NIH-A')">34</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-PGM-NIH-B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-PGM-NIH-B')">226</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-PGM-NIH-B')">236</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-PGM-NIH-B')">178</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-PGM-NIH-B')">29</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-PRO-MSK-A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-PRO-MSK-A')">375</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-PRO-MSK-A')">423</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-PRO-MSK-A')">306</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-PRO-MSK-A')">30</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-PRO-MSK-B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-PRO-MSK-B')">356</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-PRO-MSK-B')">390</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-PRO-MSK-B')">295</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-PRO-MSK-B')">32</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-PRO-NCI-A</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-PRO-NCI-A')">337</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-PRO-NCI-A')">364</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-PRO-NCI-A')">298</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-PRO-NCI-A')">28</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-PRO-NCI-B</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-PRO-NCI-B')">185</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-PRO-NCI-B')">230</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-PRO-NCI-B')">164</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-PRO-NCI-B')">11</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-PRO-NCI-C</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-PRO-NCI-C')">87</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-PRO-NCI-C')">97</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-PRO-NCI-C')">73</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-PRO-NCI-C')">2</td>
+				</tr>
+				<tr class="tr_none">
+					<td>ABRF-PRO-NCI-D</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,S,ABRF-PRO-NCI-D')">179</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,P,ABRF-PRO-NCI-D')">223</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,G,ABRF-PRO-NCI-D')">157</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,ABRF,D,ABRF-PRO-NCI-D')">10</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+<!---------------------- GEUV表格 -------------------------->
+	<div id="body_geuv">
+		<div class="geuv_title">GEUV</div>
+		<table cellspacing="1" class="table_pro">
+			<div id="thead4">
+				<thead class="geuv_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+										<tr>
+                                            <th class="lineTh">
+                                                <span style="float:right;">Method</span>
+                                                <span style="float:left;margin-top:18px;">Cell line</span>
+                                            </th>
+                                        </tr>
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>CEU</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,S,CEU')">177301</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,P,CEU')">208467</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,G,CEU')">168830</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,D,CEU')">30343</td>
+				</tr>
+				<tr>
+					<td>FIN</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,S,FIN')">193408</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,P,FIN')">230421</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,G,FIN')">184750</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,D,FIN')">34211</td>
+				</tr>
+				<tr>
+					<td>GBR</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,S,GBR')">197090</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,P,GBR')">234996</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,G,GBR')">188381</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,D,GBR')">34995</td>
+				</tr>
+				<tr>
+					<td>TSI</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,S,TSI')">192353</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,P,TSI')">239923</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,G,TSI')">184087</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,D,TSI')">33677</td>
+				</tr>
+				<tr>
+					<td>YRI</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,S,YRI')">193522</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,P,YRI')">242446</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,G,YRI')">185306</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,GEUV,D,YRI')">35042</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+<!---------------------- HumanBodyMap表格 -------------------------->
+	<div id="body_bodymap">
+		<div class="bodymap_title">HumanBodyMap</div>
+		<table cellspacing="1" class="table_pro">
+			<div id="thead4">
+				<thead class="bodymap_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+										<tr>
+                                            <th class="lineTh">
+                                                <span style="float:right;">Method</span>
+                                                <span style="float:left;margin-top:18px;">Cell line</span>
+                                            </th>
+                                        </tr>
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>16_tissues</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,S,16_tissues')">31171</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,P,16_tissues')">45054</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,G,16_tissues')">28941</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,D,16_tissues')">3260</td>
+				</tr>
+				<tr>
+					<td>adrenal</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,S,adrenal')">10795</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,P,adrenal')">11524</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,G,adrenal')">9854</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,D,adrenal')">1619</td>
+				</tr>
+				<tr>
+					<td>brain</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,S,brain')">6782</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,P,brain')">7104</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,G,brain')">6040</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,D,brain')">753</td>
+				</tr>
+				<tr>
+					<td>breast</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,S,breast')">9055</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,P,breast')">10624</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,G,breast')">8189</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,D,breast')">1057</td>
+				</tr>
+				<tr>
+					<td>colon</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,S,colon')">6182</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,P,colon')">6544</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,G,colon')">5485</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,D,colon')">842</td>
+				</tr>
+				<tr>
+					<td>lymph_node</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,S,lymph_node')">7318</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,P,lymph_node')">7582</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,G,lymph_node')">6509</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,D,lymph_node')">1266</td>
+				</tr>
+				<tr>
+					<td>prostate</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,S,prostate')">8178</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,P,prostate')">8602</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,G,prostate')">7270</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,D,prostate')">1145</td>
+				</tr>
+				<tr>
+					<td>skeletalmuscle</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,S,skeletalmuscle')">1241</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,P,skeletalmuscle')">1289</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,G,skeletalmuscle')">1086</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,D,skeletalmuscle')">202</td>
+				</tr>
+				<tr>
+					<td>testes</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,S,testes')">7533</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,P,testes')">7900</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,G,testes')">6657</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,D,testes')">1030</td>
+				</tr>
+				<tr>
+					<td>thyroid</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,S,thyroid')">7264</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,P,thyroid')">7501</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,G,thyroid')">6547</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,D,thyroid')">942</td>
+				</tr>
+				<tr>
+					<td>whitebloodcell</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,S,whitebloodcell')">3707</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,P,whitebloodcell')">3760</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,G,whitebloodcell')">3215</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,HumanBodyMap,D,whitebloodcell')">495</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+<!-----------------------BrainDataSet表格 -------------------------->
+	<div id="body_braindataset">
+		<div class="braindataset_title">BrainDataSet</div>
+		<table cellspacing="1" class="table_pro">
+			<div id="thead4">
+				<thead class="braindataset_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+										<tr>
+                                            <th class="lineTh">
+                                                <span style="float:right;">Method</span>
+                                                <span style="float:left;margin-top:18px;">Cell line</span>
+                                            </th>
+                                        </tr>
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>brain_frontal</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,S,brain_frontal')">805</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,P,brain_frontal')">814</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,G,brain_frontal')">675</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,D,brain_frontal')">104</td>
+				</tr>
+				<tr>
+					<td>brain_prefrontal</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,S,brain_prefrontal')">11379</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,P,brain_prefrontal')">11995</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,G,brain_prefrontal')">10467</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,D,brain_prefrontal')">1928</td>
+				</tr>
+				<tr>
+					<td>cerebellum</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,S,cerebellum')">5365</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,P,cerebellum')">5888</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,G,cerebellum')">5127</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,D,cerebellum')">834</td>
+				</tr>
+				<tr>
+					<td>frontal_cortex</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,S,frontal_cortex')">15677</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,P,frontal_cortex')">16973</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,G,frontal_cortex')">14360</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,D,frontal_cortex')">2368</td>
+				</tr>
+				<tr>
+					<td>Homosapiens</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,S,Homosapiens')">61005</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,P,Homosapiens')">74112</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,G,Homosapiens')">57787</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,D,Homosapiens')">15009</td>
+				</tr>
+				<tr>
+					<td>mixedhumanbrain</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,S,mixedhumanbrain')">3242</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,P,mixedhumanbrain')">3345</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,G,mixedhumanbrain')">2925</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,D,mixedhumanbrain')">316</td>
+				</tr>
+				<tr>
+					<td>temporal_cortex</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,S,temporal_cortex')">21253</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,P,temporal_cortex')">24282</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,G,temporal_cortex')">19535</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Human,BrainDataSet,D,temporal_cortex')">3316</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+
+	<script type="text/javascript">
+		window.onload=function(){
+			myPadding();
+		}
+		
+		function myPadding(){
+			var table, tr, list, i;
+			list = ["encode", "roadmap", "seqc", "ccle","abrf","geuv","bodymap","braindataset"];
+			for(i=0; i <= 7; i++){
+				table = document.getElementById("body_" + list[i]);
+				tr = table.getElementsByTagName("tr");
+				for (i = 0; i < tr.length; i++){
+					td = tr[i].getElementsByTagName("td")[0];
+					if(td){
+						td.style.width = "330px";
+						// td.style.textAlign = "right";
+						// td.style.paddingRight = "10px";
+						
+					}
+				}
+			}	
+		}
+		
+		function myFunction(){
+			var input, filter,  div, tr, td, i, j, n, list, sum;
+			list = ["encode", "roadmap", "seqc", "ccle","abrf","geuv","bodymap","braindataset"];
+			input = window.parent.document.getElementById("myInput1");
+			filter = input.value.toUpperCase();
+			sum = 0;
+			for(j=0; j<=7; j++){
+				n = 0;
+				div = document.getElementById("body_"+list[j]);
+				div.style.display="";
+				tr = div.getElementsByTagName("tr");
+				for (i = 0; i < tr.length; i++){
+					td = tr[i].getElementsByTagName("td")[0];
+					if(td){
+						if (td.innerHTML.toUpperCase().indexOf(filter) > -1){
+							tr[i].style.display="table-row";
+							n += 1;
+						}else{
+							tr[i].style.display="none";
+						}
+					}
+				}
+				if(n == 0){
+					div.style.display="none";
+				}
+				sum += n;
+			}
+			document.getElementById("number").innerHTML="You have "+sum+" results"
+			list1 = ["encode", "roadmap", "seqc", "ccle","abrf"]
+			for (var k=0; k<=4; k++){
+				div_project = document.getElementById("body_" + list1[k]);
+				tr_project = div_project.getElementsByTagName("tr");
+				if (input.value != ""){
+					document.getElementById("flag_"+list1[k]).setAttribute("style","display:none;");
+					document.getElementById("table_" + list1[k]).setAttribute("style","margin-right: auto");
+				} else{
+					document.getElementById("flag_" + list1[k]).style.display="";
+					document.getElementById("table_" + list1[k]).setAttribute("style","margin-right: 0px");
+					for (i = 13; i < tr_project.length; i++){
+						tr_project[i].style.display="none";
+					}
+				}
+			}
+			// console.log(sum);
+		}
+		function flexTable(event){
+				var state = event.target;
+				var flag_id = state.id;
+				var project_body = "body_" + flag_id.split("_")[1];
+				var table = document.getElementById(project_body);
+				var tr = table.getElementsByTagName("tr");
+				if (state.innerHTML=="∨"){
+					for (var i = 13; i < tr.length; i++){
+						tr[i].style.display="table-row";
+					}
+					state.innerHTML = "&and;";
+					if (flag_id=="flag_encode"){
+						state.setAttribute("style","margin-top:1060px;");
+					} else if (flag_id=="flag_roadmap"){
+						state.setAttribute("style","margin-top:1207px;");
+					} else if (flag_id=="flag_seqc"){
+						state.setAttribute("style","margin-top:1207px;");
+					} else if (flag_id=="flag_ccle"){
+						state.setAttribute("style","margin-top:472px;");
+					} else if (flag_id=="flag_abrf"){
+						state.setAttribute("style","margin-top:598px;");
+					}
+				}else{
+					for (var i = 13; i < tr.length; i++){
+						tr[i].style.display="none";
+					}
+					state.innerHTML = "&or;";
+					state.setAttribute("style","margin-top:262px;");
+				}
+		}
+	</script>
+</html>

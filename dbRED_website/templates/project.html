@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} Project-{{ project  }} {% endblock %}
+{% block home_active %}{% endblock %}
+{% block project_active %}class="active"{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<section id="project" class="bg-white">
+<div class="row" style="margin-bottom:30px;">
+ <div class="col-md-12">
+   <div class="row-title" style="color:#288CF0;">{{title}} Jbrowse</div>
+ </div>
+ <div class="col-md-12">
+ <div style="width: 1000px; margin: 0 auto; black;width:55%;">
+       <iframe style="border: 1px solid black;width:100%;" src="https://jbrowse.bioinfotech.org/?data={{project}}&tracklist=1&nav=1&overview=1&tracks=DNA" width="1000" height="500">
+       </iframe>
+ </div>
+ </div>
+</div>
+</section>
+{% endblock %}

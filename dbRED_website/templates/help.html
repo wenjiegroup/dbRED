@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block title %} Help {% endblock %}
+{% load staticfiles %}
+{% block content %}
+<div class="help_banner_area">
+<section id="help" class="bg-white-help">
+<div>
+    <h1 class="help-h1">HELP</h1>
+    <div class="navigation">
+        <a class="nav2" href="#search">Search</a>
+        <a class="nav2" href="#datamatrix">Data Matrix</a>
+        <a class="nav2" href="#statistics">Statistics</a>
+        <a class="nav2" href="#jbrowse">Jbrowse</a>
+        <a class="nav2" href="#download">Download</a>
+    </div>
+    <div>
+        <h3 class="help-h3">Home Page</h3>
+        <div class="description">The home page of dbRED is very concise and mainly consists of four parts. In the top left corner of the page is the back button(A), which allows you to go back to the home page no matter what page you are on. At the top right is the navigation menu(B), you can go to pages with different functions through it. The middle parts are the search area and date matrix button(C, D), we will provide a more detailed introduction to these two parts later.</div>
+        <img class="help-img" src="/static/help/home_page.png" alt="home" style="height:35%;width:75%">
+        <div class="myline">
+		    <hr/>
+	    </div>
+    </div>
+    <div>
+        <h3 class="help-h3" id="search">Search</h3>
+        <div>
+            <div class="description">dbRED provides two ways to search for A-to-I editing sites. By providing a genomic region (A), in the format chr:start-end, or a specific gene symbol, dbRED allows RNA editing searches across 7 specie in specific locus (B).</div>
+            <img class="help-img" src="/static/help/search.png" alt="search" style="height:30%;width:75%;">
+        </div>
+        <div class="second-section">
+            <div class="subtitle"></div>
+            <div>By clicking the corresponding check boxes, the searching results can be filtered by various aspects of the editing sites, such as, their amino acid changes, repetitive locations, genomic regions, identified methods, project that editing sites coming from, whether the editing sites are labeled in dbSNP.</div>
+            <img class="help-img" class="help-img" src="/static/help/filter_box.png" alt="filter_box" style="height:20%;width:66%;">
+        </div>
+        <div class="second-section">
+            <div>All searching results were organized into table format, supporting advancing sorting and searching in time. Each RNA editing sites is presented with substantial information including genomic locations, amino acid change, PhastCons conservation score, existing database annotation, and detailed results from four methods in separate page. Specifically, the icons in first columns can redirect to the UCSC genome browser illustrating the flanking regions of the editing sites. Similarly, the icons in “GeneName”, “Database”, “dbSNP” columns provide external links to other database if the editing site is presented or related in other annotation database.</div>
+            <img class="help-img" src="/static/help/search_result.png" alt="result" style="height:42%;width:75%;">
+        </div>
+        <div  class="second-section">
+            <div>A new page containing more detailed information of specific editing site in the search table can be opened by clicking the icon of the unique accession number. The detailed page consists of five panels: a genome browse to explore the genomic context of the sites (A); an information card of editing site, including cell line, project, and identified method of this sites coming from (B); the gene that editing site located in, which linked to gencard (C); ncRNA annotation of this editing sites, including lncRNA, miRNA, circRNA and piRNA (D); the surrounding sequence of the editing site and the secondary structures before and after A-to-I editing (E). ncRNA annotation offers chance to explore the functional characterization of ncRNA editing sites. Double stranded RNA is considered a prerequisite for editing by ADARs. The secondary structures surrounding editing site provides additional proof of the editing events. Users can click the thumbnail of secondary structures to see the detail (F).</div>
+            <img class="help-img" src="/static/help/search_detail.png" alt="detail" style="height:75%;width:70%">
+            <!--<img class="help-img" src="/static/help/secondary_structure.png" alt="detail" style="height:25%;width:50%;">-->
+        </div>
+        <div class="myline">
+		    <hr/>
+	    </div>
+    </div>
+    <div>
+        <h3 class="help-h3" id="datamatrix">Data Matrix</h3>
+        <div>Additionally, users can click the “Data Matrix” button to jump to a new metadata page. On the new page , it shows the number of editing sites identified by each method in each cell line. Users can choose their interested specie or project name, then click the number in the table to retrieve all editing sites identified by their interested cell line and identified method.</div>
+        <img class="help-img" src="/static/help/datamatrix.png" alt="data matrix" style="height:42%;width:75%;">
+        <div class="myline">
+		    <hr/>
+	    </div>
+    </div>
+    <div>
+        <h3 class="help-h3" id="statistics">Statistics</h3>
+        <div>
+            <div>For all data, dbRED provides a very visual statistics page. Click the corresponding picture of each species can enter the corresponding statistical page. </div>
+            <img class="help-img" src="/static/help/statistics1.png" alt="statistics" style="height:47%;width:75%;">
+        </div>
+        <div class="second-section">
+            <div>Statistics page contains the corresponding statistics for the number of editing sites, samples, repetitive location and genomic location for each species. Users can hover over each coordinate to see the corresponding number and ratio. </div>
+            <img class="help-img" src="/static/help/statistics2.png" alt="statistics" style="height:52%;width:73%;">
+        </div>
+        <div class="myline">
+		    <hr/>
+	    </div>
+    </div>
+    <div>
+        <h3 class="help-h3" id="jbrowse">Jbrowse</h3>
+        <div>
+            <div>Project page of dbRED provide genomic context and annotation for ENCODE, ROADMAP, MOUSEENCODE, and MODENCODE. For each project, it directly shows the gene annotation, repetitive elements surrounding the editing site. Besides, it collected several epigenomics experimental tracks from ENCODE and ROADMAP, including DNase hypersensitive sites, histone modifications and transcription factor binding sites. It provides the DNA elements surrounding for cis-regulation exporation of editing sites. Additionally, dbRED can display editing sites from different projects in separate tracks or combined track. It enables users to compare the location distributions of editing sites among projects. It’s also convenient to check closely located editing sites.</div>
+            <img class="help-img" src="/static/help/jbrowse1.png" alt="jbrowse" style="height:42%;width:78%;">
+        </div>
+        <div class="second-section">
+            <div>After clicking the interested editing sites, a pop-up window shows the amino acid changes, repetitive elements, phastCon score and cell line information of this sites. By embedding annotation of DHS, histone modifications and transcription factor binding sites, dbRED provides a new venue to interpret the potential functional changes resulting from editing sites.</div>
+            <img class="help-img" src="/static/help/jbrowse2.png" alt="jbrowse" style="height:42%;width:50%;">
+        </div>
+        <div class="myline">
+		    <hr/>
+	    </div>
+    </div>
+    <div>
+        <h3 class="help-h3" id="download">Download</h3>
+        <div class="description">Main dbRED tables are downloadable in the tab-delimited text format.</div>
+        <img class="help-img" src="/static/help/download.png" alt="home" style="height:38%;width:70%;">
+        <div class="myline">
+		    <hr/>
+	    </div>
+    </div>
+</div>
+</section>
+</div>
+{% endblock %}

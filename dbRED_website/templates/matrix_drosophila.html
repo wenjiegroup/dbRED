@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>all project</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.table_title{
+				font-size: 28px;
+				text-align: center;
+				font-weight: 600;
+			}
+			#number{
+				width: 180px;
+				font-weight: 600;
+				margin: 10px 110px -10px auto;
+			}
+			.dmelanogaster_title{
+				font-weight: bold;
+				color: rgb(57,98,205);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.dpseudoobscura_title{
+				font-weight: bold;
+				color: rgb(33,152,25);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.dmojavensis_title{
+				font-weight: bold;
+				color: rgb(200,100,21);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.dvirilis_title{
+				font-weight: bold;
+				color: rgb(151,80,153);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.dsimulans_title{
+				font-weight: bold;
+				color: rgb(149,74,75);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.dyakuba_title{
+				font-weight: bold;
+				color: rgb(72,209,204);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.dananassae_title{
+				font-weight: bold;
+				color: rgb(219,112,147);
+				width: 50px;
+				font-size: 27px;
+				margin: 0 120px;
+			}
+			.table_pro{
+				width: 700px;
+				border: 1px solid white;
+				background-color: rgb(240,240,240); 
+				border-radius: 8px;
+				margin: 0 auto;
+			}
+			td{	
+				height: 20px;
+				font-size: 13px;
+			    text-align: center;
+				background-color: white;
+			}
+			.th1{
+				width: 330px;
+				border-top-left-radius: 8px;
+			}
+			.th2{
+				border-top-right-radius: 8px;
+			}
+			.t_head{
+				width: 140px;
+				margin: 0 auto;
+			}
+			.dmelanogaster_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(57,98,205);
+			}
+			.dmojavensis_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(200,100,21);
+			}
+			.dpseudoobscura_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(33,152,25);
+			}
+			.dsimulans_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(149,74,75);
+			}
+			.dvirilis_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(151,80,153);
+			}
+			.dyakuba_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(72,209,204);
+			}
+			.dananassae_thead{
+				color: white;
+				text-align: center;
+				background-color: rgb(219,112,147);
+			}
+			tbody td:hover{
+				background-color: #f1f1f1;
+			}
+			.table_pro1{
+				width: 700px;
+				border: 1px solid white;
+				background-color: rgb(240,240,240);
+				border-radius: 8px;
+				margin: 0 auto;
+				margin-right:0px
+			}
+			#flag{
+				font-size: 30px;
+				font-weight:900;
+				line-height: 12px;
+				height: 15px;
+				width: 30px;
+				border-bottom-right-radius: 5px;
+				float:right;
+				margin-top: 262px;
+				margin-right:90px;
+				background-color: rgb(57,98,205);
+				color: white;
+				text-align: center;
+				cursor:pointer;
+			}
+			.tr_none{
+				display:none;
+			}
+			.lineTh {
+				height:40px;
+		 		background: rgb(255,255,255,0) url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAlIiBoZWlnaHQ9IjEyMCUiPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjEwMCUiIHkyPSIxMDAlIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=) no-repeat 100% center;
+			}
+		</style>
+	</head>
+	<div id="number"></div>
+<!---------------------- Encoe表格 -------------------------->
+	<div id="body_dmelanogaster">
+		<div class="dmelanogaster_title">D.melanogaster</div>
+		<div id="flag" onclick="flexTable(event)">&or;</div>
+		<table cellspacing="1" class="table_pro1" id="table_pro1">
+			<div id="thead0">
+				<thead class="dmelanogaster_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+										<tr>
+											<th class="lineTh">
+												<span style="float:right;">Method</span>
+												<span style="float:left;margin-top:18px;">Cell line</span>
+											</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+						<!--<th class="th2">Total</th>-->
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>Adult</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult')">36895</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult')">366</td>
+				</tr>
+				<tr>
+					<td>Adult eclosion + 4 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult eclosion + 4 days')">10380</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult eclosion + 4 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult eclosion + 4 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult eclosion + 4 days')">86</td>
+				</tr>
+				<tr>
+					<td>Adult Female 8 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult Female 8 days')">13089</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult Female 8 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult Female 8 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult Female 8 days')">124</td>
+				</tr>
+				<tr>
+					<td>Adult Female Whole Species</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult Female Whole Species')">14661</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult Female Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult Female Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult Female Whole Species')">125</td>
+				</tr>
+				<tr>
+					<td>Adult Female, eclosion + 1 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult Female, eclosion + 1 days')">64</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult Female, eclosion + 1 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult Female, eclosion + 1 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult Female, eclosion + 1 days')">2</td>
+				</tr>
+				<tr>
+					<td>Adult Female, eclosion + 30 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult Female, eclosion + 30 days')">47</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult Female, eclosion + 30 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult Female, eclosion + 30 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult Female, eclosion + 30 days')">1</td>
+				</tr>
+				<tr>
+					<td>Adult Female, eclosion + 4 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult Female, eclosion + 4 days')">20859</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult Female, eclosion + 4 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult Female, eclosion + 4 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult Female, eclosion + 4 days')">144</td>
+				</tr>
+				<tr>
+					<td>Adult Female, eclosion + 5 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult Female, eclosion + 5 days')">42</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult Female, eclosion + 5 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult Female, eclosion + 5 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult Female, eclosion + 5 days')">1</td>
+				</tr>
+				<tr>
+					<td>Adult Male 8 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult Male 8 days')">13450</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult Male 8 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult Male 8 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult Male 8 days')">120</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Adult Male Whole Species</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult Male Whole Species')">17279</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult Male Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult Male Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult Male Whole Species')">156</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Adult Male, eclosion + 1 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult Male, eclosion + 1 days')">78</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult Male, eclosion + 1 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult Male, eclosion + 1 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult Male, eclosion + 1 days')">3</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Adult Male, eclosion + 30 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult Male, eclosion + 30 days')">73</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult Male, eclosion + 30 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult Male, eclosion + 30 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult Male, eclosion + 30 days')">1</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Adult Male, eclosion + 4 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult Male, eclosion + 4 days')">22426</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult Male, eclosion + 4 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult Male, eclosion + 4 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult Male, eclosion + 4 days')">155</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Adult Male, eclosion + 5 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult Male, eclosion + 5 days')">87</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult Male, eclosion + 5 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult Male, eclosion + 5 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult Male, eclosion + 5 days')">4</td>
+				</tr>
+				<tr>
+					<td>Adult eclosion + 20 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult eclosion %2B 20 days')">21627</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult eclosion %2B 20 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult eclosion %2B 20 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult eclosion %2B 20 days')">150</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Adult mated female, eclosion + 20 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult mated female, eclosion + 20 days')">18330</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult mated female, eclosion + 20 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult mated female, eclosion + 20 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult mated female, eclosion + 20 days')">129</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Adult mixed-sex flies, eclosion + 4 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult mixed-sex flies, eclosion + 4 days')">19880</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult mixed-sex flies, eclosion + 4 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult mixed-sex flies, eclosion + 4 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult mixed-sex flies, eclosion + 4 days')">137</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Adult, eclosion + 20 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Adult, eclosion + 20 days')">21627</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Adult, eclosion + 20 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Adult, eclosion + 20 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Adult, eclosion + 20 days')">150</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos 0-2 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Embryos 0-2 hr')">19</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Embryos 0-2 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Embryos 0-2 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Embryos 0-2 hr')">0</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos 0-4 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Embryos 0-4 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Embryos 0-4 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Embryos 0-4 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Embryos 0-4 hr')">1</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos 10-12 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Embryos 10-12 hr')">25</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Embryos 10-12 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Embryos 10-12 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Embryos 10-12 hr')">0</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos 12-14 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Embryos 12-14 hr')">38</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Embryos 12-14 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Embryos 12-14 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Embryos 12-14 hr')">0</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos 14-16 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Embryos 14-16 hr')">30</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Embryos 14-16 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Embryos 14-16 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Embryos 14-16 hr')">3</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos 16-18 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Embryos 16-18 hr')">36</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Embryos 16-18 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Embryos 16-18 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Embryos 16-18 hr')">1</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos 16-20 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Embryos 16-20 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Embryos 16-20 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Embryos 16-20 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Embryos 16-20 hr')">4</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos 18-20 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Embryos 18-20 hr')">35</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Embryos 18-20 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Embryos 18-20 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Embryos 18-20 hr')">2</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos 20-22 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Embryos 20-22 hr')">36</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Embryos 20-22 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Embryos 20-22 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Embryos 20-22 hr')">1</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos 22-24 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Embryos 22-24 hr')">38</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Embryos 22-24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Embryos 22-24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Embryos 22-24 hr')">1</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos 2-4 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Embryos 2-4 hr')">19</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Embryos 2-4 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Embryos 2-4 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Embryos 2-4 hr')">0</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos 4-6 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Embryos 4-6 hr')">20</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Embryos 4-6 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Embryos 4-6 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Embryos 4-6 hr')">3</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos 6-8 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Embryos 6-8 hr')">24</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Embryos 6-8 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Embryos 6-8 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Embryos 6-8 hr')">0</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos 8-10 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Embryos 8-10 hr')">22</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Embryos 8-10 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Embryos 8-10 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Embryos 8-10 hr')">1</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Embryos mixed stages 0-24 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Embryos mixed stages 0-24 hr')">12</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Embryos mixed stages 0-24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Embryos mixed stages 0-24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Embryos mixed stages 0-24 hr')">0</td>
+				</tr>
+				<tr class="tr_none">
+					<td>L3 stage  12 hr post-molt stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,L3 stage  12 hr post-molt stage larvae')">21</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,L3 stage  12 hr post-molt stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,L3 stage  12 hr post-molt stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,L3 stage  12 hr post-molt stage larvae')">0</td>
+				</tr>
+				<tr class="tr_none">
+					<td>L3 stage  clear gut PS(7-9) stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,L3 stage  clear gut PS(7-9) stage larvae')">38</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,L3 stage  clear gut PS(7-9) stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,L3 stage  clear gut PS(7-9) stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,L3 stage  clear gut PS(7-9) stage larvae')">1</td>
+				</tr>
+				<tr class="tr_none">
+					<td>L3 stage  dark blue gut PS(1-2) stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,L3 stage  dark blue gut PS(1-2) stage larvae')">20</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,L3 stage  dark blue gut PS(1-2) stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,L3 stage  dark blue gut PS(1-2) stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,L3 stage  dark blue gut PS(1-2) stage larvae')">1</td>
+				</tr>
+				<tr class="tr_none">
+					<td>L3 stage  light blue gut PS(3-6) stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,L3 stage  light blue gut PS(3-6) stage larvae')">28</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,L3 stage  light blue gut PS(3-6) stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,L3 stage  light blue gut PS(3-6) stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,L3 stage  light blue gut PS(3-6) stage larvae')">0</td>
+				</tr>
+				<tr class="tr_none">
+					<td>L3 stage wandering stage larvae</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,L3 stage wandering stage larvae')">26095</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,L3 stage wandering stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,L3 stage wandering stage larvae')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,L3 stage wandering stage larvae')">188</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Larvae 3rd instar</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Larvae 3rd instar')">21146</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Larvae 3rd instar')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Larvae 3rd instar')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Larvae 3rd instar')">284</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Larvae L1 stage</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Larvae L1 stage')">44</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Larvae L1 stage')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Larvae L1 stage')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Larvae L1 stage')">0</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Larvae L2 stage</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Larvae L2 stage')">47</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Larvae L2 stage')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Larvae L2 stage')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Larvae L2 stage')">0</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Late Embryos</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Late Embryos')">28313</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Late Embryos')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Late Embryos')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Late Embryos')">414</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Mated Female, eclosion + 4 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Mated Female, eclosion + 4 days')">14074</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Mated Female, eclosion + 4 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Mated Female, eclosion + 4 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Mated Female, eclosion + 4 days')">83</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Mated male, eclosion + 1 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Mated male, eclosion + 1 days')">10810</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Mated male, eclosion + 1 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Mated male, eclosion + 1 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Mated male, eclosion + 1 days')">86</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Mated male, eclosion + 20 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Mated male, eclosion + 20 days')">11885</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Mated male, eclosion + 20 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Mated male, eclosion + 20 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Mated male, eclosion + 20 days')">92</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Mated male, eclosion + 4 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Mated male, eclosion + 4 days')">18290</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Mated male, eclosion + 4 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Mated male, eclosion + 4 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Mated male, eclosion + 4 days')">135</td>
+				</tr>
+				<tr class="tr_none">
+					<td>Mixed Adult 7-11 day</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,Mixed Adult 7-11 day')">4</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,Mixed Adult 7-11 day')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,Mixed Adult 7-11 day')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,Mixed Adult 7-11 day')">3</td>
+				</tr>
+				<tr class="tr_none">
+					<td>White prepupae (WPP)</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,White prepupae (WPP)')">16832</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,White prepupae (WPP)')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,White prepupae (WPP)')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,White prepupae (WPP)')">107</td>
+				</tr>
+				<tr class="tr_none">
+					<td>White prepupae (WPP) + 12 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,White prepupae (WPP) + 12 hr')">43</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,White prepupae (WPP) + 12 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,White prepupae (WPP) + 12 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,White prepupae (WPP) + 12 hr')">1</td>
+				</tr>
+				<tr class="tr_none">
+					<td>White prepupae (WPP) + 2 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,White prepupae (WPP) + 2 days')">18910</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,White prepupae (WPP) + 2 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,White prepupae (WPP) + 2 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,White prepupae (WPP) + 2 days')">135</td>
+				</tr>
+				<tr class="tr_none">
+					<td>White prepupae (WPP) + 24 hr</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,White prepupae (WPP) + 24 hr')">60</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,White prepupae (WPP) + 24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,White prepupae (WPP) + 24 hr')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,White prepupae (WPP) + 24 hr')">0</td>
+				</tr>
+				<tr class="tr_none">
+					<td>White prepupae (WPP) + 3 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,White prepupae (WPP) + 3 days')">72</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,White prepupae (WPP) + 3 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,White prepupae (WPP) + 3 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,White prepupae (WPP) + 3 days')">3</td>
+				</tr>
+				<tr class="tr_none">
+					<td>White prepupae (WPP) + 4 days</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,S,White prepupae (WPP) + 4 days')">65</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,P,White prepupae (WPP) + 4 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,G,White prepupae (WPP) + 4 days')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmelanogaster,,D,White prepupae (WPP) + 4 days')">4</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+<!---------------------- roadmap表格 -------------------------->
+	<div id="body_dmojavensis">
+		<div class="dmojavensis_title">D.mojavensis</div>
+		<table cellspacing="1" class="table_pro">
+			<div id="thead1">
+				<thead class="dmojavensis_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+										<tr>
+											<th class="lineTh">
+												<span style="float:right;">Method</span>
+												<span style="float:left;margin-top:18px;">Cell line</span>
+											</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>Adult Female</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmojavensis,,S,Adult Female')">300</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmojavensis,,P,Adult Female')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmojavensis,,G,Adult Female')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmojavensis,,D,Adult Female')">62</td>
+				</tr>
+				<tr>
+					<td>Adult Female Whole Species</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmojavensis,,S,Adult Female Whole Species')">123</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmojavensis,,P,Adult Female Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmojavensis,,G,Adult Female Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmojavensis,,D,Adult Female Whole Species')">9</td>
+				</tr>
+				<tr>
+					<td>Adult Male</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmojavensis,,S,Adult Male')">325</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmojavensis,,P,Adult Male')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmojavensis,,G,Adult Male')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmojavensis,,D,Adult Male')">60</td>
+				</tr>
+				<tr>
+					<td>Adult Male Whole Species</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmojavensis,,S,Adult Male Whole Species')">175</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmojavensis,,P,Adult Male Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmojavensis,,G,Adult Male Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dmojavensis,,D,Adult Male Whole Species')">17</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+<!---------------------- SEQC表格 -------------------------->
+	<div id="body_dpseudoobscura">
+		<div class="dpseudoobscura_title">D.pseudoobscura</div>
+		<table cellspacing="1" class="table_pro">
+			<div id="thead2">
+				<thead class="dpseudoobscura_thead">
+						<tr>
+							<th class="th1">
+								<div>
+									<table class="t_head">
+										<thead>
+											<tr>
+												<th class="lineTh">
+													<span style="float:right;">Method</span>
+													<span style="float:left;margin-top:18px;">Cell line</span>
+												</th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+							</th>
+							<th>Seperate</th>
+							<th>Pool</th>
+							<th>Giremi</th>
+							<th class="th2">Deepred</th>
+						</tr>
+					</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>Adult Female</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dpseudoobscura,,S,Adult Female')">1083</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dpseudoobscura,,P,Adult Female')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dpseudoobscura,,G,Adult Female')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dpseudoobscura,,D,Adult Female')">254</td>
+				</tr>
+				<tr>
+					<td>Adult Female Whole Species</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dpseudoobscura,,S,Adult Female Whole Species')">1069</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dpseudoobscura,,P,Adult Female Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dpseudoobscura,,G,Adult Female Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dpseudoobscura,,D,Adult Female Whole Species')">206</td>
+				</tr>
+				<tr>
+					<td>Adult Male</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dpseudoobscura,,S,Adult Male')">847</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dpseudoobscura,,P,Adult Male')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dpseudoobscura,,G,Adult Male')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dpseudoobscura,,D,Adult Male')">193</td>
+				</tr>
+				<tr>
+					<td>Adult Male Whole Species</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dpseudoobscura,,S,Adult Male Whole Species')">590</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dpseudoobscura,,P,Adult Male Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dpseudoobscura,,G,Adult Male Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dpseudoobscura,,D,Adult Male Whole Species')">101</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+<!---------------------- TCGA表格 -------------------------->
+	<div id="body_dsimulans">
+		<div class="dsimulans_title">D.simulans</div>
+		<table cellspacing="1" class="table_pro">
+			<div id="thead3">
+				<thead class="dsimulans_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+										<tr>
+											<th class="lineTh">
+												<span style="float:right;">Method</span>
+												<span style="float:left;margin-top:18px;">Cell line</span>
+											</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>Adult Female Whole Species</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dsimulans,,S,Adult Female Whole Species')">14943</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dsimulans,,P,Adult Female Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dsimulans,,G,Adult Female Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dsimulans,,D,Adult Female Whole Species')">5321</td>
+				</tr>
+				<tr>
+					<td>Adult Male Whole Species</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dsimulans,,S,Adult Male Whole Species')">15629</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dsimulans,,P,Adult Male Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dsimulans,,G,Adult Male Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dsimulans,,D,Adult Male Whole Species')">5569</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+<!---------------------- ABRF表格 -------------------------->
+	<div id="body_dvirilis">
+		<div class="dvirilis_title">D.virilis</div>
+		<table cellspacing="1" class="table_pro">
+			<div id="thead4">
+				<thead class="dvirilis_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+										<tr>
+											<th class="lineTh">
+												<span style="float:right;">Method</span>
+												<span style="float:left;margin-top:18px;">Cell line</span>
+											</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>Adult Female Whole Species</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dvirilis,,S,Adult Female Whole Species')">64</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dvirilis,,P,Adult Female Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dvirilis,,G,Adult Female Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dvirilis,,D,Adult Female Whole Species')">82</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+<!---------------------- ABRF表格 -------------------------->
+	<div id="body_dyakuba">
+		<div class="dyakuba_title">D.yakuba</div>
+		<table cellspacing="1" class="table_pro">
+			<div id="thead4">
+				<thead class="dyakuba_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+										<tr>
+											<th class="lineTh">
+												<span style="float:right;">Method</span>
+												<span style="float:left;margin-top:18px;">Cell line</span>
+											</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>Adult Female Whole Species</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dyakuba,,S,Adult Female Whole Species')">17</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dyakuba,,P,Adult Female Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dyakuba,,G,Adult Female Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dyakuba,,D,Adult Female Whole Species')">25</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+<!---------------------- HumanBodyMap表格 -------------------------->
+	<div id="body_dananassae">
+		<div class="dananassae_title">D.ananassae</div>
+		<table cellspacing="1" class="table_pro">
+			<div id="thead4">
+				<thead class="dananassae_thead">
+					<tr>
+						<th class="th1">
+							<div>
+								<table class="t_head">
+									<thead>
+										<tr>
+											<th class="lineTh">
+												<span style="float:right;">Method</span>
+												<span style="float:left;margin-top:18px;">Cell line</span>
+											</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</th>
+						<th>Seperate</th>
+						<th>Pool</th>
+						<th>Giremi</th>
+						<th class="th2">Deepred</th>
+					</tr>
+				</thead>
+			</div>
+			<tbody>
+				<tr>
+					<td>Adult Female Whole Species</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dananassae,,S,Adult Female Whole Species')">26</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dananassae,,P,Adult Female Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dananassae,,G,Adult Female Whole Species')">0</td>
+					<td style="cursor:pointer;" onclick="window.open('/matrixresult/?par=Dananassae,,D,Adult Female Whole Species')">38</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<script type="text/javascript">
+		window.onload=function(){
+			myPadding();
+		}
+		
+		function myPadding(){
+			var table, tr, list, i;
+			list = ["dmelanogaster","dmojavensis","dpseudoobscura","dsimulans","dvirilis","dananassae","dyakuba"];
+			for(i=0; i <= 6; i++){
+				table = document.getElementById("body_" + list[i]);
+				tr = table.getElementsByTagName("tr");
+				for (i = 0; i < tr.length; i++){
+					td = tr[i].getElementsByTagName("td")[0];
+					if(td){
+						td.style.width = "330px";
+						// td.style.textAlign = "right";
+						// td.style.paddingRight = "10px";
+						
+					}
+				}
+			}	
+		}
+		
+		function myFunction(){
+			var input, filter,  div, tr, td, i, j, n, list, sum;
+			list = ["dmelanogaster","dmojavensis","dpseudoobscura","dsimulans","dvirilis","dananassae","dyakuba"];
+			input = window.parent.document.getElementById("myInput1");
+			filter = input.value.toUpperCase();
+			sum = 0;
+			for(j=0; j<=6; j++){
+				n = 0;
+				div = document.getElementById("body_"+list[j]);
+				div.style.display="";
+				tr = div.getElementsByTagName("tr");
+				for (i = 0; i < tr.length; i++){
+					td = tr[i].getElementsByTagName("td")[0];
+					if(td){
+						if (td.innerHTML.toUpperCase().indexOf(filter) > -1){
+							tr[i].style.display="table-row";
+							n += 1;
+						}else{
+							tr[i].style.display="none";
+						}
+					}
+				}
+				if(n == 0){
+					div.style.display="none";
+				}
+				sum += n;
+			}
+			document.getElementById("number").innerHTML="You have "+sum+" results"
+			div_dmelanogaster = document.getElementById("body_dmelanogaster");
+			tr_dmelanogaster = div_dmelanogaster.getElementsByTagName("tr");
+			if (input.value != ""){
+				document.getElementById("flag").setAttribute("style","display:none;");
+				document.getElementById("table_pro1").setAttribute("style","margin-right: auto");
+			} else{
+				document.getElementById("flag").style.display="";
+				document.getElementById("table_pro1").setAttribute("style","margin-right: 0px");
+				for (i = 13; i < tr_dmelanogaster.length; i++){
+					tr_dmelanogaster[i].style.display="none";
+				}
+			}
+			// console.log(sum);
+		}
+
+		function flexTable(event){
+				var table = document.getElementById("body_dmelanogaster");
+				var tr = table.getElementsByTagName("tr");
+				var state = event.target;
+				if (state.innerHTML=="∨"){
+					for (var i = 13; i < tr.length; i++){
+						tr[i].style.display="table-row";
+					}
+					state.innerHTML = "&and;";
+					state.setAttribute("style","margin-top:1145px;");
+				}else{
+					for (var i = 13; i < tr.length; i++){
+						tr[i].style.display="none";
+					}
+					state.innerHTML = "&or;";
+					state.setAttribute("style","margin-top:262px;");
+				}
+		}
+	</script>
+</html>

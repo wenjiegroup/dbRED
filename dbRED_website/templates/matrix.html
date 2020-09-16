@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %} Data Matrix {% endblock %}
+{% load staticfiles %}
+{% block home_active %}{%endblock%}
+{% block content %}
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+</style>
+<div class="page">
+	<div class="mytitle">
+		<div class="title">Data Matrix</div>
+		<!--<div class="title_des">(describ-small)</div>-->
+	</div>
+	<div class="pro_sear">
+		<ul>
+			<li class="round_rec">
+				<a class="pro_a" href="/matrix/matrixhuman/" target="myframe">Human</a>
+				<a class="number"  href="/matrix/matrixhuman/" target="myframe">232</a>
+			</li>
+			<li class="round_rec">
+				<a class="pro_a" href="/matrix/matrixmouse/" target="myframe">Mouse</a>
+				<a class="number" href="/matrix/matrixmouse/" target="myframe">39</a>
+			</li>
+			<li class="round_rec">
+				<a class="pro_a" href="/matrix/matrixrat/" target="myframe">Rat</a>
+				<a class="number" href="/matrix/matrixrat/" target="myframe">44</a>
+			</li>
+			<li class="round_rec">
+				<a class="pro_a" href="/matrix/matrixchimpanzee/" target="myframe">Chimpanzee</a>
+				<a class="number" href="/matrix/matrixchimpanzee/" target="myframe">10</a>
+			</li>
+			<li class="round_rec">
+				<a class="pro_a" href="/matrix/matrixrhesus/" target="myframe">Rhesus</a>
+				<a class="number" href="/matrix/matrixrhesus/" target="myframe">11</a>
+			</li>
+			<li class="round_rec">
+				<a class="pro_a" href="/matrix/matrixnematode/" target="myframe">Nematode</a>
+				<a class="number" href="/matrix/matrixnematode/" target="myframe">101</a>
+			</li>
+			<li class="round_rec">
+				<a class="pro_a" href="/matrix/matrixdrosophila/" target="myframe">Drosophila</a>
+				<a class="number" href="/matrix/matrixdrosophila/" target="myframe">66</a>
+			</li>
+		</ul>
+		<div class="search_a1">
+			<input type="text" id="myInput1" onkeyup="frame.contentWindow.myFunction()" placeholder="Search">
+			<!--
+			<input type="submit" value="搜索" class="input_sub">
+			-->
+			<!--<div class="sear_des">(describ-small)</div>-->
+		</div>
+	</div>
+	<div class="myline">
+		<hr/>
+	</div>
+	<div class="myframe">
+		<iframe onload="frame.contentWindow.myFunction()" frameborder="0" scrolling="auto" marginheight="10px" marginwidth="10px" width="100%" height="780px" name="myframe" id="frame1" src="/matrix/matrixhuman/"></iframe>
+	</div>
+</div>
+<script type="text/javascript">
+	var frame = window.document.getElementById("frame1");
+
+</script>
+{% endblock %}

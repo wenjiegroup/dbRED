@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% block title %} Search {% endblock %}
+{% load staticfiles %}
+{% block content %}
+<style>
+.matrix-button{
+    background-color:#ffffff;
+    border-style:solid;
+    border-color:#32C350;
+    border-radius:4px;
+    color:#32C350;
+    font-size:120%;
+    font-weight:700;
+}
+
+.matrix-button:hover{
+    background:#32C350;
+    color:#ffffff;
+}
+#search-button{
+    padding-top:4px;
+    height:35px;
+    border-width:2px;
+    background-color:#ffffff;
+    border-style:solid;
+    border-color:#198CFF;
+    border-radius:4px;
+    color:#198CFF;
+    font-size:120%;
+    font-weight:700;
+}
+#search-button:hover{
+    background:#198CFF;
+    color:#ffffff;
+}
+
+</style>
+<div class="home_banner_area">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="home_banner center_content text-center">
+            <div class="home_banner_form">
+            <div class="middle_info">
+            <h1>dbRED</h1>
+            <h4>The best way to find <span style="color:#32DE50;font-size:120%;">A</span>to<span style="color:#32DE50;font-size:120%;">I</span> RNA editing events</h4>
+            <form class="form-horizontal" name="form" method="post">
+                <div class="form-group ">
+                    <div class="col-md-2">
+                        <select class="bs-select form-control" data-live-search="true" data-size="6" name="Specie" id="site_id" onmouseup="specieDescibe()">
+                            <option value="Human">Human</option>
+                            <option value="Mouse">Mouse</option>
+                            <option value="Rat">Rat</option>
+                            <option value="Chimpanzee">Chimpanzee</option>
+                            <option value="Rhesus">Rhesus</option>
+                            <option value="Cbrenneri">C.brenneri</option>
+                            <option value="Cbriggsae">C.briggsae</option>
+                            <option value="Celegans">C.elegans</option>
+                            <option value="Cjaponica">C.japonica</option>
+                            <option value="Cremanei">C.remanei</option>
+                            <option value="Dananassae">D.ananassae</option>
+                            <option value="Dmelanogaster">D.melanogaster</option>
+                            <option value="Dmojavensis">D.mojavensis</option>
+                            <option value="Dpseudoobscura">D.pseudoobscura</option>
+                            <option value="Dsimulans">D.simulans</option>
+                            <option value="Dvirilis">D.virilis</option>
+                            <option value="Dyakuba">D.yakuba</option>
+                        </select>
+                    </div>
+                    <div class="col-md-9 {% if Error_message %}has-error{%endif%}">
+                        <input type="text" id = "chr" name="Chr" placeholder="Coordinates like chr1:132432442-143243423 OR Gene Symbol like GRIA2, TP53..." class="form-control">
+                    </div>
+                    <div class="col-md-1">
+                        <button class="btn btn-default" id="search-button" onclick="setaction()"">Search</button>
+                    </div>
+                </div>
+                {% csrf_token %}
+                <script type="text/javascript">
+                    function setaction(){
+                      var chr = form.Chr.value;
+                      document.form.action = '/search/';
+                      form.submit();
+                    }
+                </script>
+            </form>
+            {% if Error_message  %}
+            <div class="alert alert-warning alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
+              <label class="control-label" for="inputError1">{{Error_message}}</label>
+            </div>
+            {% endif %}
+            <div class="matrix-div">
+                <a href="/matrixs/"><button class="matrix-button">Data Matrix</button></a>
+			</div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function specieDescibe() {
+        var dictDescribe, describe, specie;
+        dictDescribe = {
+            "Human":"Coordinates like chr1:132432442-143243423 OR Gene Symbol like GRIA2, TP53...",
+            "Mouse":"Coordinates like chr1:132432442-143243423 OR Gene Symbol like Xkr4, Pcmtd1...",
+            "Rat":"Coordinates like chr1:132432442-143243423 OR Gene Symbol like ENSRNOG00000014330.7, ENSRNOG00000014916.7...",
+            "Chimpanzee":"Coordinates like chr1:132432442-143243423 OR Gene Symbol like ENSPTRG00000000028.5, ENSPTRG00000000029.2...",
+            "Rhesus":"Coordinates like chr1:132432442-143243423 OR Gene Symbol like ENSMMUG00000018699.3, ENSMMUG00000001549.3...",
+            "Cbrenneri":"Coordinates like Cbre_Contig1174:13243-18654...",
+            "Cbriggsae":"Coordinates like chrI:1133910-5652272 OR Gene Symbol like F40H3.11, CADM1...",
+            "Celegans":"Coordinates like chrI:128670-640571 OR Gene Symbol like duox-2, Y65B4A.11...",
+            "Cjaponica":"Coordinates like Cjap.Contig10693:9046-30489...",
+            "Cremanei":"Coordinates like Crem_Contig0:100245-198858...",
+            "Dananassae":"Coordinates like scaffold_12929:563494-696563 OR Gene Symbol like GF22113, GF22121...",
+            "Dmelanogaster":"Coordinates like chr2L:27813-75167 OR Gene Symbol like Cda5, galectin...",
+            "Dmojavensis":"Coordinates like scaffold_6359:368161-3373591 OR Gene Symbol like GI21638, GI21588...",
+            "Dpseudoobscura":"Coordinates like chr2:1069875-1879128 OR Gene Symbol like GA15934, GA10500...",
+            "Dsimulans":"Coordinates like chr2L:103157-199562 OR Gene Symbol like GD23000, GD23001...",
+            "Dvirilis":"Coordinates like scaffold_12855:1450918-8274111 OR Gene Symbol like GJ10658, GJ10407...",
+            "Dyakuba":"Coordinates like chr2L:4892420-22115368 OR Gene Symbol like GE10380, GE14655..."
+        };
+        specie = document.getElementById("site_id").value;
+        describe = dictDescribe[specie];
+        document.getElementById("chr").setAttribute("placeholder", describe);
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,645 @@
+{% extends 'base.html' %}
+{% block title %} Statistics {% endblock %}
+{% block home_active %}{%endblock%}
+{% block statistics_active %}class="active"{%endblock%}
+{% load staticfiles %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6"  id="barg" style="height:450px;"></div>
+        <div class="col-md-6"  id="barh" style="height:450px;"></div>
+    </div>
+    <div class="row" style="height:700px">
+        <div class="col-md-6"  id="pie8" style="height:520px;"></div>
+        <div class="col-md-6"  id="piedrosophila2" style="height:520px;"></div>
+    </div>
+    <!--<script src="http://code.highcharts.com/highcharts.js"></script>-->
+    <script type="text/javascript">
+    var myChartq = echarts.init(document.getElementById('barg'));
+    var optionq = {
+        title : {
+            text: 'Number of Samples',
+            x:'center',
+            top: 20,
+            textStyle:{
+                fontSize:24,
+                fontFamily : 'Arial'
+            }
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{b} : {c} "
+        },
+        xAxis:{
+            type : 'category',
+            axisTick: {
+                alignWithLabel: false
+            },
+            axisLabel:{
+                interval :0,
+                rotate :30,
+                fontFamily : 'Arial'
+            },
+
+            data : ['D.ananassae','D.melanogaster','D.mojavensis','D.pseudoobscura','D.simulans','D.virilis','D.yakuba']
+        },
+        grid: {
+            x:60, x2:10, y2:70
+        },
+        yAxis: {
+            axisLine : {
+                show : false
+            },
+            axisTick : {
+                show : false
+            },
+            axisLabel : {
+                fontFamily : 'Arial'
+            }
+        },
+        series : [
+            {
+                barMaxWidth : 30,
+                type:"bar",
+                data:[2,857,26,32,17,2,2],
+                itemStyle: {
+                    normal:{
+                        color:new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#83bff6'},
+                                {offset: 0.5, color: '#188df0'},
+                                {offset: 1, color: '#188df0'}
+                            ])
+                    },
+                    emphasis: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#2378f7'},
+                                {offset: 0.7, color: '#2378f7'},
+                                {offset: 1, color: '#83bff6'}
+                            ]),
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChartq.setOption(optionq);
+    var myChartr = echarts.init(document.getElementById('barh'));
+    var optionr = {
+        title : {
+            text: 'Number of RNA editing sites',
+            x:'center',
+            top: 20,
+            textStyle:{
+                fontSize:24,
+                fontFamily : 'Arial'
+            }
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{b} : {c} "
+        },
+        xAxis:{
+            type : 'category',
+            axisTick: {
+                alignWithLabel: false
+            },
+            axisLabel:{
+                interval :0,
+                rotate :30,
+                fontFamily : 'Arial'
+            },
+            data : ['D.ananassae','D.melanogaster','D.mojavensis','D.pseudoobscura','D.simulans','D.virilis','D.yakuba']
+        },
+        grid: {
+            x:60, x2:10, y2:70
+        },
+        yAxis: {
+            axisLine : {
+                show : false
+            },
+            axisTick : {
+                show : false
+            },
+            axisLabel : {
+                fontFamily : 'Arial'
+            }
+        },
+        series : [
+            {
+                barMaxWidth : 30,
+                type:"bar",
+                data:[61,43834,435,1345,19865,139,42],
+                itemStyle: {
+                    normal:{
+                        color:new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#83bff6'},
+                                {offset: 0.5, color: '#188df0'},
+                                {offset: 1, color: '#188df0'}
+                            ])
+                    },
+                    emphasis: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#2378f7'},
+                                {offset: 0.7, color: '#2378f7'},
+                                {offset: 1, color: '#83bff6'}
+                            ]),
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChartr.setOption(optionr);
+    //饼图显示cele的location
+    var myCharts = echarts.init(document.getElementById('pie8'));
+    var options = {
+        title : {
+            text: 'Repetitive Location of D.melanogaster',
+            x:60,
+            bottom:20,
+            textStyle:{
+              fontSize:24,
+              fontFamily : 'Arial'
+            }
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a}<br/>{b} : {c} ({d}%)"
+        },
+        series : [
+            {
+                name:"Location",
+                type: 'pie',
+                radius : '70%',
+                center: ['50%', '50%'],
+                data:[
+                    {value: 63977, name: 'NonRep'},
+                    {value: 1170, name: 'Rep'},
+                ],
+                itemStyle: {
+                    normal: {
+                        shadowBlur: 20,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                },
+                color:['#1ab2e2','#1ab21c','#ffb41a']
+            }
+        ]
+    };
+    myCharts.setOption(options);
+    //饼图显示cele的location
+    var myChartDrosophilapie2 = echarts.init(document.getElementById('piedrosophila2'));
+    var optionDrosophilapie2 = {
+        title : {
+            text: 'Genomic Location of D.melanogaster',
+            x:60,
+            bottom:20,
+            textStyle:{
+              fontSize:24,
+              fontFamily : 'Arial'
+            }
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a}<br/>{b} : {c} ({d}%)"
+        },
+        series : [
+            {
+                name:"Location",
+                type: 'pie',
+                radius : '70%',
+                center: ['50%', '50%'],
+                data:[
+                    {value: 7858, name: 'nonsynonymous SNV'},
+                    {value: 40711, name: 'synonymous SNV'},
+                    {value: 4974, name: 'UTR3'},
+                    {value: 2674, name: 'UTR5'},
+                    {value: 65, name: 'UTR5;UTR3'},
+                    {value: 797, name: 'downstream'},
+                    {value: 2574, name: 'intergenic'},
+                    {value: 4312, name: 'intronic'},
+                    {value: 476, name: 'ncRNA_exonic'},
+                    {value: 68, name: 'ncRNA_intronic'},
+                    {value: 27, name: 'splicing'},
+                    {value: 24, name: 'stoploss'},
+                    {value: 168, name: 'unknown'},
+                    {value: 666, name: 'upstream'},
+                    {value: 327, name: 'upstream;downstream'},
+                ],
+                itemStyle: {
+                    normal: {
+                        shadowBlur: 20,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                },
+                color:["#228B22","#0000CD","#008B8B","#FFC0CB","#6A5ACD",'#f95a90','#b51ab5','#1ab2e2','#FF4500','#ffb41a','#497ce9','#D2691E','#cc99ff',"#A52A2A","#40E0D0","#778899","#FFD700"]
+            }
+        ]
+    };
+    myChartDrosophilapie2.setOption(optionDrosophilapie2);
+    /*var myChartDrosophilabar1 = echarts.init(document.getElementById('bardrosophila1'));
+    var optionDrosophilabar1 = {
+        title : {
+            text: 'Repetitive Location',
+            x:'center',
+            top: 20,
+            textStyle:{
+                fontSize:24,
+                fontFamily : 'Arial'
+            }
+        },
+        tooltip : {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'none'
+            },
+            //formatter: "{b} : {c} "
+            formatter: function (data){
+                var res = data[0].name + '<br/>'
+                for (var i = 0, length = data.length; i < length; i++){
+                    res += data[i].marker;
+                    res += data[i].seriesName + ':';
+                    res += data[i].value +  '%<br/>';
+                }
+                return res;
+            }
+        },
+        legend: {
+            x:230,
+            y:'bottom',
+            data:["NonRep","Rep"]
+        },
+        xAxis:{
+            type : 'category',
+            axisTick: {
+                alignWithLabel: false
+            },
+            axisLabel:{
+                interval :0,
+                rotate :30,
+                fontFamily : 'Arial'
+            },
+            data : ['D.melanogaster','D.pseudoobscura','D.simulans','D.virilis','D.ananassae','D.mojavensis','D.yakuba']
+        },
+        grid: {
+            x:60, x2:10, y2:100
+        },
+        yAxis: {
+            axisLine : {
+                show : false
+            },
+            axisTick : {
+                show : false
+            },
+            axisLabel : {
+                fontFamily : 'Arial'
+            }
+        },
+        series : [
+            {
+            name:"NonRep",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[98.01,97.70,98.75,0.00,73.77,0.00,97.62,],
+            itemStyle: {
+                normal:{
+                    color:"#1ab2e2",
+                    }
+                }
+            },
+            {
+            name:"Rep",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[1.99,2.30,1.25,0.00,26.23,0.00,2.38,],
+            itemStyle: {
+                normal:{
+                    color:"#1ab21c",
+                    }
+                }
+            },
+        ]
+    };
+    myChartDrosophilabar1.setOption(optionDrosophilabar1);
+    var myChartDrosophilabar2 = echarts.init(document.getElementById('bardrosophila2'));
+    var optionDrosophilabar2 = {
+        title : {
+            text: 'Genomic Location',
+            x:'center',
+            top: 20,
+            textStyle:{
+                fontSize:24,
+                fontFamily : 'Arial'
+            }
+        },
+        tooltip : {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'none'
+            },
+            //formatter: "{b} : {c} "
+            axisPointer: {
+                type: 'none'
+            },
+            formatter: function (data){
+                var res = data[0].name + '<br/>'
+                for (var i = 0, length = data.length; i < length; i++){
+                    res += data[i].marker;
+                    res += data[i].seriesName + ':';
+                    res += data[i].value +  '%<br/>';
+                }
+                return res;
+            }
+        },
+        legend: {
+            x:70,
+            y:'bottom',
+            data:["UTR3","UTR5","UTR5;UTR3","downstream","intergenic","intronic","ncRNA_exonic","ncRNA_intronic","nonsynonymous SNV","splicing","stoploss","synonymous SNV","unknown","upstream","upstream;downstream"]
+        },
+        xAxis:{
+            type : 'category',
+            axisTick: {
+                alignWithLabel: false
+            },
+            axisLabel:{
+                interval :0,
+                rotate :30,
+                fontFamily : 'Arial'
+            },
+            data : ['D.melanogaster','D.pseudoobscura','D.simulans','D.virilis','D.ananassae','D.mojavensis','D.yakuba']
+        },
+        grid: {
+            x:60, x2:10, y2:170
+        },
+        yAxis: {
+            axisLine : {
+                show : false
+            },
+            axisTick : {
+                show : false
+            },
+            axisLabel : {
+                fontFamily : 'Arial'
+            }
+        },
+        series : [
+            {
+            name:"UTR3",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[11.32,0.97,0.00,0.00,0.00,0.00,0.00,],
+            itemStyle: {
+                normal:{
+                    color:"#f95a90",
+                    }
+                }
+            },
+            {
+            name:"UTR5",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[6.08,0.59,0.00,0.00,0.00,0.00,0.00,],
+            itemStyle: {
+                normal:{
+                    color:"#b51ab5",
+                    }
+                }
+            },
+            {
+            name:"UTR5;UTR3",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[0.15,0.00,0.00,0.00,0.00,0.00,0.00,],
+            itemStyle: {
+                normal:{
+                    color:"#1ab2e2",
+                    }
+                }
+            },
+            {
+            name:"downstream",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[0.34,8.55,2.52,9.35,4.92,3.68,4.76,],
+            itemStyle: {
+                normal:{
+                    color:"#FF4500",
+                    }
+                }
+            },
+            {
+            name:"intergenic",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[1.34,14.57,8.24,33.81,39.34,15.86,33.33,],
+            itemStyle: {
+                normal:{
+                    color:"#ffb41a",
+                    }
+                }
+            },
+            {
+            name:"intronic",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[6.50,6.91,6.32,14.39,16.39,17.70,14.29,],
+            itemStyle: {
+                normal:{
+                    color:"#497ce9",
+                    }
+                }
+            },
+            {
+            name:"ncRNA_exonic",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[1.07,0.00,0.01,2.16,3.28,0.23,0.00,],
+            itemStyle: {
+                normal:{
+                    color:"#D2691E",
+                    }
+                }
+            },
+            {
+            name:"ncRNA_intronic",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[0.16,0.00,0.00,0.00,0.00,0.00,0.00,],
+            itemStyle: {
+                normal:{
+                    color:"#cc99ff",
+                    }
+                }
+            },
+            {
+            name:"nonsynonymous SNV",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[11.05,16.28,13.34,10.79,19.67,25.06,19.05,],
+            itemStyle: {
+                normal:{
+                    color:"#A52A2A",
+                    }
+                }
+            },
+            {
+            name:"splicing",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[0.03,0.00,0.05,0.00,3.28,0.46,0.00,],
+            itemStyle: {
+                normal:{
+                    color:"#40E0D0",
+                    }
+                }
+            },
+            {
+            name:"stoploss",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[0.02,0.07,0.05,1.44,0.00,0.46,0.00,],
+            itemStyle: {
+                normal:{
+                    color:"#228B22",
+                    }
+                }
+            },
+            {
+            name:"synonymous SNV",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[60.98,47.81,66.19,20.86,13.11,33.10,21.43,],
+            itemStyle: {
+                normal:{
+                    color:"#0000CD",
+                    }
+                }
+            },
+            {
+            name:"unknown",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[0.38,0.22,0.00,0.00,0.00,0.00,0.00,],
+            itemStyle: {
+                normal:{
+                    color:"#6A5ACD",
+                    }
+                }
+            },
+            {
+            name:"upstream",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[0.33,3.05,2.33,3.60,0.00,2.76,7.14,],
+            itemStyle: {
+                normal:{
+                    color:"#FFC0CB",
+                    }
+                }
+            },
+            {
+            name:"upstream;downstream",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[0.26,0.97,0.96,3.60,0.00,0.69,0.00,],
+            itemStyle: {
+                normal:{
+                    color:"#008B8B",
+                    }
+                }
+            },
+        ]
+    };
+    myChartDrosophilabar2.setOption(optionDrosophilabar2);*/
+    //highcharts画百分比图
+    /*$(document).ready(function() {
+       var chart = {
+          type: 'column'
+       };
+       var title = {
+        text: 'Genomic Location of D.melanogaster',
+        align:'center',
+        style:{
+          fontSize:24,
+          fontWidth:50,
+          fontFamily : 'Arial'
+        }
+       };
+       var xAxis = {
+          categories: ['D.melanogaster','D.pseudoobscura','D.simulans','D.virilis','D.ananassae','D.mojavensis','D.yakuba']
+       };
+       var yAxis ={
+          min: 0,
+          title: {
+            text: ''
+          }
+       };
+       var tooltip = {
+          pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
+          shared: true
+       };
+       var plotOptions = {
+          column: {
+             stacking: 'percent'
+          }
+       };
+       var credits = {
+          enabled: false
+       };
+       var series= [{
+            name: 'NonRep',
+                data: [42960,1314,19617,0,45,0,41]
+            }, {
+                name: 'Rep',
+                data: [874,31,248,0,16,0,1]
+            }];
+
+       var json = {};
+       json.chart = chart;
+       json.title = title;
+       json.xAxis = xAxis;
+       json.yAxis = yAxis;
+       json.tooltip = tooltip;
+       json.plotOptions = plotOptions;
+       json.credits = credits;
+       json.series = series;
+       $('#bardrosophila1').highcharts(json);
+
+    });*/
+
+    </script>
+</div>
+
+{% csrf_token %}
+{% for key,error in search_form.errors.items %}{{key}}:{{error}}{% endfor %}
+{% endblock %}

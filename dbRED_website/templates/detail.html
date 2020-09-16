@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% block title %} Detail {% endblock %}
+{% load staticfiles %}
+
+{% block home_active %}
+{% endblock %}
+{% block content %}
+<style>
+.td{width:100px;}
+</style>
+<div class="hero-background">
+  <section id="information" class="bg-white">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row-title">RNA editing site Detail Information</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div style="margin-left:auto; margin-right:auto">
+           <iframe style="border: 1px solid black" src="https://jbrowse.bioinfotech.org/?data={{ Specie }}&tracks=DNA,{{ Specie }}&loc={{ Rnaedit_info.Chr }}:{{ Rnaedit_info.position }}..{{ Rnaedit_info.position }}&tracklist=0&nav=0&overview=0" width="1000" height="200">
+           </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="information" class="bg-blue">
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+        <div class="testimonial-box">
+          <div class="testimonial-image">
+            <img src="/static/assets/info.svg" alt="info" style="height:75px;"/>
+          </div>
+        <div class="testimonial-title">Information</div>
+        <div class="testimonial-details">
+          <!-- <table >
+          <tr><td><span class="name">Name:</span></td><td>{{ Rnaedit_info.name }}</td></tr>
+          <tr><td><span class="name">Chr:</span></td><td>{{ Rnaedit_info.Chr }}</td></tr>
+          <tr><td><span class="name">postion:</span></td><td>{{ Rnaedit_info.position }}</td></tr>
+          <tr><td><span class="name">Strand:</span></td><td>{{ Rnaedit_info.Strand }}</td></tr>
+          <tr><td><span class="name">Ref->Alt:</span></td><td>{{ Rnaedit_info.Ref }}->{{ Rnaedit_info.Alt }}</td></tr>
+          <tr><td><span class="name">dbSNP:</span></td><td>{{ Rnaedit_info.dbSNP }}</td></tr>
+          <tr><td><span class="name">Method:</span></td><td>{{ Rnaedit_info.method }}</td></tr>
+          <tr><td><span class="name">database:</span></td><td>{{ Rnaedit_info.database }}</td></tr>
+          <tr><td><span class="name">Location:</span></td><td>{{ Rnaedit_info.Repeat }}</td></tr>
+          <tr><td><span class="name">Repeat:</span></td><td>{{ Rnaedit_info.Element }}</td></tr>
+          <tr><td><span class="name">AAChange:</span></td><td>{{ Rnaedit_info.AAChange }}</td></tr>
+          <tr><td><span class="name">Editlevel:</span></td><td>{{ Rnaedit_info.Editlevel }}</td></tr>
+          <tr><td><span class="name">phastcons:</span></td><td>{{ Rnaedit_info.phastcons }}</td></tr>
+          <tr><td><span class="name">Project:</span></td><td>{{ Rnaedit_info.Project }}</td></tr>
+          <tr><td><span class="name">Cellline:</span></td><td class="td">{{ Rnaedit_info.Cellline }}</td></tr>
+
+          </table> -->
+          <div><span class="name">Name:</span>{{ Rnaedit_info.name }}</div>
+          <div><span class="name">Chr-position:</span>{{ Rnaedit_info.Chr }}-{{Rnaedit_info.position}}</div>
+          <div><span class="name">Strand:</span>{{ Rnaedit_info.Strand }}</div>
+          <div><span class="name">Ref->Alt:</span>{{ Rnaedit_info.Ref }}->{{ Rnaedit_info.Alt }}</div>
+          <div><span class="name">dbSNP:</span>{{ Rnaedit_info.dbSNP }}</div>
+          <div><span class="name">Method:</span>{{ Rnaedit_info.method }}</div>
+          <div><span class="name">database:</span>{{ Rnaedit_info.database }}</div>
+          <div><span class="name">Editlevel:</span>{{ Rnaedit_info.Editlevel }}</div>
+          <div><span class="name">phastcons:</span>{{ Rnaedit_info.phastcons }}</div>
+          <div><span class="name">Project:</span>{{ Rnaedit_info.Project }}</div>
+          <div><span class="name">Cellline:</span>{{ Rnaedit_info.Cellline }}</div>
+        </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+      <div class="testimonial-box">
+        <div class="testimonial-image">
+          <img src="/static/assets/dna.svg" alt="Gene" style="height:75px;" />
+        </div>
+        <div class="testimonial-title">Gene</div>
+        <div class="testimonial-details">
+          <div><span class="name">Gene Name:</span>{{Rnaedit_info.Genename}}</div>
+          <div><span class="name">Gene Region:</span>{{Rnaedit_info.GeneRegion}}</div>
+          <div><span class="name">Gene Detail:</span>{{ Rnaedit_info.Genedetail }}</div>
+          <div><span class="name">Location:</span>{{ Rnaedit_info.Repeat }}</div>
+          <div><span class="name">Repeat:</span>{{ Rnaedit_info.Element }}</div>
+          <div><span class="name">AAChange:</span>{{ Rnaedit_info.AAChange }}</div>
+        </div>
+      </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+      <div class="testimonial-box">
+        <div class="testimonial-image">
+          <img src="/static/assets/bio.svg" alt="ncRNA" style="height:75px;" />
+        </div>
+        <div class="testimonial-title">ncRNA</div>
+        <div class="testimonial-details">
+          <div><span class="name">lncRNA:</span>{{Rnaedit_info.lncRNA}}</div>
+          <div><span class="name">miRNA:</span>{{ Rnaedit_info.miRNA }}</div>
+          <div><span class="name">circRNA:</span>{{ Rnaedit_info.circRNA }}</div>
+          <div><span class="name">piRNA:</span>{{ Rnaedit_info.piRNA }}</div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="graph" class="bg-white">
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+      <div class="testimonial-box">
+        <div class="testimonial-image">
+          <img src="/static/assets/font.svg" alt="Seq" style="height:75px;" />
+        </div>
+        <div class="testimonial-title">Sequence</div>
+        <div class="testimonial-details">
+          {{ Rnaedit_info.Sequence }}
+        </div>
+      </div>
+      </div> 
+      <div class="col-md-4"><img src="/static/image/{{Rnaedit_ref_image}}" width="300" height="300" /></div>
+      <div class="col-md-4"><img src="/static/image/{{Rnaedit_alt_image}}" width="300" height="300" /></div>
+    </div>
+  </section>
+</div>
+{% endblock %}

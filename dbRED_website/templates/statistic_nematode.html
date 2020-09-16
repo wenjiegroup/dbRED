@@ -1,0 +1,548 @@
+{% extends 'base.html' %}
+{% block title %} Statistics {% endblock %}
+{% block home_active %}{%endblock%}
+{% block statistics_active %}class="active"{%endblock%}
+{% load staticfiles %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6"  id="bari" style="height:450px;"></div>
+        <div class="col-md-6"  id="barj" style="height:450px;"></div>
+    </div>
+    <div class="row" style="height:680px;">
+        <div class="col-md-6"  id="pie9" style="height:520px;"></div>
+        <div class="col-md-6"  id="pienematode2" style="height:520px;"></div>
+    </div>
+    <script type="text/javascript">
+    var myChartt = echarts.init(document.getElementById('bari'));
+    var optiont = {
+        title : {
+            text: 'Number of Samples',
+            x:'center',
+            top: 20,
+            textStyle:{
+                fontSize:24,
+                fontFamily : 'Arial'
+            }
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{b} : {c} "
+        },
+        xAxis:{
+            type:'category',
+            axisTick: {
+                alignWithLabel: false
+            },
+            axisLabel:{
+                fontSize:14,
+                interval :0,
+                rotate :0,
+                fontFamily : 'Arial'
+            },
+            data : ['C.brenneri','C.briggsae','C.elegans','C.japonica','C.remanei']
+        },
+        grid: {
+            x:60, x2:10, y2:70
+        },
+        yAxis: {
+            axisLine : {
+                show : false
+            },
+            axisTick : {
+                show : false
+            },
+            axisLabel : {
+                fontFamily : 'Arial'
+            }
+        },
+        series : [
+            {
+                barMaxWidth : 30,
+                type:"bar",
+                data:[20,59,510,17,28],
+                itemStyle: {
+                    normal:{
+                        color:new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#83bff6'},
+                                {offset: 0.5, color: '#188df0'},
+                                {offset: 1, color: '#188df0'}
+                            ])
+                    },
+                    emphasis: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#2378f7'},
+                                {offset: 0.7, color: '#2378f7'},
+                                {offset: 1, color: '#83bff6'}
+                            ]),
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChartt.setOption(optiont);
+    var myChartu = echarts.init(document.getElementById('barj'));
+    var optionu = {
+        title : {
+            text: 'Number of RNA editing sites',
+            x:'center',
+            top: 20,
+            textStyle:{
+                fontSize:24,
+                fontFamily : 'Arial'
+            }
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{b} : {c} "
+        },
+        xAxis:{
+            type:'category',
+            axisTick: {
+                alignWithLabel: false
+            },
+            axisLabel:{
+                fontSize:14,
+                interval :0,
+                rotate :0,
+                fontFamily : 'Arial'
+            },
+            data : ['C.brenneri','C.briggsae','C.elegans','C.japonica','C.remanei']
+        },
+        grid: {
+            x:60, x2:10, y2:70
+        },
+        yAxis: {
+            axisLine : {
+                show : false
+            },
+            axisTick : {
+                show : false
+            },
+            axisLabel : {
+                fontFamily : 'Arial'
+            }
+        },
+        series : [
+            {
+                barMaxWidth:30,
+                type:"bar",
+                data:[351,424,1201,2271,20253],
+                itemStyle: {
+                    normal:{
+                        color:new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#83bff6'},
+                                {offset: 0.5, color: '#188df0'},
+                                {offset: 1, color: '#188df0'}
+                            ])
+                    },
+                    emphasis: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#2378f7'},
+                                {offset: 0.7, color: '#2378f7'},
+                                {offset: 1, color: '#83bff6'}
+                            ]),
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChartu.setOption(optionu);
+    //饼图显示dmo的location
+    var myChartv = echarts.init(document.getElementById('pie9'));
+    var optionv = {
+        title : {
+            text: 'Repetitive Location of C.elegans',
+            x:100,
+            bottom:20,
+            textStyle:{
+              fontSize:24,
+              fontFamily : 'Arial'
+            }
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a}<br/>{b} : {c} ({d}%)"
+        },
+        series : [
+            {
+                name:"Repetitive Location of C.elegans",
+                type: 'pie',
+                radius : '70%',
+                center: ['50%', '50%'],
+                data:[
+                    {value: 1221, name: 'NonRep'},
+                    {value: 404, name: 'Rep'},
+                ],
+                itemStyle: {
+                    normal: {
+                        shadowBlur: 20,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                },
+                color:['#1ab2e2','#1ab21c','#ffb41a']
+            }
+        ]
+    };
+    myChartv.setOption(optionv);
+    var myChartNematodepie2 = echarts.init(document.getElementById('pienematode2'));
+    var optionNematodepie2 = {
+        title : {
+            text: 'Genomic Location of C.elegans',
+            x:100,
+            bottom:20,
+            textStyle:{
+              fontSize:24,
+              fontFamily : 'Arial'
+            }
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a}<br/>{b} : {c} ({d}%)"
+        },
+        series : [
+            {
+                name:"Genomic Location of C.elegans",
+                type: 'pie',
+                radius : '70%',
+                center: ['50%', '50%'],
+                data:[
+                    {value: 103, name: 'downstream'},
+                    {value: 208, name: 'intergenic'},
+                    {value: 306, name: 'intronic'},
+                    {value: 33, name: 'ncRNA_exonic'},
+                    {value: 387, name: 'ncRNA_intronic'},
+                    {value: 7, name: 'splicing'},
+                    {value: 410, name: 'unknown'},
+                    {value: 30, name: 'synonymous SNV'},
+                    {value: 10, name: 'nonsynonymous SNV'},
+                    {value: 67, name: 'upstream'},
+                    {value: 62, name: 'upstream;downstream'},
+                ],
+                itemStyle: {
+                    normal: {
+                        shadowBlur: 20,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                },
+                color:["#228B22","#0000CD","#008B8B","#FFC0CB","#6A5ACD",'#f95a90','#b51ab5','#1ab2e2','#FF4500','#ffb41a','#497ce9','#D2691E','#cc99ff',"#A52A2A","#40E0D0","#778899","#FFD700"]
+            }
+        ]
+    };
+    myChartNematodepie2.setOption(optionNematodepie2);
+    /*var myChartNematodebar1 = echarts.init(document.getElementById('barnematode1'));
+    var optionNematodebar1 = {
+        title : {
+            text: 'Repetitive Location',
+            x:'center',
+            top: 20,
+            textStyle:{
+                fontSize:24,
+                fontFamily : 'Arial'
+            }
+        },
+        tooltip : {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'none'
+            },
+            //formatter: "{b} : {c} "
+            formatter: function (data){
+                var res = data[0].name + '<br/>'
+                for (var i = 0, length = data.length; i < length; i++){
+                    res += data[i].marker;
+                    res += data[i].seriesName + ':';
+                    res += data[i].value +  '%<br/>';
+                }
+                return res;
+            }
+        },
+        legend: {
+            x:240,
+            y:'bottom',
+            data:["NonRep","Rep"]
+        },
+        xAxis:{
+            type : 'category',
+            axisTick: {
+                alignWithLabel: false
+            },
+            axisLabel:{
+                interval :0,
+                rotate :30,
+                fontFamily : 'Arial'
+            },
+            data : ['C.elegans','C.briggsae']
+        },
+        grid: {
+            x:60, x2:10, y2:100
+        },
+        yAxis: {
+            axisLine : {
+                show : false
+            },
+            axisTick : {
+                show : false
+            },
+            axisLabel : {
+                fontFamily : 'Arial'
+            }
+        },
+        series : [
+            {
+            name:"NonRep",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[71.02,86.79,],
+            itemStyle: {
+                normal:{
+                    color:"#1ab2e2",
+                    }
+                }
+            },
+            {
+            name:"Rep",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[28.98,13.21,],
+            itemStyle: {
+                normal:{
+                    color:"#1ab21c",
+                    }
+                }
+            },
+        ]
+    };
+    myChartNematodebar1.setOption(optionNematodebar1);
+    var myChartNematodebar2 = echarts.init(document.getElementById('barnematode2'));
+    var optionNematodebar2 = {
+        title : {
+            text: 'Genomic Location',
+            x:'center',
+            top: 20,
+            textStyle:{
+                fontSize:24,
+                fontFamily : 'Arial'
+            }
+        },
+        tooltip : {
+            trigger: 'axis',
+            //去掉中线
+            axisPointer: {
+                type: 'none'
+            },
+            //formatter: "{b} : {c} "
+            //添加点击百分比显示
+            formatter: function (data){
+                var res = data[0].name + '<br/>'
+                for (var i = 0, length = data.length; i < length; i++){
+                    res += data[i].marker;
+                    res += data[i].seriesName + ':';
+                    res += data[i].value +  '%<br/>';
+                }
+                return res;
+            }
+        },
+        legend: {
+            x:70,
+            y:'bottom',
+            data:["UTR3","UTR5","UTR5;UTR3","downstream","intergenic","intronic","ncRNA_exonic","ncRNA_intronic","nonsynonymous SNV","splicing","stoploss","synonymous SNV","unknown","upstream","upstream;downstream"]
+        },
+        xAxis:{
+            type : 'category',
+            axisTick: {
+                alignWithLabel: false
+            },
+            axisLabel:{
+                interval :0,
+                rotate :30,
+                fontFamily : 'Arial'
+            },
+            data : ['C.elegans','C.briggsae']
+        },
+        grid: {
+            //和div大小配合调整x label显示和柱的高低
+            x:60, x2:10, y2:170
+        },
+        yAxis: {
+            axisLine : {
+                show : false
+            },
+            axisTick : {
+                show : false
+            },
+            axisLabel : {
+                fontFamily : 'Arial'
+            }
+        },
+        series : [
+            {
+            name:"downstream",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[8.58,0.00,],
+            itemStyle: {
+                normal:{
+                    color:"#f95a90",
+                    }
+                }
+            },
+            {
+            name:"intergenic",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[10.49,19.34,],
+            itemStyle: {
+                normal:{
+                    color:"#b51ab5",
+                    }
+                }
+            },
+            {
+            name:"intronic",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[13.99,32.55,],
+            itemStyle: {
+                normal:{
+                    color:"#1ab2e2",
+                    }
+                }
+            },
+            {
+            name:"ncRNA_exonic",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[2.66,0.24,],
+            itemStyle: {
+                normal:{
+                    color:"#FF4500",
+                    }
+                }
+            },
+            {
+            name:"ncRNA_intronic",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[20.73,32.55,],
+            itemStyle: {
+                normal:{
+                    color:"#ffb41a",
+                    }
+                }
+            },
+            {
+            name:"nonsynonymous SNV",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[0.83,0.00,],
+            itemStyle: {
+                normal:{
+                    color:"#497ce9",
+                    }
+                }
+            },
+            {
+            name:"splicing",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[0.42,0.47,],
+            itemStyle: {
+                normal:{
+                    color:"#D2691E",
+                    }
+                }
+            },
+            {
+            name:"synonymous SNV",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[1.83,1.89,],
+            itemStyle: {
+                normal:{
+                    color:"#cc99ff",
+                    }
+                }
+            },
+            {
+            name:"unknown",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[29.73,12.50,],
+            itemStyle: {
+                normal:{
+                    color:"#A52A2A",
+                    }
+                }
+            },
+            {
+            name:"upstream",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[5.58,0.00,],
+            itemStyle: {
+                normal:{
+                    color:"#40E0D0",
+                    }
+                }
+            },
+            {
+            name:"upstream;downstream",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[5.16,0.00,],
+            itemStyle: {
+                normal:{
+                    color:"#228B22",
+                    }
+                }
+            },
+            {
+            name:"NA",
+            barMaxWidth : 30,
+            type:"bar",
+            stack:"sitenum",
+            data:[0.00,0.47,],
+            itemStyle: {
+                normal:{
+                    color:"#0000CD",
+                    }
+                }
+            },
+        ]
+    };
+    myChartNematodebar2.setOption(optionNematodebar2);*/
+    </script>
+</div>
+
+{% csrf_token %}
+{% for key,error in search_form.errors.items %}{{key}}:{{error}}{% endfor %}
+{% endblock %}
