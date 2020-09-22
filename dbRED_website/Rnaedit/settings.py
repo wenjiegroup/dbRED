@@ -21,12 +21,12 @@ sys.path.insert(0,os.path.join(BASE_DIR,'apps'))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '44a95_q-tq%2-w1)im5_^nr@4g1l(o_^ot8na6l8!1_i7y!11('
+SECRET_KEY = 'you should change this to your own key'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['47.94.22.109','192.168.2.103','127.0.0.1','dbred.bioinfotech.org',]
+ALLOWED_HOSTS = ['you should change this to your own settings']
 
 # Application definition
 
@@ -88,8 +88,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Rnaedit',
-        'USER': 'root',
-        'PASSWORD': 'Workhard',
+        'USER': 'USERNAME',
+        'PASSWORD': 'PASSWORD',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
